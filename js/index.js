@@ -5,7 +5,16 @@
     window.app = app;
 
     app.config(function () {
-        w5cValidator.init({blur_trig: false});
+        w5cValidator.init({
+            //blur_trig   : false,
+            //show_error  : function (elem, error_messages) {
+            //
+            //},
+            //remove_error: function (elem) {
+            //
+            //}
+
+        });
         w5cValidator.set_rules({
             user_name: {
                 required: "输入的用户名不能为空",
