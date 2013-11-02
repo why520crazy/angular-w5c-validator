@@ -4,7 +4,7 @@ w5c-validator
 w5c-validator for angular.js
 主要是基于angular.js做的一个扩展插件，统一验证规则和提示信息
 
-demo演示：http://why520crazy.github.io/w5c-validator-angular/
+demo演示：http://why520crazy.github.io/w5c-validator-angular/demo/index.html
 
 
 w5c validator自身提示信息样式使用了bootstrap的方式，当然你可以很好的扩展自己的提示方式
