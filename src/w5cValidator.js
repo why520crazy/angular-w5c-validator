@@ -9,13 +9,13 @@
 (function () {
     "use strict";
     var default_rules = {
-            required: "该选项不能为空",
+            required : "该选项不能为空",
             maxlength: "该选项输入值长度不能大于{maxlength}",
             minlength: "该选项输入值长度不能小于{minlength}",
-            email: "输入邮件的格式不正确",
+            email    : "输入邮件的格式不正确",
             //repeat: "两次填写的密码不一致",
-            pattern: "该选项输入格式不正确",
-            number: "必须输入数字"
+            pattern  : "该选项输入格式不正确",
+            number   : "必须输入数字"
             //romoteuniquecheck: "该输入值已经存在，请重新输入"
         },
         elem_types = ['text', 'password', 'email', 'number', ['textarea'], ['select'], ['select-one']];
@@ -24,11 +24,34 @@
         this.rules = [];
     };
 
+    var show_error = function (elem, error_messages) {
+        var $elem = angular.element(elem);
+        var $group = $elem.parent().parent();
+        if (!this.isEmpty($group) && !$group.hasClass("has-error")) {
+            $group.addClass("has-error");
+            $elem.after('<span class="w5c-error">' + error_messages[0] + '</span>');
+        }
+    };
+
+    var remove_error = function (elem) {
+        var $elem = angular.element(elem);
+        var $group = $elem.parent().parent();
+        if (!this.isEmpty($group) && $group.hasClass("has-error")) {
+            $group.removeClass("has-error");
+            $elem.next(".w5c-error").remove();
+        }
+
+    };
+
     validator.prototype.init = function (options) {
         var defaults = {
-            blur_trig: false
+            blur_trig   : false,
+            show_error  : show_error,
+            remove_error: remove_error
         };
         this.options = angular.extend({}, defaults, options);
+        validator.prototype.show_error = this.options.show_error;
+        validator.prototype.remove_error = this.options.remove_error;
     };
 
     validator.prototype.isEmpty = function (object) {
@@ -49,24 +72,24 @@
         this.rules = rules;
     };
 
-    validator.prototype.show_error = function (elem, error_messages) {
-        var $elem = angular.element(elem);
-        var $group = $elem.parent().parent();
-        if (!this.isEmpty($group) && !$group.hasClass("has-error")) {
-            $group.addClass("has-error");
-            $elem.after('<span class="w5c-error">' + error_messages[0] + '</span>');
-        }
-    };
-
-    validator.prototype.remove_error = function (elem) {
-        var $elem = angular.element(elem);
-        var $group = $elem.parent().parent();
-        if (!this.isEmpty($group) && $group.hasClass("has-error")) {
-            $group.removeClass("has-error");
-            $elem.next(".w5c-error").remove();
-        }
-
-    };
+//    validator.prototype.show_error = function (elem, error_messages) {
+//        var $elem = angular.element(elem);
+//        var $group = $elem.parent().parent();
+//        if (!this.isEmpty($group) && !$group.hasClass("has-error")) {
+//            $group.addClass("has-error");
+//            $elem.after('<span class="w5c-error">' + error_messages[0] + '</span>');
+//        }
+//    };
+//
+//    validator.prototype.remove_error = function (elem) {
+//        var $elem = angular.element(elem);
+//        var $group = $elem.parent().parent();
+//        if (!this.isEmpty($group) && $group.hasClass("has-error")) {
+//            $group.removeClass("has-error");
+//            $elem.next(".w5c-error").remove();
+//        }
+//
+//    };
 
     validator.prototype.get_error_message = function (validation_name, elem) {
         var msg_tpl = null;
@@ -116,7 +139,7 @@
     var $validator = window.w5cValidator = window.w5cValidator || new validator();
     //$validator.init();
 
-    angular.module("ng").directive("w5cFormValidate", ['$parse',function ($parse) {
+    angular.module("ng").directive("w5cFormValidate", ['$parse', function ($parse) {
         return{
             link: function (scope, $form, attr) {
                 var form_elem = $form[0];
@@ -142,7 +165,7 @@
                             $elem.bind("blur", function () {
                                 var $elem = angular.element(this);
                                 if (!scope[form_name][this.name].$valid) {
-                                    var error_messages = $validator.get_error_messages($elem,scope[form_name][this.name].$error);
+                                    var error_messages = $validator.get_error_messages($elem, scope[form_name][this.name].$error);
                                     $validator.show_error($elem, error_messages);
                                 } else {
                                     $validator.remove_error($elem);
@@ -162,7 +185,7 @@
                             if (scope[form_name][elem.name].$valid) {
                                 continue;
                             } else {
-                                var element_errors = $validator.get_error_messages(elem,scope[form_name][elem.name].$error);
+                                var element_errors = $validator.get_error_messages(elem, scope[form_name][elem.name].$error);
 
                                 $validator.remove_error(elem);
                                 $validator.show_error(elem, element_errors);
@@ -180,9 +203,9 @@
                 };
                 scope[form_name].do_validate = do_validate;
 
-                $form.bind("submit",function(){
+                $form.bind("submit", function () {
                     do_validate();
-                    if(scope[form_name].$valid && angular.isFunction(form_submit_fn)){
+                    if (scope[form_name].$valid && angular.isFunction(form_submit_fn)) {
                         scope.$apply(function () {
                             form_submit_fn(scope);
                         });
