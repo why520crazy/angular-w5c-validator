@@ -72,25 +72,6 @@
         this.rules = rules;
     };
 
-//    validator.prototype.show_error = function (elem, error_messages) {
-//        var $elem = angular.element(elem);
-//        var $group = $elem.parent().parent();
-//        if (!this.isEmpty($group) && !$group.hasClass("has-error")) {
-//            $group.addClass("has-error");
-//            $elem.after('<span class="w5c-error">' + error_messages[0] + '</span>');
-//        }
-//    };
-//
-//    validator.prototype.remove_error = function (elem) {
-//        var $elem = angular.element(elem);
-//        var $group = $elem.parent().parent();
-//        if (!this.isEmpty($group) && $group.hasClass("has-error")) {
-//            $group.removeClass("has-error");
-//            $elem.next(".w5c-error").remove();
-//        }
-//
-//    };
-
     validator.prototype.get_error_message = function (validation_name, elem) {
         var msg_tpl = null;
         if (!this.isEmpty(this.rules[elem.name]) && !this.isEmpty(this.rules[elem.name][validation_name])) {
@@ -132,12 +113,7 @@
         return element_errors;
     };
 
-    validator.prototype.do_validate = function (form_elem) {
-
-    };
-
     var $validator = window.w5cValidator = window.w5cValidator || new validator();
-    //$validator.init();
 
     angular.module("ng").directive("w5cFormValidate", ['$parse', function ($parse) {
         return{
