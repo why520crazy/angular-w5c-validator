@@ -116,13 +116,12 @@
     var $validator = window.w5cValidator = window.w5cValidator || new validator();
     //$validator.init();
 
-    angular.module("ng").directive("w5cFormValidate", [function () {
+    angular.module("ng").directive("w5cFormValidate", ['$parse',function ($parse) {
         return{
             link: function (scope, $form, attr) {
                 var form_elem = $form[0];
                 var form_name = $form.attr("name");
-                //var options = angular.extend($validator.options, scope.$eval(attr.cwFormValidate));
-
+                var form_submit_fn = $parse(attr.w5cSubmit);
 
                 //初始化验证规则，并时时监控输入值的变话
                 for (var i = 0; i < form_elem.length; i++) {
@@ -160,7 +159,7 @@
                     for (var i = 0; i < form_elem.length; i++) {
                         var elem = form_elem[i];
                         if (elem_types.toString().indexOf(elem.type) > -1 && !$validator.isEmpty(elem.name)) {
-                            if (scope[form_name][$elem.name].$valid) {
+                            if (scope[form_name][elem.name].$valid) {
                                 continue;
                             } else {
                                 var element_errors = $validator.get_error_messages(elem,scope[form_name][elem.name].$error);
@@ -180,6 +179,15 @@
                     }
                 };
                 scope[form_name].do_validate = do_validate;
+
+                $form.bind("submit",function(){
+                    do_validate();
+                    if(scope[form_name].$valid && angular.isFunction(form_submit_fn)){
+                        scope.$apply(function () {
+                            form_submit_fn(scope);
+                        });
+                    }
+                })
             }
         };
     }]);

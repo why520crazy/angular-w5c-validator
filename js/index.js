@@ -8,9 +8,8 @@
     });
     app.controller("validate_ctrl",function($scope){
 
-        $scope.js_submit = function(form){
-            //alert("jj");
-            form.do_validate();
+        $scope.js_save_entity = function(form){
+           //do somethings for bz
         };
     });
 
