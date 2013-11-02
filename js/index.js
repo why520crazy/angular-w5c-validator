@@ -14,7 +14,6 @@
         })
     });
     app.controller("validate_ctrl", function ($scope) {
-
         $scope.js_save_entity = function (form) {
             //do somethings for bz
         };
