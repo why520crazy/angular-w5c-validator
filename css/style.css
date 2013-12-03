@@ -45,6 +45,30 @@ body code {
   padding-left: 10px;
   font-weight: bold;
 }
+.entry-item .item-container:before,
+.entry-item .item-container:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.entry-item .item-container:after {
+  clear: both;
+}
+.entry-item .item-container:before,
+.entry-item .item-container:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.entry-item .item-container:after {
+  clear: both;
+}
 .entry-item .item-container.empty {
   min-height: 20px;
 }

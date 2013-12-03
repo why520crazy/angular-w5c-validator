@@ -39,6 +39,49 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        JQuery UI sortable stop function:<br>
+        <textarea cols="150" rows="30">
+            $scope.$apply(function(){
+                var item_id = ui.item.attr("item-id");
+                var entry_id = ui.item.attr("entry-id");
+                var item_pos = ui.item.attr("item-pos");
+                var newpos = 0;
+                var prev_pos = ui.item.prev().attr("item-pos");
+                var next_pos = ui.item.next().attr("item-pos");
+                if ((prev_pos == null || prev_pos == 0) && (next_pos == null || next_pos == 0)) {
+                    newpos = 65535;
+                } else if (prev_pos == null || prev_pos == 0) {
+                    newpos = parseInt(next_pos) / 2 + 1;
+                }
+                else if (next_pos == null || next_pos == 0) {
+                    newpos = parseInt(prev_pos) + 65535 + 1;
+                } else {
+                    newpos = (parseInt(prev_pos) + parseInt(next_pos)) / 2 + 1;
+                }
+                var to_entry_id = ui.item.parents(".entry-item").attr("entry-id");
+
+                if (entry_id == to_entry_id && newpos == item_pos) return;
+
+                var from_entry = _.findWhere($scope.entries, {id: parseInt(entry_id)})
+                var to_entry = _.findWhere($scope.entries, {id: parseInt(to_entry_id)})
+                var item = _.findWhere(from_entry.items, {id: parseInt(item_id)});
+                item.pos = newpos;
+
+                //the one solution
+                //ui.item.remove();
+
+                //change data
+                to_entry.items.push(item);
+                from_entry.items = _.reject(from_entry.items, function (item) {
+                    return item.id == item_id
+                });
+            });
+        </textarea>
+        <br>
+        <br>
+    </div>
+
 </div>
 
 <div id="footer">
