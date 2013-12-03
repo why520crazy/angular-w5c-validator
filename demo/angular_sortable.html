@@ -23,20 +23,15 @@
                 <a class="navbar-brand" href="#">sortable</a>
             </div>
             <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <!--<li class="{{=it.path == 'index' ? 'active' : ''}}"><a href="/">首页</a></li>-->
-                    <!--<li class="{{=it.path == 'about' ? 'active' : ''}}"><a href="/about">关于</a></li>-->
 
-                </ul>
             </div>
-            <!--/.nav-collapse -->
         </div>
     </div>
-    <div class="container entry-container" data-ng-controller="sortTestCtrl" sortable="entry_sort_options">
+    <div class="container entry-container" data-ng-controller="sortTestCtrl">
         <div class="entry-item" data-ng-repeat="entry in entries" entry-id="{{entry.id}}" data-ng-cloak="">
             <span class="title">{{entry.name}}</span>
 
-            <div class="item-container" sortable="item_sortable_options">
+            <div class="item-container" sortable="item_sortable_options" data-ng-class="{true:'empty'}[entry.items.length == 0]">
                 <div class="item" data-ng-class="{true:'first-item'}[$index == 0]" data-ng-repeat="item in entry.items" item-id="{{item.id}}" entry-id="{{entry.id}}"
                      item-pos="{{item.pos}}">
                     {{item.name}}
@@ -95,33 +90,6 @@
                     };
                 }])
         app.controller("sortTestCtrl", ['$scope', function ($scope) {
-
-            $scope.entry_sort_options = {
-                appendTo   : $(".entry-container"),
-                containment: '.entry-container',
-                placeholder: "entry-placeholder",
-                helper     : "clone",
-                revert     : 10,
-                dropOnEmpty: true,
-                tolerance  : "pointer",
-                distance   : "4",
-                delay      : "75",
-                handle     : ".title",
-                disabled   : false, //$scope.permission != 1,
-                accept     : ".entry",
-                over       : function (e, ui) {
-
-                },
-                start      : function (e, ui) {
-                    $(".entry-placeholder").css({
-                        height: ui.item.outerHeight()
-                    });
-                },
-                stop       : function (e, ui) {
-                    ui.item.removeClass("picked-up");
-                }
-            };
-
             $scope.item_sortable_options = {
                 appendTo: $(".entry-container"),
                 helper: 'clone',

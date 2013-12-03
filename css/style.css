@@ -45,6 +45,9 @@ body code {
   padding-left: 10px;
   font-weight: bold;
 }
+.entry-item .item-container.empty {
+  min-height: 20px;
+}
 .entry-item .item-container .item {
   height: 30px;
   border-bottom: 1px solid #003333;
