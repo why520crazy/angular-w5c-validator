@@ -33,7 +33,7 @@
         </div>
     </div>
     <div class="container entry-container" data-ng-controller="sortTestCtrl" sortable="entry_sort_options">
-        <div class="entry-item" data-ng-repeat="entry in entries" entry-id="{{entry.id}}">
+        <div class="entry-item" data-ng-repeat="entry in entries" entry-id="{{entry.id}}" data-ng-cloak="">
             <span class="title">{{entry.name}}</span>
 
             <div class="item-container" sortable="item_sortable_options">
