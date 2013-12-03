@@ -48,6 +48,10 @@ body code {
 .entry-item .item-container .item {
   height: 30px;
   border-bottom: 1px solid #003333;
+  padding-left: 5px;
+}
+.entry-item .item-container .item.first-item {
+  border-top: 1px solid #003333;
 }
 .w5c-error {
   color: #b94a48;

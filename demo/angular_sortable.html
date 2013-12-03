@@ -37,7 +37,7 @@
             <span class="title">{{entry.name}}</span>
 
             <div class="item-container" sortable="item_sortable_options">
-                <div class="item" data-ng-repeat="item in entry.items" item-id="{{item.id}}" entry-id="{{entry.id}}"
+                <div class="item" data-ng-class="{true:'first-item'}[$index == 0]" data-ng-repeat="item in entry.items" item-id="{{item.id}}" entry-id="{{entry.id}}"
                      item-pos="{{item.pos}}">
                     {{item.name}}
                 </div>
