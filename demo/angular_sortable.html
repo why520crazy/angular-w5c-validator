@@ -80,39 +80,7 @@
         'use strict';
         var app = angular.module("app", []);
 
-        app.directive('draggable', [function () {
-
-                    return {
-                        // A = attribute, E = Element, C = Class and M = HTML Comment
-                        restrict: 'A',
-                        //The link function is responsible for registering DOM listeners as well as updating the DOM.
-                        link: function (scope, element, attrs) {
-                            scope.$watch(attrs.draggable, function (newValue) {
-                                if (_.isEmpty(newValue)) {
-                                    return;
-                                }
-                                element.draggable(newValue);
-                            });
-                        }
-                    };
-                }])
-                .directive('droppable', ['$compile', function ($compile) {
-                    'use strict';
-                    return {
-                        restrict: 'A',
-                        link: function (scope, element, attrs) {
-                            //This makes an element Droppable
-                            scope.$watch(attrs.droppable, function (newValue, oldValue) {
-                                if (_.isEmpty(newValue)) {
-                                    return;
-                                }
-                                element.droppable(newValue);
-                            });
-
-                        }
-                    };
-                }])
-                .directive("sortable", [function () {
+        app.directive("sortable", [function () {
                     'use strict';
                     return{
                         link: function (scope, element, attrs) {
@@ -200,6 +168,11 @@
                         var to_entry = _.findWhere($scope.entries, {id: parseInt(to_entry_id)})
                         var item = _.findWhere(from_entry.items, {id: parseInt(item_id)});
                         item.pos = newpos;
+
+                        //the one solution
+                        //ui.item.remove();
+
+                        //change data
                         to_entry.items.push(item);
                         from_entry.items = _.reject(from_entry.items, function (item) {
                             return item.id == item_id
