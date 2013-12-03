@@ -44,22 +44,26 @@ body {
 //.cw-form input.ng-valid.ng-dirty {
 //  background-color: #78FA89;
 //}
-.cw-form{
-//  input:invalid,
-//  textarea:invalid,
-//  select:invalid {
-//    border-color       : #e9322d;
-//    -webkit-box-shadow : 0 0 6px #f8b9b7;
-//    -moz-box-shadow    : 0 0 6px #f8b9b7;
-//    box-shadow         : 0 0 6px #f8b9b7;
-//  }
 
-//  input.error:ng-invalid, input.ng-invalid:invalid {
-//    border-color       : #e9322d;
-//    -webkit-box-shadow : 0 0 6px #f8b9b7;
-//    -moz-box-shadow    : 0 0 6px #f8b9b7;
-//    box-shadow         : 0 0 6px #f8b9b7;
-//  }
+
+.entry-item{
+  float: left;
+  width: 200px;
+  border: 1px #003300 solid;
+  margin-right: 10px;
+  min-height: 500px;
+  .title{
+    padding-left: 10px;
+    font-weight: bold;
+  }
+
+  .item-container{
+    //padding-left: 5px;
+    .item{
+      height: 30px;
+      border-bottom: 1px solid #003333;
+    }
+  }
 }
 
 @import "../src/style.less";
