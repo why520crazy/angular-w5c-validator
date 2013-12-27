@@ -162,19 +162,19 @@
                                 continue;
                             } else {
                                 var element_errors = $validator.get_error_messages(elem, scope[form_name][elem.name].$error);
-
+                                error_messages.push(element_errors[0]);
                                 $validator.remove_error(elem);
                                 $validator.show_error(elem, element_errors);
                             }
                         }
                     }
-                    if ($validator.isEmpty(error_messages) || error_messages.length > 0) {
-                        form_elem.$errors = error_messages;
+                    if (!$validator.isEmpty(error_messages) && error_messages.length > 0) {
+                        scope[form_name].$errors = error_messages;
                     } else {
-                        form_elem.$errors = [];
+                        scope[form_name].$errors = [];
                     }
                     if (!scope.$$phase) {
-                        scope.$apply(form_elem.$errors);
+                        scope.$apply(scope[form_name].$errors);
                     }
                 };
                 scope[form_name].do_validate = do_validate;
