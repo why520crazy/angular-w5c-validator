@@ -34,8 +34,30 @@ body code {
   width: 800px;
   margin: 40px auto 0 auto;
 }
-.w5c-error {
-  color: #b94a48;
+.w5c-form input:focus:invalid:focus,
+.w5c-form textarea:focus:invalid:focus,
+.w5c-form select:focus:invalid:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  color: #000000;
+}
+.w5c-form input.error:invalid,
+.w5c-form textarea.error:invalid,
+.w5c-form select.error:invalid {
+  border-color: #e9322d;
+  -webkit-box-shadow: 0 0 6px #f8b9b7;
+  -moz-box-shadow: 0 0 6px #f8b9b7;
+  box-shadow: 0 0 6px #f8b9b7;
+}
+.w5c-form .dropdown-menu {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.w5c-form .alert {
+  margin-bottom: 0px;
 }
 /*!
  * Bootstrap v3.0.0
