@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0e0a46f8-efa5-4246-8954-0b5049cf19ec" name="Default" comment="" />
+    <ignored path="w5c-validator-angular-gh-pages.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/misc.xml" />
+    <ignored path=".idea/dictionaries/haifeng.xml" />
+    <ignored path=".idea/vcs.xml" />
+    <ignored path=".idea/encodings.xml" />
+    <ignored path=".idea/.name" />
+    <ignored path=".idea/scopes/scope_settings.xml" />
+    <ignored path=".idea/watcherTasks.xml" />
+    <ignored path=".idea/modules.xml" />
+    <ignored path=".idea/w5c-validator-angular-gh-pages.iml" />
+    <ignored path=".idea/codeStyleSettings.xml" />
+    <ignored path=".idea/" />
+    <file path="/Dummy.txt" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386078504898" ignored="false" />
+    <file path="/index.html" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1383403051114" ignored="false" />
+    <file path="/w5cValidator.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1383388186286" ignored="false" />
+    <file path="$PROJECT_DIR$/../w5c-validator-angular/src/w5cValidator.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1383399150710" ignored="false" />
+    <file path="$PROJECT_DIR$/../w5c-validator-angular/js/index.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1383388314811" ignored="false" />
+    <file path="/index.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1383388251221" ignored="false" />
+    <file path="$PROJECT_DIR$/../w5c-validator-angular/demo/index.html" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1383403051114" ignored="false" />
+    <file path="/angular_sortable.html" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386078434567" ignored="false" />
+    <file path="/style.less" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386078190490" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/ycjs/controller/project.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386068665279" ignored="false" />
+    <file path="/project.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386068290555" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/core/config.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386059889602" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/ycjs/tpl/project/task/project_tasks.html" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386067762249" ignored="false" />
+    <file path="/project_tasks.html" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386067354354" ignored="false" />
+    <file path="/a.dummy" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386063321082" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/ycjs/controller/project_add.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386042809695" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/ycjs/controller/account.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386042660167" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/ycjs/controller/entity_task.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386042660165" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/ycjs/controller/entity_post.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386042660166" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/ycjs/controller/entity_page.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386042660167" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/ycjs/controller/entity_file.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386042660166" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/ycjs/controller/dashboard.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386042660168" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/ycjs/controller/comment.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386042660167" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/ycjs/kzi.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386054192665" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/ycjs/tpl/test.html" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386047232312" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/css/base.less" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386046167565" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/ycjs/app.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386054184700" ignored="false" />
+    <file path="/app.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386046359723" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/view/layout.html" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386054184699" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtconsole/data/user.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386057625902" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtconsole/res/js/main.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386057940189" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtconsole/route.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386057988031" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/ycjs/lib/angular/1.2.2/angular.js" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386058983292" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/css/less/style/hover_style.less" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386063595035" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../10_YC/Worktile/wtweb/res/css/base.css" changelist="0e0a46f8-efa5-4246-8954-0b5049cf19ec" time="1386063599612" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="w5c-validator-angular-gh-pages" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascripts/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="104" column="11" selection-start="4269" selection-end="4269" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="w5cValidator.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/w5cValidator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="216" column="5" selection-start="8370" selection-end="8370" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="211" selection-end="384" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="61" selection-start="806" selection-end="806" vertical-scroll-proportion="-13.75">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angular_sortable.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo/angular_sortable.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="12" selection-start="3418" selection-end="3418" vertical-scroll-proportion="1.0164835">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/style.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="16" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#5#554#0" expanded="false" />
+                <element signature="e#567#614#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/js/index.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/src/w5cValidator.js" />
+        <option value="$PROJECT_DIR$/demo/index.html" />
+        <option value="$PROJECT_DIR$/css/style.less" />
+        <option value="$PROJECT_DIR$/demo/angular_sortable.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="10" />
+    <option name="y" value="22" />
+    <option name="width" value="1260" />
+    <option name="height" value="761" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents ProjectPane="true" />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="underscore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.5.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="style.less" />
+              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="preferences.sourceCode" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/demo" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e0a46f8-efa5-4246-8954-0b5049cf19ec" name="Default" comment="" />
+      <created>1383386705675</created>
+      <updated>1383386705675</updated>
+    </task>
+    <task id="LOCAL-00001" summary="add">
+      <created>1383386930080</created>
+      <updated>1383386930080</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add demo">
+      <created>1383387717508</created>
+      <updated>1383387717508</updated>
+    </task>
+    <task id="LOCAL-00003" summary="修改验证可以传入 show_error remove_error方法">
+      <created>1383388394911</created>
+      <updated>1383388394911</updated>
+    </task>
+    <task id="LOCAL-00004" summary="修改名字">
+      <created>1383402932783</created>
+      <updated>1383402932783</updated>
+    </task>
+    <task id="LOCAL-00005" summary="修改名字">
+      <created>1383403086903</created>
+      <updated>1383403086903</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add">
+      <created>1386076127492</created>
+      <updated>1386076127492</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add">
+      <created>1386076539027</created>
+      <updated>1386076539027</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add">
+      <created>1386076737026</created>
+      <updated>1386076737026</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add">
+      <created>1386077714764</created>
+      <updated>1386077714764</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add">
+      <created>1386078063691</created>
+      <updated>1386078063691</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add">
+      <created>1386078505990</created>
+      <updated>1386078505990</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="10" y="22" width="1260" height="761" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33073324" sideWeight="0.4995958" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497979" sideWeight="0.66926676" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33073324" sideWeight="0.5004042" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917318" sideWeight="0.4995958" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15756631" sideWeight="0.4995958" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" value="add" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="add demo" />
+    <MESSAGE value="修改验证可以传入 show_error remove_error方法" />
+    <MESSAGE value="修改名字" />
+    <MESSAGE value="add" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/javascripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="11" selection-start="4269" selection-end="4269" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/w5cValidator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="216" column="5" selection-start="8370" selection-end="8370" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="211" selection-end="384" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="61" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="11" selection-start="4269" selection-end="4269" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="211" selection-end="384" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/w5cValidator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="216" column="5" selection-start="8370" selection-end="8370" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="61" selection-start="806" selection-end="806" vertical-scroll-proportion="-13.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/angular/1.0.8/angular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1381292884000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1381292884000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/underscore/1.5.1/underscore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="72" selection-start="693" selection-end="693" vertical-scroll-proportion="0.64659685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="16" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#5#554#0" expanded="false" />
+            <element signature="e#567#614#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/angular_sortable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="12" selection-start="3418" selection-end="3418" vertical-scroll-proportion="1.0164835">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
