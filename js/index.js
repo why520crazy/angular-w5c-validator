@@ -7,12 +7,12 @@
     app.config(function () {
         w5cValidator.init({
             //blur_trig   : false,
-            show_error  : function (elem, error_messages) {
-
-            },
-            remove_error: function (elem) {
-
-            }
+//            show_error  : function (elem, error_messages) {
+//
+//            },
+//            remove_error: function (elem) {
+//
+//            }
 
         });
         w5cValidator.set_rules({
