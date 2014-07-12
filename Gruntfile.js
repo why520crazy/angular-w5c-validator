@@ -92,11 +92,13 @@ module.exports = function (grunt) {
         },
         pkg    : grunt.file.readJSON('package.json'),
         concat : {
-            js: {
-                //['res/lib/jquery/1.11.0/jquery.js','res/lib/bootstrap/3.1.1/js/bootstrap.js', 'res/js/main.js'],
-                // 这里的site_scripts是从配置文件读取的，因为layout也需要读取site_scripts，如果仅仅是这个地方使用到，可以按照上面的方式写死
+            js   : {
                 src : ["src/w5cValidator.js", "src/directive.js"],
                 dest: 'example/w5cValidator.js'
+            },
+            basic: {
+                src : ["src/w5cValidator.js", "src/directive.js"],
+                dest: 'dest/w5cValidator.js'
             }
         },
         uglify : {
@@ -104,8 +106,8 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build  : {
-                src : 'example/w5cValidator.js',
-                dest: 'example/w5cValidator.min.js'
+                src : 'dest/w5cValidator.js',
+                dest: 'dest/w5cValidator.min.js'
             }
         },
         copy   : {
@@ -135,5 +137,5 @@ module.exports = function (grunt) {
         grunt.task.run(['serve:' + target]);
     });
 
-    grunt.registerTask('build', ["copy","concat"]);
+    grunt.registerTask('build', ["copy", "concat","uglify"]);
 };

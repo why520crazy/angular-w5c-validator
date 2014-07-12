@@ -74,29 +74,5 @@
         });
 
     }]);
-    app.directive('showHtml', [function ($compile) {
-        return {
-            scope: true,
-            link : function (scope, element, attrs) {
-                var el;
-
-                scope.$watch(attrs.showHtml, function (tpl) {
-
-                    if (angular.isDefined(tpl)) {
-                        // compile the provided template against the current scope
-                        el = $compile(tpl)(scope);
-                        // stupid way of emptying the element
-                        element.html("");
-
-                        // add the template content
-                        element.append(el);
-                    } else {
-                        element.html("<span>ddd</span>111");
-                    }
-                });
-            }
-        };
-    }]);
-
 
 })();
