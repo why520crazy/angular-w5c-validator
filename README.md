@@ -117,8 +117,8 @@ app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
 #参数
 
 
-|名称|默认值|作用
-|------|-----|------
-|blurTrig|false|光标移除元素后是否验证并显示错误提示信息
-|showError|true|可以是bool和function，每个元素验证不通过后调用该方法显示错误信息，默认true，显示错误信息在元素的后面。
-|removeError|true|可以是bool和function，每个元素验证通过后调用该方法移除错误信息，默认true，验证通过后在元素的后面移除错误信息。
+|名称|默认值|作用|
+|------|-----|------|
+|blurTrig|false|光标移除元素后是否验证并显示错误提示信息|
+|showError|true|可以是bool和function，每个元素验证不通过后调用该方法显示错误信息，默认true，显示错误信息在元素的后面。|
+|removeError|true|可以是bool和function，每个元素验证通过后调用该方法移除错误信息，默认true，验证通过后在元素的后面移除错误信息。|
