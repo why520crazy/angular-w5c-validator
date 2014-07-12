@@ -24,7 +24,7 @@ v1.0版本虽然简单的实现了想要的功能，但是没有按照模块独�
 1. HTML 中引用 dest/w5cValidator.js；
 
 2. 在`app.config`事件中配置全局属性和显示规则：
-```javascript
+<pre>
 app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
 
         // 全局配置
@@ -53,7 +53,7 @@ app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
             }
         });
     }]);
-```
+</pre>
 
 1. 在HTML模板中form上使用指令 w5c-form-validate 和 w5c-submit，w5c-form-validate指令表示该表单采用 w5cValidator的验证规则；w5c-submit 表示验证成功后调用的事件，当然w5c-submit可以不填写；
 ```
