@@ -54,7 +54,8 @@ app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
         });
     }]);
 ```
-3. 在HTML模板中form上使用指令 w5c-form-validate 和 w5c-submit
+
+1. 在HTML模板中form上使用指令 w5c-form-validate 和 w5c-submit
 w5c-form-validate指令表示该表单采用 w5cValidator的验证规则；
 w5c-submit 表示验证成功后调用的事件，当然w5c-submit可以不填写；
 ```
