@@ -52,10 +52,11 @@ angular.module("w5c.validator", ["ng"])
         };
 
         validatorFn.prototype = {
+            constructor     : validatorFn,
             config          : function (options) {
                 this.options = angular.extend(this.options, options);
             },
-            setRules           : function (rules) {
+            setRules        : function (rules) {
                 this.rules = rules;
             },
             getErrorMessage : function (validationName, elem) {
