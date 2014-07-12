@@ -4,8 +4,9 @@
     <meta name="description" content="why520crazy">
     <meta name="author" content="why520crazy">
 
-    <title>angular js validate</title>
-    <link href="css/style.css" rel="stylesheet">
+    <title>w5cValidator - Angular js </title>
+    <link href="css/css.css" rel="stylesheet">
+    <link href="lib/highlight/8.0/styles/default.css" rel="stylesheet">
 
 </head>
 
@@ -20,94 +21,48 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">w5cValidator - angular验证框架扥扩展</a>
+                <a class="navbar-brand" href="#">w5c-Validator</a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <!--<li class="{{=it.path == 'index' ? 'active' : ''}}"><a href="/">首页</a></li>-->
-                    <!--<li class="{{=it.path == 'about' ? 'active' : ''}}"><a href="/about">关于</a></li>-->
-
+                    <li><a href="https://github.com/why520crazy/w5c-validator-angular">github 源代码</a></li>
                 </ul>
             </div>
-            <!--/.nav-collapse -->
         </div>
     </div>
     <div class="container" data-ng-controller="validateCtrl" ng-cloak="">
         <div class="row">
             <div class="col-md-6">
-                <form class="form-horizontal w5c-form demo-form" role="form" w5c-submit="vm.saveEntity(form_validate)"
-                      w5c-form-validate="" novalidate name="validateForm">
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">邮箱</label>
-
-                        <div class="col-sm-10">
-                            <input type="email" name="email" ng-model="entity.email" required="" class="form-control"
-                                   placeholder="输入邮箱">
+                <ng-include src="'validate.form.html'"></ng-include>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            <label>
+                                <input ng-model="vm.validateOptions.blurTrig" type="checkbox"> 光标移走触发验证
+                            </label>
                         </div>
+                        <select class="form-control" ng-model="vm.showErrorType" ng-change="vm.changeShowType()">
+                            <option value="1">每个输入框显示错误信息</option>
+                            <option value="2">错误信息集中显示</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">用户名</label>
-
-                        <div class="col-sm-10">
-                            <input required="" ng-pattern="/^[A-Za-z]{1}[0-9A-Za-z_]{1,19}$/" ng-model="entity.name"
-                                   class="form-control" name="user_name" placeholder="输入用户名">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">密码</label>
-
-                        <div class="col-sm-10">
-                            <input type="password" required="" ng-model="entity.password" name="password"
-                                   class="form-control"
-                                   placeholder="输入密码">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">数字</label>
-
-                        <div class="col-sm-10">
-                            <input type="number" required="" ng-model="entity.number" name="number" class="form-control"
-                                   placeholder="输入数字">
-                        </div>
-                    </div>
-                    <div class="form-group" ng-show="validateForm.$errors.length > 0">
-                        <label class="col-sm-2 control-label"></label>
-
-                        <div class="col-sm-10">
-                            <div class="alert alert-danger">{{validateForm.$errors[0]}}</div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-success"> 验证</button>
-                        </div>
-                    </div>
-                </form>
+                </div>
 
             </div>
             <div class="col-md-6">
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li class="active"><a href="#html" role="tab" data-toggle="tab">HTML</a></li>
-                    <li><a href="#js" role="tab" data-toggle="tab">js</a></li>
-                    <li><a href="#css" role="tab" data-toggle="tab">css</a></li>
-                </ul>
 
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div class="tab-pane active" id="html">
-                        <prev>
-                               <div>{{vm.htmlSource}}</div>
-                        </prev>
-                    </div>
-                    <div class="tab-pane" id="js">
-                        <prev>
-                            <div>{{vm.jsSource}}</div>
-                        </prev>
-                    </div>
-                    <div class="tab-pane" id="css">css</div>
-                </div>
+                <tabset>
+                    <tab heading="HTML">
+                        <div hljs source="vm.htmlSource" language="html"></div>
+                    </tab>
+                    <tab heading="js">
+                        <div hljs source="vm.jsSource" language="js"></div>
+                    </tab>
+                    <tab heading="less">
+                        <div hljs source="vm.lessSource" language="css"></div>
+                    </tab>
+                </tabset>
             </div>
         </div>
     </div>
@@ -132,7 +87,10 @@
 <script src="lib/jquery/1.11.0/jquery.js"></script>
 <script src="lib/angular/1.2.0/angular.js"></script>
 <script src="lib/bootstrap/3.0.0/js/bootstrap.js"></script>
-<script src="../src/w5cValidator.js"></script>
+<script src="lib/angular-ui/ui-bootstrap/0.9.0/ui-bootstrap-tpls.js"></script>
+<script src="lib/highlight/8.0/highlight.pack.js"></script>
+<script src="lib/angular-highlightjs/angular-highlightjs.js"></script>
+<script src="w5cValidator.js"></script>
 <script src="index.js"></script>
 </body>
 </html>
