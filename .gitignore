@@ -1,5 +1,6 @@
 node_modules
 dist
 .tmp
+.idea
 .sass-cache
 app/bower_components
