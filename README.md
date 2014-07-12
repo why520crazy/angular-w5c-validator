@@ -23,7 +23,7 @@ v1.0版本虽然简单的实现了想要的功能，但是没有按照模块独�
 
 1. HTML 中引用 dest/w5cValidator.js；
 
-1. 在`app.config`事件中配置全局属性和显示规则：
+2. 在`app.config`事件中配置全局属性和显示规则：
 ```javascript
 app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
 
