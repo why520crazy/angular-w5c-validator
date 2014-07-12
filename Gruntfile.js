@@ -134,4 +134,6 @@ module.exports = function (grunt) {
         grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
         grunt.task.run(['serve:' + target]);
     });
+
+    grunt.registerTask('build', ["copy","concat"]);
 };

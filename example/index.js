@@ -7,15 +7,11 @@
     app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
         w5cValidatorProvider.config({
             blurTrig: false,
-            showError: function (element, errorMessages) {
-
-            },
-            removeError: function (element) {
-
-            }
+            showError: false,
+            removeError: false
 
         });
-        w5cValidatorProvider.rules({
+        w5cValidatorProvider.setRules({
             email: {
                 required: "输入的邮箱地址不能为空",
                 email: "输入邮箱地址格式不正确"
