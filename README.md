@@ -112,7 +112,8 @@ app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
 1. 由于验证使用的是 angular的form验证，所以必须要保证form和验证的元素都要有name属性；
 1. 如果你不想把验证成功事件w5c-submit写在 form上，可以直接在form里面的其他元素上使用w5cFormSubmit指令，如：
 ```
-<button type="buttom" w5c-form-submit="vm.saveEntity()" class="btn btn-success"> 验证</button>```
+<button type="buttom" w5c-form-submit="vm.saveEntity()" class="btn btn-success"> 验证</button>
+```
 
 #参数
 
