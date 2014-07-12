@@ -56,7 +56,7 @@ app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
 </pre>
 
 1. 在HTML模板中form上使用指令 w5c-form-validate 和 w5c-submit，w5c-form-validate指令表示该表单采用 w5cValidator的验证规则；w5c-submit 表示验证成功后调用的事件，当然w5c-submit可以不填写；
-<code>
+```
 <form class="form-horizontal w5c-form demo-form" role="form" w5c-submit="vm.saveEntity(form_validate)"
       w5c-form-validate="vm.validateOptions" novalidate name="validateForm">
     <div class="form-group">
@@ -64,7 +64,7 @@ app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
 
         <div class="col-sm-10">
             <input type="email" name="email" ng-model="entity.email" required="" class="form-control"
-                   placeholder="输入邮箱">
+                   placeholder="输入邮箱" />
         </div>
     </div>
     <div class="form-group">
@@ -72,7 +72,7 @@ app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
 
         <div class="col-sm-10">
             <input required="" ng-pattern="/^[A-Za-z]{1}[0-9A-Za-z_]{1,19}$/" ng-model="entity.name"
-                   class="form-control" name="username" placeholder="输入用户名">
+                   class="form-control" name="username" placeholder="输入用户名" />
         </div>
     </div>
     <div class="form-group">
@@ -81,7 +81,7 @@ app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
         <div class="col-sm-10">
             <input type="password" required="" ng-model="entity.password" name="password"
                    class="form-control" ng-minlength="5" ng-maxlength="15"
-                   placeholder="输入密码">
+                   placeholder="输入密码" ></input>
         </div>
     </div>
     <div class="form-group">
@@ -89,7 +89,7 @@ app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
 
         <div class="col-sm-10">
             <input type="number" required="" ng-model="entity.number" name="number" class="form-control"
-                   placeholder="输入数字">
+                   placeholder="输入数字" />
         </div>
     </div>
     <div class="form-group" ng-show="validateForm.$errors.length > 0 && vm.showErrorType == 2">
@@ -106,7 +106,7 @@ app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
         </div>
     </div>
 </form>
-</code>
+```
 
 #注意事项：
 1. 由于验证使用的是 angular的form验证，所以必须要保证form和验证的元素都要有name属性；
