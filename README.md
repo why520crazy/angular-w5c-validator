@@ -20,7 +20,9 @@ v1.0版本虽然简单的实现了想要的功能，但是没有按照模块独�
 >展示地址：http://why520crazy.github.io/w5c-validator-angular
 
 使用步骤：
-1.  HTML 中引用 dest/w5cValidator.js；
+
+1. HTML 中引用 dest/w5cValidator.js；
+
 1. 在`app.config`事件中配置全局属性和显示规则：
 ```javascript
 app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
