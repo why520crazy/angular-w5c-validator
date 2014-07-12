@@ -26,19 +26,27 @@
             }
         });
     }]);
-    app.controller("validateCtrl", function ($scope) {
+    app.controller("validateCtrl", ["$scope","$http",function ($scope,$http) {
+
+        var vm = $scope.vam = {};
+
+        vm.saveEntity = function (form) {
+            //do somethings for bz
+        };
+
+        $http.get("index.js").success(function(result){
+            vm.jsSource = result.data;
+        });
+        $http.get("validate.form.html").success(function(result){
+            vm.htmlSource = result.data;
+        });
+
         // 只是测试使用，实际Angular项目中不要在 controller中操作DOM元素
         $('.nav-tabs a').click(function (e) {
             e.preventDefault();
             $(this).tab('show');
         });
-        var vm = $scope.vam = {};
-        vm.htmlSource = "wwwww";
-        vm.jsSource = "<span>js</span>";
-        vm.mainJsSource = "<span>main.js</span>";
-        vm.saveEntity = function (form) {
-            //do somethings for bz
-        };
-    });
+
+    }]);
 
 })();
