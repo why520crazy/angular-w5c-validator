@@ -37,7 +37,12 @@
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-10">
-                        <select class="form-control">
+                        <div class="checkbox">
+                            <label>
+                                <input ng-model="vm.validateOptions.blurTrig" type="checkbox"> 光标移走触发验证
+                            </label>
+                        </div>
+                        <select class="form-control" ng-model="vm.showErrorType" ng-change="vm.changeShowType()">
                             <option value="1">每个输入框显示错误信息</option>
                             <option value="2">错误信息集中显示</option>
                         </select>

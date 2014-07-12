@@ -30,7 +30,7 @@ angular.module("w5c.validator", ["ng"])
                 }
                 return false;
             };
-            this.defalutShowError = function (elem, errorMessages) {
+            this.defaultShowError = function (elem, errorMessages) {
                 var $elem = angular.element(elem);
                 var $group = $elem.parent().parent();
                 if (!this.isEmpty($group) && !$group.hasClass("has-error")) {
@@ -38,7 +38,7 @@ angular.module("w5c.validator", ["ng"])
                     $elem.after('<span class="w5c-error">' + errorMessages[0] + '</span>');
                 }
             };
-            this.defalutRemoveError = function (elem) {
+            this.defaultRemoveError = function (elem) {
                 var $elem = angular.element(elem);
                 var $group = $elem.parent().parent();
                 if (!this.isEmpty($group) && $group.hasClass("has-error")) {
@@ -98,26 +98,28 @@ angular.module("w5c.validator", ["ng"])
                 }
                 return elementErrors;
             },
-            showError       : function (elem, errorMessages) {
-                if(this.options.showError === false){
+            showError       : function (elem, errorMessages, options) {
+                var useOptions = angular.extend({}, this.options, options);
+                if (useOptions.showError === false) {
                     return;
                 }
-                if(angular.isFunction(this.options.showError)){
-                    return this.options.showError(elem, errorMessages);
+                if (angular.isFunction(useOptions.showError)) {
+                    return useOptions.showError(elem, errorMessages);
                 }
-                if(this.options.showError === true){
-                    return this.defalutShowError(elem, errorMessages);
+                if (useOptions.showError === true) {
+                    return this.defaultShowError(elem, errorMessages);
                 }
             },
-            removeError     : function (elem) {
-                if (this.options.removeError === false) {
+            removeError     : function (elem, options) {
+                var useOptions = angular.extend({}, this.options, options);
+                if (useOptions.removeError === false) {
                     return;
                 }
-                if (angular.isFunction(this.options.removeError)) {
-                    return this.options.removeError(elem);
+                if (angular.isFunction(useOptions.removeError)) {
+                    return useOptions.removeError(elem);
                 }
-                if (this.options.removeError === true) {
-                    return this.defalutRemoveError(elem);
+                if (useOptions.removeError === true) {
+                    return this.defaultRemoveError(elem);
                 }
             }
         };
