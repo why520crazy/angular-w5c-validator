@@ -111,9 +111,7 @@ app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
 #注意事项：
 1. 由于验证使用的是 angular的form验证，所以必须要保证form和验证的元素都要有name属性；
 1. 如果你不想把验证成功事件w5c-submit写在 form上，可以直接在form里面的其他元素上使用w5cFormSubmit指令，如：
-```
-<button type="buttom" w5c-form-submit="vm.saveEntity()" class="btn btn-success"> 验证</button>
-```
+`<button type="buttom" w5c-form-submit="vm.saveEntity()" class="btn btn-success"> 验证</button>`
 1. 如果你clone了代码。本地直接打开example/index.html是不可以运行，因为我使用了 $http服务去获取 js css html，所以必须要在本地搭建服务端程序，如果你有nodejs环境，运行`npm install ` 安装module后再运行 `grunt server` ,
 如果没有grunt，用命令`npm install grunt-cli -g`安装, mac下需要 `sudo npm install grunt-cli -g`
 
