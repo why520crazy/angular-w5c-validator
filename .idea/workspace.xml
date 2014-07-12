@@ -2,568 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e0a46f8-efa5-4246-8954-0b5049cf19ec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/brown_papersq.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/pojoaque.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/school_book.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/alerts.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/alerts.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/ui-router/0.2.10/angular-ui-router.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular/1.0.8/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular/1.2.0/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/arta.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/ascetic.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/atelier-dune.dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/atelier-dune.light.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/atelier-forest.dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/atelier-forest.light.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/atelier-heath.dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/atelier-heath.light.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/atelier-lakeside.dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/atelier-lakeside.light.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/atelier-seaside.dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/atelier-seaside.light.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/badges.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/badges.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/bootstrap.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/breadcrumbs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/breadcrumbs.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/brown_paper.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/button-groups.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/button-groups.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/buttons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/buttons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/carousel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/carousel.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/close.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/close.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/code.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/code.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/component-animations.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/component-animations.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/default.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/docco.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/dropdowns.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/dropdowns.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/far.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/forms.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/forms.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/foundation.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/github.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/glyphicons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/glyphicons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/googlecode.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/grid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/grid.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/highlight.pack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/idea.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/input-groups.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/input-groups.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/ir_black.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/jquery/1.11.0/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/jumbotron.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/jumbotron.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/labels.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/labels.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/list-group.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/list-group.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/magula.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/media.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/media.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/mixins.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/modals.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/modals.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/mono-blue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/monokai.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/monokai_sublime.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/navbar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/navbar.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/navs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/navs.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/normalize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/normalize.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/obsidian.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/pager.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/pager.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/pagination.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/pagination.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/panels.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/panels.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/paraiso.dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/paraiso.light.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/pojoaque.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/popovers.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/popovers.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/print.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/print.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/progress-bars.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/progress-bars.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/railscasts.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/rainbow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/responsive-utilities.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/responsive-utilities.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/scaffolding.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/scaffolding.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/school_book.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/solarized_dark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/solarized_light.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/css/style.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/sunburst.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/tables.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/tables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/theme.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/thumbnails.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/thumbnails.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/tomorrow-night-blue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/tomorrow-night-bright.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/tomorrow-night-eighties.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/tomorrow-night.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/tomorrow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/tooltip.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/tooltip.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/type.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/type.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/ui-bootstrap/0.9.0/ui-bootstrap-tpls.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/ui-bootstrap/0.9.0/ui-bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/utilities.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/utilities.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/variables.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/vs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/wells.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/wells.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/xcode.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example/lib/angular-ui/highlight/8.0/styles/zenburn.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/compiler-20130603.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/style.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/angular_sortable.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bg_hr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/blacktocat.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/icon_download.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/sprite_download.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascripts/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.0.8/angular-resource.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.2/angular-animate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.2/angular-cookies.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.2/angular-loader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.2/angular-mocks.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.2/angular-resource.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.2/angular-route-BF.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.2/angular-route.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.2/angular-sanitize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.2/angular-scenario.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.2/angular-touch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.2/angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.3/angular-animate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.3/angular-cookies.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.3/angular-loader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.3/angular-mocks.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.3/angular-resource.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.3/angular-route.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.3/angular-sanitize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.3/angular-scenario.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.3/angular-touch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/angular/1.2.3/angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/bootstrap.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery-ui-i18n.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-af.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-ar-DZ.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-az.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-bs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-cy-GB.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-en-AU.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-en-GB.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-en-NZ.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-eo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-et.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-eu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-fa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-fi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-fo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-fr-CH.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-gl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-he.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-hi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-hy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-id.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-is.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-ka.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-kk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-km.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-lb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-lt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-lv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-mk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-ml.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-ms.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-nl-BE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-pt-BR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-pt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-rm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-ro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-sq.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-sr-SR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-sr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-ta.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-th.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-tj.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-uk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-vi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-zh-CN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-zh-HK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/i18n/jquery.ui.datepicker-zh-TW.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/jquery-ui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/jquery-ui[ALL].js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/jquery-ui[custom].js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/images/ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/images/ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/images/ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/images/ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/images/ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/images/ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/jquery-ui.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/minified/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/minified/images/ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/minified/images/ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/minified/images/ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/minified/images/ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/1.9.2/themes/base/minified/images/ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery-ui/jquery-ui.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/1.9.1/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/Caret/0.0.1/jquery.caret.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/IframeTransport/1.7.0/jquery.iframe-transport.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/IframeTransport/1.8.1/jquery.iframe-transport.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/JavaScript-Canvas-to-Blob/2.0.5/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/JavaScript-Canvas-to-Blob/2.0.5/canvas-to-blob.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/JavaScript-Load-Image/1.6.0/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/JavaScript-Load-Image/1.6.0/load-image.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/JavaScript-Load-Image/1.9.0/load-image-exif-map.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/JavaScript-Load-Image/1.9.0/load-image-exif.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/JavaScript-Load-Image/1.9.0/load-image-ios.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/JavaScript-Load-Image/1.9.0/load-image-meta.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/JavaScript-Load-Image/1.9.0/load-image-orientation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/JavaScript-Load-Image/1.9.0/load-image.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/atwho/0.3.1/jquery.atwho.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/atwho/0.3.1/jquery.atwho.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/atwho/0.3.2/jquery.atwho.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/atwho/0.3.2/jquery.atwho.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/atwho/0.3.2/jquery.atwho_YB.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/fancybox_loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/fancybox_loading@2x.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/fancybox_overlay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/fancybox_sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/fancybox_sprite@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/helpers/fancybox_buttons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/helpers/jquery.fancybox-buttons.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/helpers/jquery.fancybox-buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/helpers/jquery.fancybox-media.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/helpers/jquery.fancybox-thumbs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/helpers/jquery.fancybox-thumbs.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/jquery.fancybox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/jquery.fancybox.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fancybox/2.1.5/source/jquery.fancybox.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/angularjs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/basic-plus.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/basic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/blueimp-file-upload.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/cors/postmessage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/cors/result.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/img/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/img/progressbar.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/jquery-ui.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/cors/jquery.postmessage-transport.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/cors/jquery.xdr-transport.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/jquery.fileupload-angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/jquery.fileupload-audio.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/jquery.fileupload-image.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/jquery.fileupload-jquery-ui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/jquery.fileupload-process.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/jquery.fileupload-ui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/jquery.fileupload-validate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/jquery.fileupload-video.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/jquery.fileupload.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/jquery.iframe-transport.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/js/vendor/jquery.ui.widget.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/8.8.5/worktile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/angularjs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/basic-plus.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/basic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/blueimp-file-upload.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/cors/postmessage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/cors/result.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/img/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/img/progressbar.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/jquery-ui.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/cors/jquery.postmessage-transport.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/cors/jquery.xdr-transport.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/jquery.fileupload-angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/jquery.fileupload-angular_YB.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/jquery.fileupload-audio.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/jquery.fileupload-image.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/jquery.fileupload-jquery-ui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/jquery.fileupload-process.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/jquery.fileupload-ui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/jquery.fileupload-validate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/jquery.fileupload-video.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/jquery.fileupload.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/jquery.iframe-transport.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/js/vendor/jquery.ui.widget.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fileupload/9.4.2/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fullcalendar/1.6.3/changelog.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fullcalendar/1.6.3/fullcalendar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fullcalendar/1.6.3/fullcalendar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fullcalendar/1.6.3/fullcalendar.print.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fullcalendar/1.6.3/gcal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fullcalendar/1.6.4/changelog.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fullcalendar/1.6.4/fullcalendar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fullcalendar/1.6.4/fullcalendar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fullcalendar/1.6.4/fullcalendar.print.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/fullcalendar/1.6.4/gcal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/jcrop/0.9.12/Jcrop.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/jcrop/0.9.12/jquery.Jcrop.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/jcrop/0.9.12/jquery.Jcrop.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/COPYING.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/demo/jquery_ui_sortable_example.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/demo/keyboard_nav_example.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/demo/loading_each_script_separately.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/demo/max-height_example.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/demo/max-width_example.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/demo/multiple_scrollbars_example.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/demo/nested_scrollbars_demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/demo/nested_scrollbars_demo_alt.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/demo/nested_scrollbars_demo_alt_2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/demo/scroll_buttons_and_snap_scrolling_examples.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/demo/scrollbar_themes_demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/demo/simple_example.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/demo/simple_example_all_params.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/demo/textarea_example.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/jquery.mCustomScrollbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/jquery.mCustomScrollbar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/js/jquery.mCustomScrollbar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/mCSB_buttons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mCustomScrollbar/2.8.2/readme.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/metadata/jquery.metadata.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/mousewheel/3.0.6/jquery.mousewheel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/pagination/jquery.pagination.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/additional-methods.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/additional-methods.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/jquery.validate.init.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/jquery.validate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/jquery.validate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_et.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_eu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_fa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_fi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_he.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_ka.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_kk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_lt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_lv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_my.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_pt_BR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_pt_PT.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_ro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_si.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_sr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_th.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_uk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_vi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_zh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/messages_zh_TW.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/methods_de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/methods_nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery/validate/1.11.0/localization/methods_pt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/underscore/1.5.1/underscore.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/example/css/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/angular/1.0.8/angular.js" afterPath="$PROJECT_DIR$/example/lib/angular/1.0.8/angular.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/angular/1.2.0/angular.js" afterPath="$PROJECT_DIR$/example/lib/angular/1.2.0/angular.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/.editorconfig" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/.editorconfig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/.gitignore" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/.travis.yml" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/.travis.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/alerts.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/alerts.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/alerts.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/alerts.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/badges.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/badges.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/badges.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/badges.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/bootstrap-theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/bootstrap.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/breadcrumbs.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/breadcrumbs.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/breadcrumbs.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/breadcrumbs.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/button-groups.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/button-groups.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/button-groups.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/button-groups.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/buttons.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/buttons.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/buttons.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/buttons.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/carousel.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/carousel.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/carousel.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/carousel.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/close.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/close.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/close.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/close.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/code.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/code.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/code.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/code.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/component-animations.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/component-animations.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/component-animations.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/component-animations.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/dropdowns.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/dropdowns.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/dropdowns.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/dropdowns.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/forms.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/forms.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/forms.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/forms.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/glyphicons.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/glyphicons.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/glyphicons.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/glyphicons.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/grid.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/grid.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/grid.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/grid.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/input-groups.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/input-groups.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/input-groups.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/input-groups.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/jumbotron.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/jumbotron.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/jumbotron.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/jumbotron.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/labels.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/labels.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/labels.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/labels.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/list-group.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/list-group.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/list-group.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/list-group.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/media.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/media.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/media.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/media.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/mixins.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/mixins.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/mixins.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/mixins.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/modals.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/modals.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/modals.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/modals.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/navbar.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/navbar.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/navbar.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/navbar.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/navs.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/navs.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/navs.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/navs.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/normalize.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/normalize.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/normalize.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/normalize.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/pager.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/pager.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/pager.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/pager.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/pagination.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/pagination.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/pagination.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/pagination.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/panels.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/panels.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/panels.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/panels.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/popovers.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/popovers.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/popovers.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/popovers.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/print.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/print.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/print.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/print.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/progress-bars.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/progress-bars.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/progress-bars.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/progress-bars.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/responsive-utilities.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/responsive-utilities.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/responsive-utilities.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/responsive-utilities.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/scaffolding.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/scaffolding.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/scaffolding.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/scaffolding.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/tables.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/tables.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/tables.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/tables.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/theme.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/theme.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/theme.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/thumbnails.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/thumbnails.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/thumbnails.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/thumbnails.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/tooltip.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/tooltip.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/tooltip.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/tooltip.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/type.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/type.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/type.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/type.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/utilities.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/utilities.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/utilities.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/utilities.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/variables.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/variables.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/variables.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/variables.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/wells.css" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/wells.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/css/wells.less" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/css/wells.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/js/bootstrap.js" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/js/bootstrap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/3.0.0/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/example/lib/bootstrap/3.0.0/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/w5cValidator.js" afterPath="$PROJECT_DIR$/src/w5cValidator.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stylesheets/pygment_trac.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stylesheets/stylesheet.css" afterPath="" />
     </list>
     <ignored path="w5c-validator-angular-gh-pages.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -597,20 +38,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6296296" vertical-offset="0" max-vertical-offset="442">
+            <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="442">
               <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="204">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="404">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -711,34 +152,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="w5c-validator-angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="w5c-validator-angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="w5c-validator-angular-gh-pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="w5c-validator-angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -856,14 +269,23 @@
       <created>1386078505990</created>
       <updated>1386078505990</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Merge branch 'master' into gh-pages&#10;&#10;Conflicts:&#10;&#9;src/w5cValidator.js&#10;">
+      <created>1405137855347</created>
+      <updated>1405137855347</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Merge branch 'master' into gh-pages&#10;&#10;Conflicts:&#10;&#9;src/w5cValidator.js&#10;">
+      <created>1405137868958</created>
+      <updated>1405137868958</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33040935" sideWeight="0.4995958" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32991204" sideWeight="0.4995958" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -871,13 +293,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33073324" sideWeight="0.5004042" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32894737" sideWeight="0.4995958" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.4995958" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15756631" sideWeight="0.4995958" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -904,7 +325,8 @@
     <MESSAGE value="修改验证可以传入 show_error remove_error方法" />
     <MESSAGE value="修改名字" />
     <MESSAGE value="add" />
-    <option name="LAST_COMMIT_MESSAGE" value="add" />
+    <MESSAGE value="Merge branch 'master' into gh-pages&#10;&#10;Conflicts:&#10;&#9;src/w5cValidator.js&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' into gh-pages&#10;&#10;Conflicts:&#10;&#9;src/w5cValidator.js&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -950,14 +372,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="431">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/params.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="418">
@@ -968,8 +382,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6296296" vertical-offset="0" max-vertical-offset="442">
+        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="442">
           <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="431">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
