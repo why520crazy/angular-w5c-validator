@@ -1,0 +1,140 @@
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="why520crazy">
+    <meta name="author" content="why520crazy">
+
+    <title>angular js validate</title>
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+<!--<div class="container">-->
+<div class="wrap">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">w5cValidator - angular验证框架扥扩展</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <!--<li class="{{=it.path == 'index' ? 'active' : ''}}"><a href="/">首页</a></li>-->
+                    <!--<li class="{{=it.path == 'about' ? 'active' : ''}}"><a href="/about">关于</a></li>-->
+
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <div class="container" data-ng-controller="validateCtrl" ng-cloak="">
+        <div class="row">
+            <div class="col-md-6">
+                <form class="form-horizontal w5c-form demo-form" role="form" w5c-submit="vm.saveEntity(form_validate)"
+                      w5c-form-validate="" novalidate name="validateForm">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">邮箱</label>
+
+                        <div class="col-sm-10">
+                            <input type="email" name="email" ng-model="entity.email" required="" class="form-control"
+                                   placeholder="输入邮箱">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">用户名</label>
+
+                        <div class="col-sm-10">
+                            <input required="" ng-pattern="/^[A-Za-z]{1}[0-9A-Za-z_]{1,19}$/" ng-model="entity.name"
+                                   class="form-control" name="user_name" placeholder="输入用户名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">密码</label>
+
+                        <div class="col-sm-10">
+                            <input type="password" required="" ng-model="entity.password" name="password"
+                                   class="form-control"
+                                   placeholder="输入密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">数字</label>
+
+                        <div class="col-sm-10">
+                            <input type="number" required="" ng-model="entity.number" name="number" class="form-control"
+                                   placeholder="输入数字">
+                        </div>
+                    </div>
+                    <div class="form-group" ng-show="validateForm.$errors.length > 0">
+                        <label class="col-sm-2 control-label"></label>
+
+                        <div class="col-sm-10">
+                            <div class="alert alert-danger">{{validateForm.$errors[0]}}</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-success"> 验证</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-md-6">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="active"><a href="#html" role="tab" data-toggle="tab">HTML</a></li>
+                    <li><a href="#js" role="tab" data-toggle="tab">js</a></li>
+                    <li><a href="#main_js" role="tab" data-toggle="tab">main.js</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="html">
+                        <prev>
+                               <div>{{vm.htmlSource}}</div>
+                        </prev>
+                    </div>
+                    <div class="tab-pane" id="js">
+                        <prev>
+                            <code>
+
+                            </code>
+                        </prev>
+                    </div>
+                    <div class="tab-pane" id="main_js">mainjs</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+
+        <div class="pull-left">
+            <p class="text-muted credit">
+                <span>版权所有 © 2013 why520crazy</span></p></div>
+        <div class="pull-right text-muted credit">
+            <a target="_blank" href="http://weibo.com/why520crazy">新浪微博 @why520crazy</a> |
+            <a target="_blank" href="http://why520crazy.cnblogs.com/">博客园博客</a> |
+            <a target="_blank" href="https://worktile.com">Worktile</a>
+        </div>
+
+    </div>
+</div>
+<!--</div>-->
+
+<script src="lib/jquery/1.11.0/jquery.js"></script>
+<script src="lib/angular/1.2.0/angular.js"></script>
+<script src="lib/bootstrap/3.0.0/js/bootstrap.js"></script>
+<script src="../src/w5cValidator.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
