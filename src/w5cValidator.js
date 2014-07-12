@@ -7,13 +7,13 @@
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', function () {
         var defaultRules = {
-                required      : "该选项不能为空",
-                maxlength     : "该选项输入值长度不能大于{maxlength}",
-                minlength     : "该选项输入值长度不能小于{minlength}",
-                email         : "输入邮件的格式不正确",
-                repeat        : "两次输入不一致",
-                pattern       : "该选项输入格式不正确",
-                number        : "必须输入数字",
+                required: "该选项不能为空",
+                maxlength: "该选项输入值长度不能大于{maxlength}",
+                minlength: "该选项输入值长度不能小于{minlength}",
+                email: "输入邮件的格式不正确",
+                repeat: "两次输入不一致",
+                pattern: "该选项输入格式不正确",
+                number: "必须输入数字",
                 w5cuniquecheck: "该输入值已经存在，请重新输入"
             },
             elemTypes = ['text', 'password', 'email', 'number', ['textarea'], ['select'], ['select-one']];
@@ -31,8 +31,8 @@ angular.module("w5c.validator", ["ng"])
                 return false;
             };
             this.options = {
-                blurTrig   : false,
-                showError  : function (elem, errorMessages) {
+                blurTrig: false,
+                showError: function (elem, errorMessages) {
                     var $elem = angular.element(elem);
                     var $group = $elem.parent().parent();
                     if (!this.isEmpty($group) && !$group.hasClass("has-error")) {
@@ -52,14 +52,14 @@ angular.module("w5c.validator", ["ng"])
         };
 
         validatorFn.prototype = {
-            constructor     : validatorFn,
-            config          : function (options) {
+            constructor: validatorFn,
+            config: function (options) {
                 this.options = angular.extend(this.options, options);
             },
-            setRules        : function (rules) {
+            setRules: function (rules) {
                 this.rules = rules;
             },
-            getErrorMessage : function (validationName, elem) {
+            getErrorMessage: function (validationName, elem) {
                 var msgTpl = null;
                 if (!this.isEmpty(this.rules[elem.name]) && !this.isEmpty(this.rules[elem.name][validationName])) {
                     msgTpl = this.rules[elem.name][validationName];
@@ -115,8 +115,7 @@ angular.module("w5c.validator", ["ng"])
             return validator;
         }
     })
-    .
-    directive("w5cFormValidate", ['$parse', 'w5cValidator', function ($parse, w5cValidator) {
+    .directive("w5cFormValidate", ['$parse', 'w5cValidator', function ($parse, w5cValidator) {
         return{
             link: function (scope, form, attr) {
                 var formElem = form[0],
@@ -219,7 +218,7 @@ angular.module("w5c.validator", ["ng"])
     .directive("w5cFormSubmit", ['$parse', function ($parse) {
         return{
             require: "w5cFormValidate",
-            link   : function (scope, element, attr) {
+            link: function (scope, element, attr) {
                 var validSuccessFn = $parse(attr.w5cFormSubmit);
                 var formName = element.parents("form").attr("name");
                 var form = scope.$eval(formName);
@@ -264,7 +263,7 @@ angular.module("w5c.validator", ["ng"])
         'use strict';
         return {
             require: "ngModel",
-            link   : function (scope, elem, attrs, ctrl) {
+            link: function (scope, elem, attrs, ctrl) {
                 var otherInput = elem.inheritedData("$formController")[attrs.w5cRepeat];
 
                 ctrl.$parsers.push(function (value) {
@@ -285,7 +284,7 @@ angular.module("w5c.validator", ["ng"])
     .directive("w5cUniqueCheck", ['$timeout', '$http', function ($timeout, $http) {
         return{
             require: "ngModel",
-            link   : function (scope, elem, attrs, ngModel) {
+            link: function (scope, elem, attrs, ngModel) {
                 var doValidate = function () {
                     var attValues = scope.$eval(attrs.w5cUniqueCheck);
                     var url = attValues.url;
@@ -324,4 +323,3 @@ angular.module("w5c.validator", ["ng"])
             }
         };
     }]);
-;
