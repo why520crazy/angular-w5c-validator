@@ -106,7 +106,7 @@ app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
         </div>
     </div>
 </form>
-``</pre>
+</pre>
 
 #注意事项：
 1. 由于验证使用的是 angular的form验证，所以必须要保证form和验证的元素都要有name属性；
