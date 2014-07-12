@@ -116,6 +116,7 @@ app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
 
 #参数
 
+
 |名称|默认值|作用
 |------|-----|------
 |blurTrig|false|光标移除元素后是否验证并显示错误提示信息
