@@ -23,7 +23,9 @@ v1.0版本虽然简单的实现了想要的功能，但是没有按照模块独�
 
 1. HTML 中引用 dest/w5cValidator.js；
 
-2. 在`app.config`事件中配置全局属性和显示规则：
+1. 启动module引用 "w5c.validator"，如:` var app = angular.module("app", ["w5c.validator"]);`
+
+1. 在`app.config`事件中配置全局属性和显示规则：
 <pre>
 app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
 
