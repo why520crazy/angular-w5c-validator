@@ -23,7 +23,9 @@ v1.0版本虽然简单的实现了想要的功能，但是没有按照模块独�
 
 1. HTML 中引用 dest/w5cValidator.js；
 
-2. 在`app.config`事件中配置全局属性和显示规则：
+1. 启动module引用 "w5c.validator"，如:` var app = angular.module("app", ["w5c.validator"]);`
+
+1. 在`app.config`事件中配置全局属性和显示规则：
 <pre>
 app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
 
@@ -114,6 +116,7 @@ app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
 `<button type="buttom" w5c-form-submit="vm.saveEntity()" class="btn btn-success"> 验证</button>`
 1. 如果你clone了代码。本地直接打开example/index.html是不可以运行，因为我使用了 $http服务去获取 js css html，所以必须要在本地搭建服务端程序，如果你有nodejs环境，运行`npm install ` 安装module后再运行 `grunt server` ,
 如果没有grunt，用命令`npm install grunt-cli -g`安装, mac下需要 `sudo npm install grunt-cli -g`
+1. 如果你不想安装node grunt等乱七八糟的玩意，直接打开example/index-local.html 即可运行。
 
 #参数
 
