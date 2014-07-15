@@ -57,7 +57,7 @@ body code {
 .w5c-form input.error:invalid,
 .w5c-form textarea.error:invalid,
 .w5c-form select.error:invalid {
-  border-color: #e9322d;
+  border-color: #b94a48;
   -webkit-box-shadow: 0 0 6px #f8b9b7;
   -moz-box-shadow: 0 0 6px #f8b9b7;
   box-shadow: 0 0 6px #f8b9b7;
@@ -68,6 +68,11 @@ body code {
 }
 .w5c-form .alert {
   margin-bottom: 0px;
+}
+.w5c-form .w5c-error {
+  color: #b94a48;
+  display: block;
+  margin-top: 5px;
 }
 /*!
  * Bootstrap v3.0.0
