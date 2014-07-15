@@ -13,8 +13,7 @@ w5cValidator 插件基于angular原有的表单验证，在原有的基础上扩
 >代码地址：https://github.com/why520crazy/w5c-validator-angular
 
 关于v1.x版本的介绍参见：http://www.ngnice.com/posts/69f774dc4d3190
-
-v1.0版本虽然简单的实现了想要的功能，但是没有按照模块独立出来，而且有很多代码不是很规范，这次正好抽时间重构了代码，直接升级到了 v2.0.0版本，同时也完善了一些展示案例功能。
+v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立出来，而且有很多代码不是很规范，这次正好重构了之前的代码，直接升级到了 v2.0.0版本，同时也完善了展示案例功能。
 
 如果你已经足够了解了angular或者之前使用过 w5cValidator，可以直接看展示程序：
 >展示地址：http://why520crazy.github.io/w5c-validator-angular
