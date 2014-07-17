@@ -45,57 +45,57 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
         }]);
     ```
 1. 在HTML模板中form上使用指令 w5c-form-validate 和 w5c-submit，w5c-form-validate指令表示该表单采用 w5cValidator的验证规则；w5c-submit 表示验证成功后调用的事件，当然w5c-submit可以不填写；
-        ```
-        <form class="form-horizontal w5c-form demo-form" role="form" w5c-submit="vm.saveEntity()"
-              w5c-form-validate="vm.validateOptions" novalidate name="validateForm">
-            <div class="form-group">
-                <label class="col-sm-2 control-label">邮箱</label>
-        
-                <div class="col-sm-10">
-                    <input type="email" name="email" ng-model="entity.email" required="" class="form-control"
-                           placeholder="输入邮箱" />
-                </div>
+    ```
+    <form class="form-horizontal w5c-form demo-form" role="form"
+          w5c-form-validate="vm.validateOptions" novalidate name="validateForm">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">邮箱</label>
+
+            <div class="col-sm-10">
+                <input type="email" name="email" ng-model="entity.email" required="" class="form-control"
+                       placeholder="输入邮箱">
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">用户名</label>
-        
-                <div class="col-sm-10">
-                    <input required="" ng-pattern="/^[A-Za-z]{1}[0-9A-Za-z_]{1,19}$/" ng-model="entity.name"
-                           class="form-control" name="username" placeholder="输入用户名" />
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">用户名</label>
+
+            <div class="col-sm-10">
+                <input required="" ng-pattern="/^[A-Za-z]{1}[0-9A-Za-z_]{1,19}$/" ng-model="entity.name"
+                       class="form-control" name="username" placeholder="输入用户名">
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">密码</label>
-        
-                <div class="col-sm-10">
-                    <input type="password" required="" ng-model="entity.password" name="password"
-                           class="form-control" ng-minlength="5" ng-maxlength="15"
-                           placeholder="输入密码" ></input>
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">密码</label>
+
+            <div class="col-sm-10">
+                <input type="password" required="" ng-model="entity.password" name="password"
+                       class="form-control" ng-minlength="5" ng-maxlength="15"
+                       placeholder="输入密码">
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">数字</label>
-        
-                <div class="col-sm-10">
-                    <input type="number" required="" ng-model="entity.number" name="number" class="form-control"
-                           placeholder="输入数字" />
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">数字</label>
+
+            <div class="col-sm-10">
+                <input type="number" required="" ng-model="entity.number" name="number" class="form-control"
+                       placeholder="输入数字">
             </div>
-            <div class="form-group" ng-show="validateForm.$errors.length > 0 && vm.showErrorType == 2">
-                <label class="col-sm-2 control-label"></label>
-        
-                <div class="col-sm-10">
-                    <div class="alert alert-danger">{{validateForm.$errors[0]}}</div>
-                </div>
+        </div>
+        <div class="form-group" ng-show="validateForm.$errors.length > 0 && vm.showErrorType == 2">
+            <label class="col-sm-2 control-label"></label>
+
+            <div class="col-sm-10">
+                <div class="alert alert-danger">{{validateForm.$errors[0]}}</div>
             </div>
-        
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-success"> 验证</button>
-                </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="buttom" w5c-form-submit="vm.saveEntity()" class="btn btn-success"> 验证</button>
             </div>
-        </form>
-        ```
+        </div>
+    </form>
+    ```
 
 #注意事项：
 1. 由于验证使用的是 angular的form验证，所以必须要保证form和验证的元素都要有name属性；
