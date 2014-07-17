@@ -25,7 +25,7 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
 1. 启动module引用 "w5c.validator"，如:` var app = angular.module("app", ["w5c.validator"]);`
 
 1. 在`app.config`事件中配置全局属性和显示规则：
-        <pre>
+        ```
         app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
         
                 // 全局配置
@@ -54,8 +54,7 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
                     }
                 });
             }]);
-        </pre>
-
+        ```
 1. 在HTML模板中form上使用指令 w5c-form-validate 和 w5c-submit，w5c-form-validate指令表示该表单采用 w5cValidator的验证规则；w5c-submit 表示验证成功后调用的事件，当然w5c-submit可以不填写；
         ```
         <form class="form-horizontal w5c-form demo-form" role="form" w5c-submit="vm.saveEntity()"
