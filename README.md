@@ -25,36 +25,25 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
 1. 启动module引用 "w5c.validator"，如:` var app = angular.module("app", ["w5c.validator"]);`
 
 1. 在`app.config`事件中配置全局属性和显示规则：
-        ```
-        app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
-        
-                // 全局配置
-                w5cValidatorProvider.config({
-                    blurTrig   : false,
-                    showError  : true,
-                    removeError: true
-        
-                });
-                w5cValidatorProvider.setRules({
-                    email   : {
-                        required: "输入的邮箱地址不能为空",
-                        email   : "输入邮箱地址格式不正确"
-                    },
-                    username: {
-                        required: "输入的用户名不能为空",
-                        pattern : "用户名必须输入字母、数字、下划线,以字母开头"
-                    },
-                    password: {
-                        required : "密码不能为空",
-                        minlength: "密码长度不能小于{minlength}",
-                        maxlength: "密码长度不能大于{maxlength}"
-                    },
-                    number  : {
-                        required: "数字不能为空"
-                    }
-                });
-            }]);
-        ```
+    ```
+     app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
+
+            // 全局配置
+            w5cValidatorProvider.config({
+                blurTrig   : false,
+                showError  : true,
+                removeError: true
+
+            });
+            w5cValidatorProvider.setRules({
+                email   : {
+                    required: "输入的邮箱地址不能为空",
+                    email   : "输入邮箱地址格式不正确"
+                },
+                ...
+            });
+        }]);
+    ```
 1. 在HTML模板中form上使用指令 w5c-form-validate 和 w5c-submit，w5c-form-validate指令表示该表单采用 w5cValidator的验证规则；w5c-submit 表示验证成功后调用的事件，当然w5c-submit可以不填写；
         ```
         <form class="form-horizontal w5c-form demo-form" role="form" w5c-submit="vm.saveEntity()"
