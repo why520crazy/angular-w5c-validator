@@ -92,6 +92,9 @@ module.exports = function (grunt) {
         },
         pkg    : grunt.file.readJSON('package.json'),
         concat : {
+            options: {
+                banner: '/*! <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            },
             js   : {
                 src : ["src/w5cValidator.js", "src/directive.js"],
                 dest: 'example/w5cValidator.js'
@@ -103,7 +106,7 @@ module.exports = function (grunt) {
         },
         uglify : {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                banner: '/*! <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build  : {
                 src : 'dist/w5cValidator.js',
