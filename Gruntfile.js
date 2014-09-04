@@ -98,7 +98,7 @@ module.exports = function (grunt) {
             },
             basic: {
                 src : ["src/w5cValidator.js", "src/directive.js"],
-                dest: 'dest/w5cValidator.js'
+                dest: 'dist/w5cValidator.js'
             }
         },
         uglify : {
@@ -106,8 +106,8 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build  : {
-                src : 'dest/w5cValidator.js',
-                dest: 'dest/w5cValidator.min.js'
+                src : 'dist/w5cValidator.js',
+                dest: 'dist/w5cValidator.min.js'
             }
         },
         copy   : {

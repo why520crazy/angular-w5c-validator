@@ -20,7 +20,7 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
 
 使用步骤：
 
-1. HTML 中引用 dest/w5cValidator.js；
+1. HTML 中引用 dist/w5cValidator.js；
 
 1. 启动module引用 "w5c.validator"，如:` var app = angular.module("app", ["w5c.validator"]);`
 
