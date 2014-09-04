@@ -20,7 +20,8 @@
             },
             username: {
                 required: "输入的用户名不能为空",
-                pattern: "用户名必须输入字母、数字、下划线,以字母开头"
+                pattern: "用户名必须输入字母、数字、下划线,以字母开头",
+                w5cuniquecheck:"输入用户名已经存在，请重新输入"
             },
             password: {
                 required: "密码不能为空",
