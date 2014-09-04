@@ -2,14 +2,11 @@ w5c-validator
 =====================
 
 w5c-validator for angular.js
-主要是基于angular.js做的一个扩展插件，统一验证规则和提示信息
 
-demo演示：http://why520crazy.github.io/w5c-validator-angular
+w5cValidator 插件基于angular.js原有的表单验证，统一验证规则和提示信息，在原有的基础上扩展了一些错误提示的功能，让大家不用在每个表单上写一些提示信息的模板，专心的去实现业务逻辑。
+w5c validator自身提示信息样式使用了bootstrap的方式，当然你可以很好的扩展自己的提示方式（比如tooltip等）
 
-w5c validator自身提示信息样式使用了bootstrap的方式，当然你可以很好的扩展自己的提示方式
-
-w5cValidator 插件基于angular原有的表单验证，在原有的基础上扩展了一些错误提示的功能，让大家不用在每个表单上写一些提示信息的模板，专心的去实现业务逻辑。
-
+>demo演示：http://why520crazy.github.io/w5c-validator-angular
 >代码地址：https://github.com/why520crazy/w5c-validator-angular
 
 关于v1.x版本的介绍参见：http://www.ngnice.com/posts/69f774dc4d3190
@@ -97,6 +94,10 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
     </form>
     ```
 
+#验证规则
+AngularJS原生支持很多种验证规则，比如：require（必填项），email，pattern（正则），maxlength，minlength，number，url，max，min
+w5cValidator提供了w5c-repeat（级联重复，常用于重复密码）和w5cUniqueCheck (远程验证，常用于检验用户名邮箱是否存在)
+
 #注意事项：
 1. 由于验证使用的是 angular的form验证，所以必须要保证form和验证的元素都要有name属性；
 1. 如果你不想把验证成功事件w5c-submit写在 form上，可以直接在form里面的其他元素上使用w5cFormSubmit指令，如：
@@ -104,6 +105,7 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
 1. 如果你clone了代码。本地直接打开example/index.html是不可以运行，因为我使用了 $http服务去获取 js css html，所以必须要在本地搭建服务端程序，如果你有nodejs环境，运行`npm install ` 安装module后再运行 `grunt server` ,
 如果没有grunt，用命令`npm install grunt-cli -g`安装, mac下需要 `sudo npm install grunt-cli -g`
 1. 如果你不想安装node grunt等乱七八糟的玩意，直接打开example/index-local.html 即可运行。
+1. w5cUniqueCheck默认检验是否已经存在，存在验证不通过，不存在验证通过，如果isExists设置为false表示：存在验证通过，不存在验证不通过。
 
 #参数
 
