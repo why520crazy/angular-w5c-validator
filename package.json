@@ -1,6 +1,6 @@
 {
     "name"           : "w5cValidator",
-    "version"        : "2.0.0",
+    "version"        : "2.1.0",
     "devDependencies": {
         "grunt"                 : "~0.4.1",
         "grunt-contrib-concat"  : "~0.3.0",

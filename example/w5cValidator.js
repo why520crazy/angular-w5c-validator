@@ -1,5 +1,5 @@
 /**
- * @license w5cValidator v2.0.0
+ * @license w5cValidator v2.1.0
  * (c) 2013-2014
  * Author: @why520crazy
  * License: NONE
