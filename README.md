@@ -57,7 +57,8 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
 
             <div class="col-sm-10">
                 <input required="" ng-pattern="/^[A-Za-z]{1}[0-9A-Za-z_]{1,19}$/" ng-model="entity.name"
-                       class="form-control" name="username" placeholder="输入用户名">
+                       w5c-unique-check="{url:'http://www.ngnice.com/api/test/user/name/check?name='+entity.name}"
+                       class="form-control" name="username" placeholder="输入用户名（输入why520crazy验证存在）">
             </div>
         </div>
         <div class="form-group">
@@ -67,6 +68,15 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
                 <input type="password" required="" ng-model="entity.password" name="password"
                        class="form-control" ng-minlength="5" ng-maxlength="15"
                        placeholder="输入密码">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">重复密码</label>
+
+            <div class="col-sm-10">
+                <input type="password" required="" w5c-repeat="password" ng-model="entity.repeatPassword" name="repeatPassword"
+                       class="form-control"
+                       placeholder="重复密码">
             </div>
         </div>
         <div class="form-group">
