@@ -1,12 +1,11 @@
 w5c-validator
 =====================
 
-w5c-validator for angular.js
-
 w5cValidator 插件基于angular.js原有的表单验证，统一验证规则和提示信息，在原有的基础上扩展了一些错误提示的功能，让大家不用在每个表单上写一些提示信息的模板，专心的去实现业务逻辑。
 w5c validator自身提示信息样式使用了bootstrap的方式，当然你可以很好的扩展自己的提示方式（比如tooltip等）
 
 >demo演示：http://why520crazy.github.io/w5c-validator-angular
+
 >代码地址：https://github.com/why520crazy/w5c-validator-angular
 
 关于v1.x版本的介绍参见：http://www.ngnice.com/posts/69f774dc4d3190
@@ -58,7 +57,8 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
 
             <div class="col-sm-10">
                 <input required="" ng-pattern="/^[A-Za-z]{1}[0-9A-Za-z_]{1,19}$/" ng-model="entity.name"
-                       class="form-control" name="username" placeholder="输入用户名">
+                       w5c-unique-check="{url:'http://www.ngnice.com/api/test/user/name/check?name='+entity.name}"
+                       class="form-control" name="username" placeholder="输入用户名（输入why520crazy验证存在）">
             </div>
         </div>
         <div class="form-group">
@@ -68,6 +68,15 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
                 <input type="password" required="" ng-model="entity.password" name="password"
                        class="form-control" ng-minlength="5" ng-maxlength="15"
                        placeholder="输入密码">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">重复密码</label>
+
+            <div class="col-sm-10">
+                <input type="password" required="" w5c-repeat="password" ng-model="entity.repeatPassword" name="repeatPassword"
+                       class="form-control"
+                       placeholder="重复密码">
             </div>
         </div>
         <div class="form-group">
@@ -96,6 +105,7 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
 
 #验证规则
 AngularJS原生支持很多种验证规则，比如：require（必填项），email，pattern（正则），maxlength，minlength，number，url，max，min
+
 w5cValidator提供了w5c-repeat（级联重复，常用于重复密码）和w5cUniqueCheck (远程验证，常用于检验用户名邮箱是否存在)
 
 #注意事项：
