@@ -33,21 +33,66 @@
     <div class="container" data-ng-controller="validateCtrl" ng-cloak="">
         <div class="row">
             <div class="col-md-5">
-                <ng-include src="'validate.form.html'"></ng-include>
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-10">
-                        <div class="checkbox">
-                            <label>
-                                <input ng-model="vm.validateOptions.blurTrig" type="checkbox"> 光标移走触发验证
-                            </label>
+                <tabset>
+                    <tab heading="示例">
+                        <ng-include src="'validate.form.html'"></ng-include>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input ng-model="vm.validateOptions.blurTrig" type="checkbox"> 光标移走触发验证
+                                    </label>
+                                </div>
+                                <select class="form-control" ng-model="vm.showErrorType" ng-change="vm.changeShowType()">
+                                    <option value="1">每个输入框显示错误信息</option>
+                                    <option value="2">错误信息集中显示</option>
+                                </select>
+                            </div>
                         </div>
-                        <select class="form-control" ng-model="vm.showErrorType" ng-change="vm.changeShowType()">
-                            <option value="1">每个输入框显示错误信息</option>
-                            <option value="2">错误信息集中显示</option>
-                        </select>
-                    </div>
-                </div>
+                    </tab>
+                    <tab heading="使用说明">
+                        <div class="use-info">
+                            <ol>
+                                <li>
+                                    HTML 中引用 dist/w5cValidator.js；
+                                </li>
+                                <li>
+                                    启动module引用 "w5c.validator"，如:<code> var app = angular.module("app", ["w5c.validator"]);</code>
+                                </li>
+                                <li>
+                                    在<code>app.config</code>事件中配置全局属性和显示规则；
+                                </li>
+                            </ol>
+                            <table class="table-bordered">
+                                <thead><tr>
+                                    <th>名称</th>
+                                    <th>默认值</th>
+                                    <th>作用</th>
+                                </tr></thead>
+                                <tbody>
+                                <tr>
+                                    <td>blurTrig</td>
+                                    <td>false</td>
+                                    <td>光标移除元素后是否验证并显示错误提示信息</td>
+                                </tr>
+                                <tr>
+                                    <td>showError</td>
+                                    <td>true</td>
+                                    <td>可以是bool和function，每个元素验证不通过后调用该方法显示错误信息，默认true，显示错误信息在元素的后面。</td>
+                                </tr>
+                                <tr>
+                                    <td>removeError</td>
+                                    <td>true</td>
+                                    <td>可以是bool和function，每个元素验证通过后调用该方法移除错误信息，默认true，验证通过后在元素的后面移除错误信息。</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </tab>
+                </tabset>
+
 
             </div>
             <div class="col-md-7">
