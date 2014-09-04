@@ -141,9 +141,11 @@ angular.module("w5c.validator", ["ng"])
         }
     }]);
 angular.module("w5c.validator")
-    .directive("w5cFormValidate", ['$parse', 'w5cValidator', function ($parse, w5cValidator) {
+    .directive("w5cFormValidate", ['$parse', 'w5cValidator', '$timeout', function ($parse, w5cValidator, $timeout) {
         return{
-            link: function (scope, form, attr) {
+            controller: ['$scope', function ($scope) {
+            }],
+            link: function (scope, form, attr, ctrl) {
                 var formElem = form[0],
                     formName = form.attr("name"),
                     formSubmitFn = $parse(attr.w5cSubmit),
@@ -179,13 +181,16 @@ angular.module("w5c.validator")
                                 if (!options.blurTrig) {
                                     return;
                                 }
+                                var self = this;
                                 var $elem = angular.element(this);
-                                if (!scope[formName][this.name].$valid) {
-                                    var errorMessages = w5cValidator.getErrorMessages(this, scope[formName][this.name].$error);
-                                    w5cValidator.showError($elem, errorMessages, options);
-                                } else {
-                                    w5cValidator.removeError($elem, options);
-                                }
+                                $timeout(function () {
+                                    if (!scope[formName][self.name].$valid) {
+                                        var errorMessages = w5cValidator.getErrorMessages(self, scope[formName][self.name].$error);
+                                        w5cValidator.showError($elem, errorMessages, options);
+                                    } else {
+                                        w5cValidator.removeError($elem, options);
+                                    }
+                                },50);
                             });
                         }
                     }
@@ -281,7 +286,7 @@ angular.module("w5c.validator")
                     if (event.which === 13) {
                         var currentInput = document.activeElement;
                         if (currentInput.type !== "textarea") {
-                            this.find("button").focus();
+                            element.find("button").focus();
                             currentInput.focus();
                             if (angular.isFunction(form.doValidate)) {
                                 form.doValidate();
@@ -323,41 +328,43 @@ angular.module("w5c.validator")
     .directive("w5cUniqueCheck", ['$timeout', '$http', function ($timeout, $http) {
         return{
             require: "ngModel",
-            link: function (scope, elem, attrs, ngModel) {
+            link: function (scope, elem, attrs, ctrl) {
                 var doValidate = function () {
                     var attValues = scope.$eval(attrs.w5cUniqueCheck);
                     var url = attValues.url;
                     var isExists = attValues.isExists;//default is true
-                    $http.get(url).success(function (result) {
+                    $http.get(url).success(function (data) {
                         if (isExists === false) {
-                            ngModel.$setValidity('w5cuniquecheck', result.data);
+                            ctrl.$setValidity('w5cuniquecheck', (data == "true"));
                         }
                         else {
-                            ngModel.$setValidity('w5cuniquecheck', !result.data);
+                            ctrl.$setValidity('w5cuniquecheck', !(data == "true"));
                         }
                     });
                 };
 
                 scope.$watch(attrs.ngModel, function (newValue) {
-                    if (_.isEmpty(newValue)) {
-                    } else if (!scope[elem[0].form.name][elem[0].name].$dirty) {
+                    if (newValue && ctrl.$dirty) {
                         doValidate();
                     }
                 });
 
-                elem.bind("blur", function () {
+                elem.bind("blur.w5cUniqueCheck", function () {
                     $timeout(function () {
-                        if (scope[elem[0].form.name][elem[0].name].$invalid) {
+                        if (ctrl.$invalid && !ctrl.$error.w5cuniquecheck) {
                             return;
                         }
                         doValidate();
-
                     });
                 });
-                elem.bind("focus", function () {
+                elem.bind("focus.w5cUniqueCheck", function () {
                     $timeout(function () {
-                        ngModel.$setValidity('w5cuniquecheck', true);
+                        //ctrl.$setValidity('w5cuniquecheck', true);
                     });
+                });
+                scope.$on('$destroy', function () {
+                    elem.unbind("blur.w5cUniqueCheck");
+                    elem.unbind("focus.w5cUniqueCheck");
                 });
             }
         };
