@@ -28,6 +28,7 @@
                 maxlength: "密码长度不能大于{maxlength}"
             },
             repeatPassword: {
+                required: "重复密码不能为空",
                 repeat: "两次密码输入不一致"
             },
             number: {
