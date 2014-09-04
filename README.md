@@ -105,6 +105,7 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
 
 #验证规则
 AngularJS原生支持很多种验证规则，比如：require（必填项），email，pattern（正则），maxlength，minlength，number，url，max，min
+
 w5cValidator提供了w5c-repeat（级联重复，常用于重复密码）和w5cUniqueCheck (远程验证，常用于检验用户名邮箱是否存在)
 
 #注意事项：
