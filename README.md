@@ -126,7 +126,7 @@ w5cValidator提供了w5c-repeat（级联重复，常用于重复密码）和w5cU
 |showError|true|可以是bool和function，每个元素验证不通过后调用该方法显示错误信息，默认true，显示错误信息在元素的后面。|
 |removeError|true|可以是bool和function，每个元素验证通过后调用该方法移除错误信息，默认true，验证通过后在元素的后面移除错误信息。|
 
-showError为
+showError Function为
 
 ```
 function showError(elem, errorMessages){
@@ -134,7 +134,7 @@ function showError(elem, errorMessages){
 }
 ```
 
-removeError为
+removeError Function为
 
 ```
 function removeError(elem){
