@@ -141,3 +141,16 @@ function removeError(elem){
     ...
 }
 ```
+
+设置代码为：
+```
+ w5cValidatorProvider.config({
+    blurTrig: false,
+    showError: function(elem,errorMessages){
+        ...
+    },
+    removeError: function(elem){
+        ...
+    }
+  });
+```
