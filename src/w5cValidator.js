@@ -1,9 +1,3 @@
-/**
- * @license w5cValidator v2.1.0
- * (c) 2013-2014
- * Author: @why520crazy
- * License: NONE
- */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
