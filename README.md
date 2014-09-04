@@ -123,5 +123,21 @@ w5cValidator提供了w5c-repeat（级联重复，常用于重复密码）和w5cU
 |名称|默认值|作用|
 |------|-----|------|
 |blurTrig|false|光标移除元素后是否验证并显示错误提示信息|
-|showError|true|可以是bool和function，每个元素验证不通过后调用该方法显示错误信息，默认true，显示错误信息在元素的后面。function showError(elem, errorMessages){...}|
-|removeError|true|可以是bool和function，每个元素验证通过后调用该方法移除错误信息，默认true，验证通过后在元素的后面移除错误信息。function removeError(elem){...}|
+|showError|true|可以是bool和function，每个元素验证不通过后调用该方法显示错误信息，默认true，显示错误信息在元素的后面。|
+|removeError|true|可以是bool和function，每个元素验证通过后调用该方法移除错误信息，默认true，验证通过后在元素的后面移除错误信息。|
+
+showError为
+
+```
+function showError(elem, errorMessages){
+    ...
+}
+```
+
+removeError为
+
+```
+function removeError(elem){
+    ...
+}
+```
