@@ -1,1 +1,47 @@
-## v2.1.01. 添加w5cRepeat directive做级联验证，如：重复密码验证1. 添加w5cUniqueCheck (远程验证，常用于检验用户名邮箱是否存在) ，w5cUniqueCheck默认检验是否已经存在，存在验证不通过，不存在验证通过，如果isExists设置为false表示：存在验证通过，不存在验证不通过。## v2.0.01. 模块独立为 w5c.validator ，引用需要显式的指定依赖；如：```angular.module("app",["w5c.validator"])```1. 去除全局的w5cValidator对象，添加了w5cValidator 服务；1. 设置全局属性的方法从 init 变成config；1. 设置全局的配置和信息提示规则，需要使用 w5cValidator 服务；    <pre>     app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {            // 全局配置            w5cValidatorProvider.config({                blurTrig   : false,                showError  : true, // bool or function                removeError: true  // bool or function            });            w5cValidatorProvider.setRules({                xxx   : {                    required: "输入的邮箱地址不能为空",                    email   : "输入邮箱地址格式不正确"                }            });        }]);    </pre>1. 不仅提供全局的配置，还提供了单个form的配置功能，配置的参数写在 w5c-form-validate="{blurTrig:true}"## v1.x1. 全局的 w5cValidator对象，设置全局属性使用 w5cValidator.init，配置规则使用 w5cValidator.set_rules；1. 在form上使用 w5c-form-validate 指令表示该form使用 w5cValidator；1. form上使用w5c-submit指令设置验证成功后的form submit事件；1. 在form元素内使用 w5c-form-submit 指令设置验证成功后的form submit事件；
+## v2.1.0
+
+1. 添加w5cRepeat directive做级联验证，如：重复密码验证。
+
+1. 添加w5cUniqueCheck (远程验证，常用于检验用户名邮箱是否存在) ，w5cUniqueCheck默认检验是否已经存在，存在验证不通过，不存在验证通过，如果isExists设置为false表示：存在验证通过，不存在验证不通过。
+
+1. 此版本添加到bower上了，可以通过`bower install angular-w5c-validator` 进行安装。
+
+## v2.0.0
+
+1. 模块独立为 w5c.validator ，引用需要显式的指定依赖；如：```angular.module("app",["w5c.validator"])```
+
+1. 去除全局的w5cValidator对象，添加了w5cValidator 服务；
+
+1. 设置全局属性的方法从 init 变成config；
+
+1. 设置全局的配置和信息提示规则，需要使用 w5cValidator 服务；
+    <pre>
+     app.config(["w5cValidatorProvider", function (w5cValidatorProvider) {
+            // 全局配置
+            w5cValidatorProvider.config({
+                blurTrig   : false,
+                showError  : true, // bool or function
+                removeError: true  // bool or function
+
+            });
+            w5cValidatorProvider.setRules({
+                xxx   : {
+                    required: "输入的邮箱地址不能为空",
+                    email   : "输入邮箱地址格式不正确"
+                }
+            });
+        }]);
+    </pre>
+
+1. 不仅提供全局的配置，还提供了单个form的配置功能，配置的参数写在 w5c-form-validate="{blurTrig:true}"
+
+## v1.x
+
+
+1. 全局的 w5cValidator对象，设置全局属性使用 w5cValidator.init，配置规则使用 w5cValidator.set_rules；
+
+1. 在form上使用 w5c-form-validate 指令表示该form使用 w5cValidator；
+
+1. form上使用w5c-submit指令设置验证成功后的form submit事件；
+
+1. 在form元素内使用 w5c-form-submit 指令设置验证成功后的form submit事件；
