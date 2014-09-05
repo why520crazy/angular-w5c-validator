@@ -4,6 +4,11 @@
     },
     "name": "w5c-validator",
     "version": "2.1.0",
+    "keywords": [
+        "angular",
+        "validator",
+        "validate"
+    ],
     "main": ["./w5cValidator.js"],
     "dependencies": {
         "angular": ">=1.2.0"
