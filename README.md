@@ -86,9 +86,18 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
 
             <div class="col-sm-10">
                 <input type="number" required="" ng-model="entity.number" name="number" class="form-control"
-                       placeholder="输入数字">
+                       placeholder="输入数字（10-15）" max="15" min="10">
             </div>
         </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">URL</label>
+
+            <div class="col-sm-10">
+                <input type="url" required="" ng-model="entity.url" name="url" class="form-control"
+                       placeholder="输入URL">
+            </div>
+        </div>
+
         <div class="form-group" ng-show="validateForm.$errors.length > 0 && vm.showErrorType == 2">
             <label class="col-sm-2 control-label"></label>
 
