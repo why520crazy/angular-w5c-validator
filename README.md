@@ -16,7 +16,7 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
 
 使用步骤：
 
-1. HTML 中引用 dist/w5cValidator.js；
+1. HTML 中引用 dist/w5cValidator.js，或者执行 `bower install angular-w5c-validator` 进行安装；
 
 1. 启动module引用 "w5c.validator"，如:` var app = angular.module("app", ["w5c.validator"]);`
 
@@ -125,3 +125,32 @@ w5cValidator提供了w5c-repeat（级联重复，常用于重复密码）和w5cU
 |blurTrig|false|光标移除元素后是否验证并显示错误提示信息|
 |showError|true|可以是bool和function，每个元素验证不通过后调用该方法显示错误信息，默认true，显示错误信息在元素的后面。|
 |removeError|true|可以是bool和function，每个元素验证通过后调用该方法移除错误信息，默认true，验证通过后在元素的后面移除错误信息。|
+
+showError Function为
+
+```
+function showError(elem, errorMessages){
+    ...
+}
+```
+
+removeError Function为
+
+```
+function removeError(elem){
+    ...
+}
+```
+
+设置代码为：
+```
+ w5cValidatorProvider.config({
+    blurTrig: false,
+    showError: function(elem,errorMessages){
+        ...
+    },
+    removeError: function(elem){
+        ...
+    }
+  });
+```

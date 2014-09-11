@@ -13,6 +13,7 @@
             removeError: true
 
         });
+
         w5cValidatorProvider.setRules({
             email: {
                 required: "输入的邮箱地址不能为空",
