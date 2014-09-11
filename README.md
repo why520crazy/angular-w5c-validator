@@ -115,7 +115,7 @@ w5cValidator提供了w5c-repeat（级联重复，常用于重复密码）和w5cU
 ```
 {
     required      : "该选项不能为空",
-        maxlength     : "该选项输入值长度不能大于{maxlength}",
+    maxlength     : "该选项输入值长度不能大于{maxlength}",
     minlength     : "该选项输入值长度不能小于{minlength}",
     email         : "输入邮件的格式不正确",
     repeat        : "两次输入不一致",
