@@ -16,7 +16,7 @@ angular.module("w5c.validator", ["ng"])
             this.elemTypes = elemTypes;
             this.rules = [];
             this.isEmpty = function (object) {
-                if (object === undefined || object === null) {
+                if (!object) {
                     return true;
                 }
                 if (object instanceof Array && object.length === 0) {
