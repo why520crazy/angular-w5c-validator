@@ -1,4 +1,4 @@
-/*! w5cValidator v2.1.0 2014-09-04 */
+/*! w5cValidator v2.1.1 2014-09-11 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -17,7 +17,7 @@ angular.module("w5c.validator", ["ng"])
             this.elemTypes = elemTypes;
             this.rules = [];
             this.isEmpty = function (object) {
-                if (object === undefined || object === null) {
+                if (!object) {
                     return true;
                 }
                 if (object instanceof Array && object.length === 0) {
@@ -135,6 +135,7 @@ angular.module("w5c.validator", ["ng"])
             return validator;
         }
     }]);
+
 angular.module("w5c.validator")
     .directive("w5cFormValidate", ['$parse', 'w5cValidator', '$timeout', function ($parse, w5cValidator, $timeout) {
         return{
