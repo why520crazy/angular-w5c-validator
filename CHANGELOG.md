@@ -1,3 +1,9 @@
+## v2.2.0
+
+1. 添加 w5cValidatorProvider.setDefaultRules 方法，设置默认提示信息规则，可以通过次方法设置国际化。
+
+1. 添加 type="url" 、max、min验证规则的错误提示。
+
 ## v2.1.0
 
 1. 添加w5cRepeat directive做级联验证，如：重复密码验证。
