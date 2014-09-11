@@ -128,7 +128,7 @@ w5cValidator提供了w5c-repeat（级联重复，常用于重复密码）和w5cU
 
 }
 ```
-可以通过 w5cValidatorProvider.setDefaultRules(rule)进行设置修改，这样可以做国际化
+可以通过 w5cValidatorProvider.setDefaultRules(rule)进行设置做国际化
 
 #注意事项：
 1. 由于验证使用的是 angular的form验证，所以必须要保证form和验证的元素都要有name属性；
