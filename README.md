@@ -118,6 +118,7 @@ w5cValidator提供了w5c-repeat（级联重复，常用于重复密码）和w5cU
 如果没有grunt，用命令`npm install grunt-cli -g`安装, mac下需要 `sudo npm install grunt-cli -g`
 1. 如果你不想安装node grunt等乱七八糟的玩意，直接打开example/index-local.html 即可运行。
 1. w5cUniqueCheck默认检验是否已经存在，存在验证不通过，不存在验证通过，如果isExists设置为false表示：存在验证通过，不存在验证不通过。
+1. w5cValidatorProvider默认的错误提示信息是中文的，如果想修改成其他语言，可以通过 w5cValidatorProvider.setDefaultRules()方法设置。
 
 #参数
 
