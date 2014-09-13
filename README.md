@@ -6,8 +6,6 @@ w5c validator自身提示信息样式使用了bootstrap的方式，当然你可�
 
 >demo演示：http://why520crazy.github.io/angular-w5c-validator
 
->代码地址：https://github.com/why520crazy/w5c-validator-angular
-
 >Change Log:https://github.com/why520crazy/angular-w5c-validator/blob/master/CHANGELOG.md
 
 关于v1.x版本的介绍参见：http://www.ngnice.com/posts/69f774dc4d3190
