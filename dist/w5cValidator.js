@@ -1,4 +1,4 @@
-/*! w5cValidator v2.2.0 2014-09-24 */
+/*! w5cValidator v2.3.0 2014-09-24 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
