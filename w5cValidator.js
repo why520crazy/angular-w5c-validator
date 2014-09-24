@@ -1,4 +1,4 @@
-/*! w5cValidator v2.2.0 2014-09-11 */
+/*! w5cValidator v2.3.0 2014-09-24 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -176,13 +176,28 @@ angular.module("w5c.validator")
     .directive("w5cFormValidate", ['$parse', 'w5cValidator', '$timeout', function ($parse, w5cValidator, $timeout) {
         return{
             controller: ['$scope', function ($scope) {
+                this.needBindKeydown = false;
+                this.form = null;
+                this.formElement = null;
+                this.doValidate = function(success){
+                    if (angular.isFunction(this.form.doValidate)) {
+                        this.form.doValidate();
+                    }
+                    if (this.form.$valid && angular.isFunction(success)) {
+                        $scope.$apply(function () {
+                            success($scope);
+                        });
+                    }
+                }
             }],
-            link: function (scope, form, attr, ctrl) {
+            link      : function (scope, form, attr, ctrl) {
                 var formElem = form[0],
                     formName = form.attr("name"),
                     formSubmitFn = $parse(attr.w5cSubmit),
                     options = scope.$eval(attr.w5cFormValidate);
 
+                ctrl.form = scope[formName];
+                ctrl.formElement = form;
                 // w5cFormValidate has value,watch it
                 if (attr.w5cFormValidate) {
                     scope.$watch(attr.w5cFormValidate, function (newValue) {
@@ -222,7 +237,7 @@ angular.module("w5c.validator")
                                     } else {
                                         w5cValidator.removeError($elem, options);
                                     }
-                                },50);
+                                }, 50);
                             });
                         }
                     }
@@ -269,7 +284,9 @@ angular.module("w5c.validator")
                             });
                         }
                     });
-
+                    ctrl.needBindKeydown = true;
+                }
+                if(ctrl.needBindKeydown){
                     form.bind("keydown keypress", function (event) {
                         if (event.which === 13) {
                             var currentInput = document.activeElement;
@@ -287,51 +304,18 @@ angular.module("w5c.validator")
                         }
                     });
                 }
-
-
             }
         };
     }])
     .directive("w5cFormSubmit", ['$parse', function ($parse) {
         return{
-            link: function (scope, element, attr) {
+            require : "^w5cFormValidate",
+            link    : function (scope, element, attr, ctrl) {
                 var validSuccessFn = $parse(attr.w5cFormSubmit);
-                var formName = element.parents("form").attr("name");
-                var form = scope.$eval(formName);
-                if (!form) {
-                    throw new Error("w5cFormSubmit form is empty.");
-                    return;
-                }
-
                 element.bind("click", function () {
-                    if (angular.isFunction(form.doValidate)) {
-                        form.doValidate();
-                    }
-                    if (form.$valid && angular.isFunction(validSuccessFn)) {
-                        scope.$apply(function () {
-                            validSuccessFn(scope);
-                        });
-                    }
+                    ctrl.doValidate(validSuccessFn);
                 });
-
-                element.parents("form").bind("keydown keypress", function (event) {
-                    if (event.which === 13) {
-                        var currentInput = document.activeElement;
-                        if (currentInput.type !== "textarea") {
-                            element.find("button").focus();
-                            currentInput.focus();
-                            if (angular.isFunction(form.doValidate)) {
-                                form.doValidate();
-                            }
-                            event.preventDefault();
-                            if (form.$valid && angular.isFunction(validSuccessFn)) {
-                                scope.$apply(function () {
-                                    validSuccessFn(scope);
-                                });
-                            }
-                        }
-                    }
-                });
+                ctrl.needBindKeydown = true;
             }
         };
     }])
@@ -339,7 +323,7 @@ angular.module("w5c.validator")
         'use strict';
         return {
             require: "ngModel",
-            link: function (scope, elem, attrs, ctrl) {
+            link   : function (scope, elem, attrs, ctrl) {
                 var otherInput = elem.inheritedData("$formController")[attrs.w5cRepeat];
 
                 ctrl.$parsers.push(function (value) {
@@ -360,7 +344,7 @@ angular.module("w5c.validator")
     .directive("w5cUniqueCheck", ['$timeout', '$http', function ($timeout, $http) {
         return{
             require: "ngModel",
-            link: function (scope, elem, attrs, ctrl) {
+            link   : function (scope, elem, attrs, ctrl) {
                 var doValidate = function () {
                     var attValues = scope.$eval(attrs.w5cUniqueCheck);
                     var url = attValues.url;
