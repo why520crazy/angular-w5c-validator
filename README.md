@@ -4,9 +4,7 @@ w5c-validator
 w5cValidator 插件基于angular.js原有的表单验证，统一验证规则和提示信息，在原有的基础上扩展了一些错误提示的功能，让大家不用在每个表单上写一些提示信息的模板，专心的去实现业务逻辑。
 w5c validator自身提示信息样式使用了bootstrap的方式，当然你可以很好的扩展自己的提示方式（比如tooltip等）
 
->demo演示：http://why520crazy.github.io/w5c-validator-angular
-
->代码地址：https://github.com/why520crazy/w5c-validator-angular
+>demo演示：http://why520crazy.github.io/angular-w5c-validator
 
 >Change Log:https://github.com/why520crazy/angular-w5c-validator/blob/master/CHANGELOG.md
 
