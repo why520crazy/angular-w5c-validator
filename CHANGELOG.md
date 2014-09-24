@@ -1,3 +1,6 @@
+## v2.3.0
+Fix BUG https://github.com/why520crazy/angular-w5c-validator/issues/6，不依赖于jQuery
+
 ## v2.2.0
 
 1. 添加 w5cValidatorProvider.setDefaultRules 方法，设置默认提示信息规则，可以通过次方法设置国际化。
