@@ -1,5 +1,8 @@
+## v2.3.1
+Fix BUG for https://github.com/why520crazy/angular-w5c-validator/issues/7，单层级表单元素的has-error添加到form元素上的问题
+
 ## v2.3.0
-Fix BUG https://github.com/why520crazy/angular-w5c-validator/issues/6，不依赖于jQuery
+Fix BUG for https://github.com/why520crazy/angular-w5c-validator/issues/6，不依赖于jQuery
 
 ## v2.2.0
 
