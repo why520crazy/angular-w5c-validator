@@ -1,4 +1,4 @@
-/*! w5cValidator v2.3.0 2014-09-24 */
+/*! w5cValidator v2.3.1 2014-09-26 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -30,16 +30,26 @@ angular.module("w5c.validator", ["ng"])
                 return false;
             };
             this.defaultShowError = function (elem, errorMessages) {
-                var $elem = angular.element(elem);
-                var $group = $elem.parent().parent();
+                var $elem = angular.element(elem),
+                    $parent = $elem.parent(),
+                    $group = $parent.parent();
+
+                if(!this.isEmpty($group) && $group[0].tagName === "FORM"){
+                    $group = $parent;
+                }
                 if (!this.isEmpty($group) && !$group.hasClass("has-error")) {
                     $group.addClass("has-error");
                     $elem.after('<span class="w5c-error">' + errorMessages[0] + '</span>');
                 }
             };
             this.defaultRemoveError = function (elem) {
-                var $elem = angular.element(elem);
-                var $group = $elem.parent().parent();
+                var $elem = angular.element(elem),
+                    $parent = $elem.parent(),
+                    $group = $parent.parent();
+
+                if(!this.isEmpty($group) && $group[0].tagName === "FORM"){
+                    $group = $parent;
+                }
                 if (!this.isEmpty($group) && $group.hasClass("has-error")) {
                     $group.removeClass("has-error");
                     $elem.next(".w5c-error").remove();
