@@ -1,4 +1,4 @@
-/*! w5cValidator v2.3.1 2014-09-26 */
+/*! w5cValidator v2.3.2 2014-10-09 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -301,7 +301,10 @@ angular.module("w5c.validator")
                         if (event.which === 13) {
                             var currentInput = document.activeElement;
                             if (currentInput.type !== "textarea") {
-                                angular.element(this).find("button").focus();
+                                var button = form.find("button");
+                                if(button){
+                                    button[0].focus();
+                                }
                                 currentInput.focus();
                                 doValidate();
                                 event.preventDefault();

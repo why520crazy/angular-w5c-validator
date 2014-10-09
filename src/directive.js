@@ -117,7 +117,10 @@ angular.module("w5c.validator")
                         if (event.which === 13) {
                             var currentInput = document.activeElement;
                             if (currentInput.type !== "textarea") {
-                                angular.element(this).find("button").focus();
+                                var button = form.find("button");
+                                if(button){
+                                    button[0].focus();
+                                }
                                 currentInput.focus();
                                 doValidate();
                                 event.preventDefault();
