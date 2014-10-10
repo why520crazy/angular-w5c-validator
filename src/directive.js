@@ -5,6 +5,7 @@ angular.module("w5c.validator")
                 this.needBindKeydown = false;
                 this.form = null;
                 this.formElement = null;
+                this.submitSuccessFn = null;
                 this.doValidate = function(success){
                     if (angular.isFunction(this.form.doValidate)) {
                         this.form.doValidate();
@@ -124,9 +125,9 @@ angular.module("w5c.validator")
                                 currentInput.focus();
                                 doValidate();
                                 event.preventDefault();
-                                if (scope[formName].$valid && angular.isFunction(formSubmitFn)) {
+                                if (scope[formName].$valid && angular.isFunction(ctrl.submitSuccessFn)) {
                                     scope.$apply(function () {
-                                        formSubmitFn(scope);
+                                        ctrl.submitSuccessFn(scope);
                                     });
                                 }
                             }
@@ -145,6 +146,7 @@ angular.module("w5c.validator")
                     ctrl.doValidate(validSuccessFn);
                 });
                 ctrl.needBindKeydown = true;
+                ctrl.submitSuccessFn = validSuccessFn;
             }
         };
     }])
