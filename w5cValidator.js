@@ -1,4 +1,4 @@
-/*! w5cValidator v2.3.3 2014-10-10 */
+/*! w5cValidator v2.3.7 2015-01-19 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -121,10 +121,10 @@ angular.module("w5c.validator", ["ng"])
             },
             showError       : function (elem, errorMessages, options) {
                 var useOptions = angular.extend({}, this.options, options);
+                angular.element(elem).removeClass("valid").addClass("error");
                 if (useOptions.showError === false) {
                     return;
                 }
-                angular.element(elem).removeClass("valid").addClass("error");
                 if (angular.isFunction(useOptions.showError)) {
                     return useOptions.showError(elem, errorMessages);
                 }
@@ -134,10 +134,10 @@ angular.module("w5c.validator", ["ng"])
             },
             removeError     : function (elem, options) {
                 var useOptions = angular.extend({}, this.options, options);
+                angular.element(elem).removeClass("error").addClass("valid");
                 if (useOptions.removeError === false) {
                     return;
                 }
-                angular.element(elem).removeClass("error").addClass("valid");
                 if (angular.isFunction(useOptions.removeError)) {
                     return useOptions.removeError(elem);
                 }
@@ -269,7 +269,6 @@ angular.module("w5c.validator")
                                 errorMessages.push(elementErrors[0]);
                                 w5cValidator.removeError(elem, options);
                                 w5cValidator.showError(elem, elementErrors, options);
-                                angular.element(elem).removeClass("valid").addClass("error");
                             }
                         }
                     }
