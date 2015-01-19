@@ -85,7 +85,6 @@ angular.module("w5c.validator")
                                 errorMessages.push(elementErrors[0]);
                                 w5cValidator.removeError(elem, options);
                                 w5cValidator.showError(elem, elementErrors, options);
-                                angular.element(elem).removeClass("valid").addClass("error");
                             }
                         }
                     }

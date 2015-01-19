@@ -120,10 +120,10 @@ angular.module("w5c.validator", ["ng"])
             },
             showError       : function (elem, errorMessages, options) {
                 var useOptions = angular.extend({}, this.options, options);
+                angular.element(elem).removeClass("valid").addClass("error");
                 if (useOptions.showError === false) {
                     return;
                 }
-                angular.element(elem).removeClass("valid").addClass("error");
                 if (angular.isFunction(useOptions.showError)) {
                     return useOptions.showError(elem, errorMessages);
                 }
@@ -133,10 +133,10 @@ angular.module("w5c.validator", ["ng"])
             },
             removeError     : function (elem, options) {
                 var useOptions = angular.extend({}, this.options, options);
+                angular.element(elem).removeClass("error").addClass("valid");
                 if (useOptions.removeError === false) {
                     return;
                 }
-                angular.element(elem).removeClass("error").addClass("valid");
                 if (angular.isFunction(useOptions.removeError)) {
                     return useOptions.removeError(elem);
                 }
