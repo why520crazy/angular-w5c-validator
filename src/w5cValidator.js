@@ -33,12 +33,19 @@ angular.module("w5c.validator", ["ng"])
                     $parent = $elem.parent(),
                     $group = $parent.parent();
 
+                //找到 form-group，及其下级
++               while(!$group.hasClass("form-group"))
++               {
++                   $parent = $parent.parent();
++                   $group = $parent.parent();
++               }
+
                 if(!this.isEmpty($group) && $group[0].tagName === "FORM"){
                     $group = $parent;
                 }
                 if (!this.isEmpty($group) && !$group.hasClass("has-error")) {
                     $group.addClass("has-error");
-                    $elem.after('<span class="w5c-error">' + errorMessages[0] + '</span>');
+                    $parent.append('<span class="w5c-error">' + errorMessages[0] + '</span>');
                 }
             };
             this.defaultRemoveError = function (elem) {
