@@ -15,7 +15,7 @@ angular.module("w5c.validator", ["ng"])
                 min           : "该选项输入值不能小于{min}"
 
             },
-            elemTypes = ['text', 'password', 'email', 'number', 'url', ['textarea'], ['select'], ['select-one']];
+            elemTypes = ['text', 'password', 'email', 'number', 'url', 'tel', 'hidden', ['textarea'], ['select'], ['select-one']];
 
         var validatorFn = function () {
             this.elemTypes = elemTypes;
@@ -46,7 +46,7 @@ angular.module("w5c.validator", ["ng"])
                 }
                 if (!this.isEmpty($group) && !$group.hasClass("has-error")) {
                     $group.addClass("has-error");
-                    $parent.append('<span class="w5c-error">' + errorMessages[0] + '</span>');
+                    $group.append('<span class="w5c-error">' + errorMessages[0] + '</span>');
                 }
             };
             this.defaultRemoveError = function (elem) {
@@ -59,7 +59,7 @@ angular.module("w5c.validator", ["ng"])
                 }
                 if (!this.isEmpty($group) && $group.hasClass("has-error")) {
                     $group.removeClass("has-error");
-                    $elem.next(".w5c-error").remove();
+                    $group.find(".w5c-error").remove();
                 }
             };
             this.options = {
