@@ -14,7 +14,7 @@ angular.module("w5c.validator", ["ng"])
                 min           : "该选项输入值不能小于{min}"
 
             },
-            elemTypes = ['text', 'password', 'email', 'number', 'url', ['textarea'], ['select'], ['select-one']];
+            elemTypes = ['text', 'password', 'email', 'number', 'url', ['textarea'], ['select'], ['select-multiple'], ['select-one']];
 
         var validatorFn = function () {
             this.elemTypes = elemTypes;
@@ -34,13 +34,11 @@ angular.module("w5c.validator", ["ng"])
                     $group = $parent.parent();
 
                 //找到 form-group，及其下级
-+               while(!$group.hasClass("form-group"))
-+               {
-+                   $parent = $parent.parent();
-+                   $group = $parent.parent();
-+               }
-
-                if(!this.isEmpty($group) && $group[0].tagName === "FORM"){
+                while (!$group.hasClass("form-group")) {
+                    $parent = $parent.parent();
+                    $group = $parent.parent();
+                }
+                if (!this.isEmpty($group) && $group[0].tagName === "FORM") {
                     $group = $parent;
                 }
                 if (!this.isEmpty($group) && !$group.hasClass("has-error")) {
@@ -53,7 +51,7 @@ angular.module("w5c.validator", ["ng"])
                     $parent = $elem.parent(),
                     $group = $parent.parent();
 
-                if(!this.isEmpty($group) && $group[0].tagName === "FORM"){
+                if (!this.isEmpty($group) && $group[0].tagName === "FORM") {
                     $group = $parent;
                 }
                 if (!this.isEmpty($group) && $group.hasClass("has-error")) {
