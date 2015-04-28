@@ -1,12 +1,12 @@
 angular.module("w5c.validator")
     .directive("w5cFormValidate", ['$parse', 'w5cValidator', '$timeout', function ($parse, w5cValidator, $timeout) {
-        return{
+        return {
             controller: ['$scope', function ($scope) {
                 this.needBindKeydown = false;
                 this.form = null;
                 this.formElement = null;
                 this.submitSuccessFn = null;
-                this.doValidate = function(success){
+                this.doValidate = function (success) {
                     if (angular.isFunction(this.form.doValidate)) {
                         this.form.doValidate();
                     }
@@ -97,7 +97,19 @@ angular.module("w5c.validator")
                         scope.$apply(scope[formName].$errors);
                     }
                 };
-                scope[formName].doValidate = doValidate;
+                if (scope[formName]) {
+                    scope[formName].doValidate = doValidate;
+                    scope[formName].reset = function () {
+                        $timeout(function () {
+                            scope[formName].$setPristine();
+                            for (var i = 0; i < formElem.length; i++) {
+                                var elem = formElem[i];
+                                var $elem = angular.element(elem);
+                                w5cValidator.removeError($elem, options);
+                            }
+                        });
+                    };
+                }
 
                 //w5cSubmit is function
                 if (attr.w5cSubmit && angular.isFunction(formSubmitFn)) {
@@ -112,13 +124,13 @@ angular.module("w5c.validator")
                     });
                     ctrl.needBindKeydown = true;
                 }
-                if(ctrl.needBindKeydown){
+                if (ctrl.needBindKeydown) {
                     form.bind("keydown keypress", function (event) {
                         if (event.which === 13) {
                             var currentInput = document.activeElement;
                             if (currentInput.type !== "textarea") {
                                 var button = form.find("button");
-                                if(button && button[0]){
+                                if (button && button[0]) {
                                     button[0].focus();
                                 }
                                 currentInput.focus();
@@ -137,9 +149,9 @@ angular.module("w5c.validator")
         };
     }])
     .directive("w5cFormSubmit", ['$parse', function ($parse) {
-        return{
-            require : "^w5cFormValidate",
-            link    : function (scope, element, attr, ctrl) {
+        return {
+            require: "^w5cFormValidate",
+            link   : function (scope, element, attr, ctrl) {
                 var validSuccessFn = $parse(attr.w5cFormSubmit);
                 element.bind("click", function () {
                     ctrl.doValidate(validSuccessFn);
@@ -172,7 +184,7 @@ angular.module("w5c.validator")
         };
     }])
     .directive("w5cUniqueCheck", ['$timeout', '$http', function ($timeout, $http) {
-        return{
+        return {
             require: "ngModel",
             link   : function (scope, elem, attrs, ctrl) {
                 var doValidate = function () {
