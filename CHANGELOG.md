@@ -2,7 +2,7 @@
 
 1. FIX BUG for https://github.com/why520crazy/angular-w5c-validator/issues/17
 
-1. https://github.com/why520crazy/angular-w5c-validator/labels/enhancement
+1. Form 表单添加了 reset 方法重置表单和错误信息，https://github.com/why520crazy/angular-w5c-validator/labels/enhancement
 
 ## v2.3.1
 Fix BUG for https://github.com/why520crazy/angular-w5c-validator/issues/7，单层级表单元素的has-error添加到form元素上的问题
