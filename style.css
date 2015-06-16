@@ -1,6 +1,6 @@
-.w5c-form input:focus:focus,
-.w5c-form textarea:focus:focus,
-.w5c-form select:focus:focus {
+.w5c-form input:focus,
+.w5c-form textarea:focus,
+.w5c-form select:focus {
   border-color: rgba(82, 168, 236, 0.8);
   outline: 0;
   outline: thin dotted \9;
@@ -8,9 +8,9 @@
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   color: #000000;
 }
-.w5c-form input:focus:focus.error,
-.w5c-form textarea:focus:focus.error,
-.w5c-form select:focus:focus.error {
+.w5c-form input:focus.error,
+.w5c-form textarea:focus.error,
+.w5c-form select:focus.error {
   border-color: #b94a48;
   -webkit-box-shadow: 0 0 6px #f8b9b7;
   -moz-box-shadow: 0 0 6px #f8b9b7;
