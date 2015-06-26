@@ -1,6 +1,7 @@
 angular.module("w5c.validator")
     .directive("w5cFormValidate", ['$parse', 'w5cValidator', '$timeout', function ($parse, w5cValidator, $timeout) {
         return {
+            require   : ['w5cFormValidate', '^?form'],
             controller: ['$scope', function ($scope) {
                 this.needBindKeydown = false;
                 this.form = null;
@@ -17,13 +18,16 @@ angular.module("w5c.validator")
                     }
                 }
             }],
-            link      : function (scope, form, attr, ctrl) {
+            link      : function (scope, form, attr, ctrls) {
+                var ctrl = ctrls[0], formCtrl = ctrls[1];
                 var formElem = form[0],
                     formName = form.attr("name"),
                     formSubmitFn = $parse(attr.w5cSubmit),
                     options = scope.$eval(attr.w5cFormValidate);
-
-                ctrl.form = scope[formName];
+                if (!formName) {
+                    throw Error("form must has name when use w5cFormValidate");
+                }
+                ctrl.form = formCtrl;
                 ctrl.formElement = form;
                 // w5cFormValidate has value,watch it
                 if (attr.w5cFormValidate) {
@@ -40,14 +44,20 @@ angular.module("w5c.validator")
                     var elem = formElem[i];
                     var $elem = angular.element(elem);
                     if (w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elem.name)) {
-                        var $viewValueName = formName + "." + elem.name + ".$viewValue";
-                        //监控输入框的value值当有变化时移除错误信息
-                        //可以修改成当输入框验证通过时才移除错误信息，只要监控$valid属性即可
-                        scope.$watch("[" + $viewValueName + "," + i + "]", function (newValue) {
-                            var $elem = formElem[newValue[1]];
-                            scope[formName].$errors = [];
-                            w5cValidator.removeError($elem, options);
-                        }, true);
+                        (function (elem, $elem) {
+                            //formCtrl[elem.name].$viewChangeListeners.push(function () {
+                            //    formCtrl.$errors = [];
+                            //    w5cValidator.removeError($elem, options);
+                            //});
+                            var $viewValueName = formName + "." + elem.name + ".$viewValue";
+                            //监控输入框的value值当有变化时移除错误信息
+                            //可以修改成当输入框验证通过时才移除错误信息，只要监控$valid属性即可
+                            scope.$watch($viewValueName, function () {
+                                formCtrl.$errors = [];
+                                w5cValidator.removeError($elem, options);
+                            }, true);
+                        })(elem, $elem);
+
 
                         //光标移走的时候触发验证信息
                         if (options.blurTrig) {
@@ -58,8 +68,8 @@ angular.module("w5c.validator")
                                 var self = this;
                                 var $elem = angular.element(this);
                                 $timeout(function () {
-                                    if (!scope[formName][self.name].$valid) {
-                                        var errorMessages = w5cValidator.getErrorMessages(self, scope[formName][self.name].$error);
+                                    if (!formCtrl[self.name].$valid) {
+                                        var errorMessages = w5cValidator.getErrorMessages(self, formCtrl[self.name].$error);
                                         w5cValidator.showError($elem, errorMessages, options);
                                     } else {
                                         w5cValidator.removeError($elem, options);
@@ -77,11 +87,11 @@ angular.module("w5c.validator")
                     for (var i = 0; i < formElem.length; i++) {
                         var elem = formElem[i];
                         if (w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elem.name)) {
-                            if (scope[formName][elem.name].$valid) {
+                            if (formCtrl[elem.name].$valid) {
                                 angular.element(elem).removeClass("error").addClass("valid");
                                 continue;
                             } else {
-                                var elementErrors = w5cValidator.getErrorMessages(elem, scope[formName][elem.name].$error);
+                                var elementErrors = w5cValidator.getErrorMessages(elem, formCtrl[elem.name].$error);
                                 errorMessages.push(elementErrors[0]);
                                 w5cValidator.removeError(elem, options);
                                 w5cValidator.showError(elem, elementErrors, options);
@@ -89,19 +99,19 @@ angular.module("w5c.validator")
                         }
                     }
                     if (!w5cValidator.isEmpty(errorMessages) && errorMessages.length > 0) {
-                        scope[formName].$errors = errorMessages;
+                        formCtrl.$errors = errorMessages;
                     } else {
-                        scope[formName].$errors = [];
+                        formCtrl.$errors = [];
                     }
                     if (!scope.$$phase) {
-                        scope.$apply(scope[formName].$errors);
+                        scope.$apply(formCtrl.$errors);
                     }
                 };
-                if (scope[formName]) {
-                    scope[formName].doValidate = doValidate;
-                    scope[formName].reset = function () {
+                if (formCtrl) {
+                    formCtrl.doValidate = doValidate;
+                    formCtrl.reset = function () {
                         $timeout(function () {
-                            scope[formName].$setPristine();
+                            formCtrl.$setPristine();
                             for (var i = 0; i < formElem.length; i++) {
                                 var elem = formElem[i];
                                 var $elem = angular.element(elem);
@@ -116,7 +126,7 @@ angular.module("w5c.validator")
 
                     form.bind("submit", function () {
                         doValidate();
-                        if (scope[formName].$valid && angular.isFunction(formSubmitFn)) {
+                        if (formCtrl.$valid && angular.isFunction(formSubmitFn)) {
                             scope.$apply(function () {
                                 formSubmitFn(scope);
                             });
@@ -136,7 +146,7 @@ angular.module("w5c.validator")
                                 currentInput.focus();
                                 doValidate();
                                 event.preventDefault();
-                                if (scope[formName].$valid && angular.isFunction(ctrl.submitSuccessFn)) {
+                                if (formCtrl.$valid && angular.isFunction(ctrl.submitSuccessFn)) {
                                     scope.$apply(function () {
                                         ctrl.submitSuccessFn(scope);
                                     });
@@ -183,47 +193,49 @@ angular.module("w5c.validator")
             }
         };
     }])
-    .directive("w5cUniqueCheck", ['$timeout', '$http', function ($timeout, $http) {
+    .directive("w5cUniqueCheck", ['$timeout', '$http', 'w5cValidator', function ($timeout, $http, w5cValidator) {
         return {
-            require: "ngModel",
-            link   : function (scope, elem, attrs, ctrl) {
+            require: ["ngModel", "?^form"],
+            link   : function (scope, elem, attrs, ctrls) {
+                var ngModelCtrl = ctrls[0], formCtrl = ctrls[1];
+
                 var doValidate = function () {
                     var attValues = scope.$eval(attrs.w5cUniqueCheck);
                     var url = attValues.url;
                     var isExists = attValues.isExists;//default is true
                     $http.get(url).success(function (data) {
-                        if (isExists === false) {
-                            ctrl.$setValidity('w5cuniquecheck', (data == "true"));
-                        }
-                        else {
-                            ctrl.$setValidity('w5cuniquecheck', !(data == "true"));
+                        var state = isExists === false ? (data == 'true' || data == true) : !(data == 'true' || data == true);
+                        ngModelCtrl.$setValidity('w5cuniquecheck', state);
+                        if (!state) {
+                            var errorMsg = w5cValidator.getErrorMessage("w5cuniquecheck", elem[0]);
+                            w5cValidator.showError(elem[0], [errorMsg]);
+                            if (!formCtrl.$errors) {
+                                formCtrl.$errors = [errorMsg];
+                            } else {
+                                formCtrl.$errors.unshift(errorMsg);
+                            }
                         }
                     });
                 };
 
-                scope.$watch(attrs.ngModel, function (newValue) {
-                    if (newValue && ctrl.$dirty) {
+                ngModelCtrl.$viewChangeListeners.push(function () {
+                    formCtrl.$errors = [];
+                    ngModelCtrl.$setValidity('w5cuniquecheck', true);
+                    if (ngModelCtrl.$invalid && !ngModelCtrl.$error.w5cuniquecheck) {
+                        return;
+                    }
+                    if (ngModelCtrl.$dirty) {
                         doValidate();
                     }
                 });
 
-                elem.bind("blur.w5cUniqueCheck", function () {
-                    $timeout(function () {
-                        if (ctrl.$invalid && !ctrl.$error.w5cuniquecheck) {
-                            return;
-                        }
-                        doValidate();
-                    });
-                });
-                elem.bind("focus.w5cUniqueCheck", function () {
-                    $timeout(function () {
-                        //ctrl.$setValidity('w5cuniquecheck', true);
-                    });
-                });
-                scope.$on('$destroy', function () {
-                    elem.unbind("blur.w5cUniqueCheck");
-                    elem.unbind("focus.w5cUniqueCheck");
-                });
+                var firstValue = scope.$eval(attrs.ngModel);
+                if (firstValue) {
+                    if (ngModelCtrl.$invalid && !ngModelCtrl.$error.w5cuniquecheck) {
+                        return;
+                    }
+                    doValidate();
+                }
             }
         };
     }]);

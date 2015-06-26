@@ -16,6 +16,17 @@ angular.module("w5c.validator", ["ng"])
             },
             elemTypes = ['text', 'password', 'email', 'number', 'url', ['textarea'], ['select'], ['select-multiple'], ['select-one']];
 
+        var getParentGroup = function(elem){
+            if(elem[0].tagName === "FORM" || elem[0].nodeType == 11){
+                return null;
+            }
+            if(elem && elem.hasClass("form-group")){
+                return elem;
+            }else{
+                return getParentGroup(elem.parent())
+            }
+        };
+
         var validatorFn = function () {
             this.elemTypes = elemTypes;
             this.rules = [];
@@ -30,34 +41,27 @@ angular.module("w5c.validator", ["ng"])
             };
             this.defaultShowError = function (elem, errorMessages) {
                 var $elem = angular.element(elem),
-                    $parent = $elem.parent(),
-                    $group = $parent.parent();
+                    $group = getParentGroup($elem);
 
-                //找到 form-group，及其下级
-                while (!$group.hasClass("form-group")) {
-                    $parent = $parent.parent();
-                    $group = $parent.parent();
-                }
-                if (!this.isEmpty($group) && $group[0].tagName === "FORM") {
-                    $group = $parent;
-                }
                 if (!this.isEmpty($group) && !$group.hasClass("has-error")) {
                     $group.addClass("has-error");
-                    $parent.append('<span class="w5c-error">' + errorMessages[0] + '</span>');
+
+                }
+                if($elem.next(".w5c-error").length <= 0){
+                    $elem.after('<span class="w5c-error">' + errorMessages[0] + '</span>');
                 }
             };
             this.defaultRemoveError = function (elem) {
                 var $elem = angular.element(elem),
-                    $parent = $elem.parent(),
-                    $group = $parent.parent();
+                    $group = getParentGroup($elem);
 
-                if (!this.isEmpty($group) && $group[0].tagName === "FORM") {
-                    $group = $parent;
-                }
                 if (!this.isEmpty($group) && $group.hasClass("has-error")) {
                     $group.removeClass("has-error");
+                }
+                if($elem.next(".w5c-error").length > 0){
                     $elem.next(".w5c-error").remove();
                 }
+
             };
             this.options = {
                 blurTrig   : false,
