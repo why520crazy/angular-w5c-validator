@@ -33,11 +33,11 @@ angular.module("w5c.validator")
                 if (attr.w5cFormValidate) {
                     scope.$watch(attr.w5cFormValidate, function (newValue) {
                         if (newValue) {
-                            options = angular.extend({}, w5cValidator.options, newValue);
+                            ctrl.options = options = angular.extend({}, w5cValidator.options, newValue);
                         }
                     }, true)
                 }
-                options = angular.extend({}, w5cValidator.options, options);
+                ctrl.options = options = angular.extend({}, w5cValidator.options, options);
 
                 //初始化验证规则，并时时监控输入值的变话
                 for (var i = 0; i < formElem.length; i++) {
@@ -195,9 +195,9 @@ angular.module("w5c.validator")
     }])
     .directive("w5cUniqueCheck", ['$timeout', '$http', 'w5cValidator', function ($timeout, $http, w5cValidator) {
         return {
-            require: ["ngModel", "?^form"],
+            require: ["ngModel", "?^w5cFormValidate","?^form"],
             link   : function (scope, elem, attrs, ctrls) {
-                var ngModelCtrl = ctrls[0], formCtrl = ctrls[1];
+                var ngModelCtrl = ctrls[0], w5cFormCtrl = ctrls[1], formCtrl = ctrls[2];
 
                 var doValidate = function () {
                     var attValues = scope.$eval(attrs.w5cUniqueCheck);
@@ -208,7 +208,7 @@ angular.module("w5c.validator")
                         ngModelCtrl.$setValidity('w5cuniquecheck', state);
                         if (!state) {
                             var errorMsg = w5cValidator.getErrorMessage("w5cuniquecheck", elem[0]);
-                            w5cValidator.showError(elem[0], [errorMsg]);
+                            w5cValidator.showError(elem[0], [errorMsg], w5cFormCtrl.options);
                             if (!formCtrl.$errors) {
                                 formCtrl.$errors = [errorMsg];
                             } else {
