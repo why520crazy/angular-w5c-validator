@@ -41,8 +41,9 @@
     app.controller("validateCtrl", ["$scope", "$http", function ($scope, $http) {
 
         var vm = $scope.vm = {
-            htmlSource   : "",
-            showErrorType: 1
+            htmlSource        : "",
+            showErrorType     : 1,
+            showDynamicElement: true
         };
 
         vm.saveEntity = function (form) {

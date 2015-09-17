@@ -1,3 +1,6 @@
+## v2.4.0
+添加动态元素的验证
+
 ## v2.3.9
 
 1. FIX BUG for https://github.com/why520crazy/angular-w5c-validator/issues/17
