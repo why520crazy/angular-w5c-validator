@@ -141,7 +141,7 @@ w5cValidator提供了w5c-repeat（级联重复，常用于重复密码）和w5cU
 1. 由于验证使用的是 angular的form验证，所以必须要保证form和验证的元素都要有name属性；
 1. 如果你不想把验证成功事件w5c-submit写在 form上，可以直接在form里面的其他元素上使用w5cFormSubmit指令，如：
 `<button type="buttom" w5c-form-submit="vm.saveEntity()" class="btn btn-success"> 验证</button>`
-1. 如果你clone了代码。本地直接打开example/index.html是不可以运行，因为我使用了 $http服务去获取 js css html，所以必须要在本地搭建服务端程序，如果你有nodejs环境，运行`npm install ` 安装module后再运行 `grunt server` ,
+1. 如果你clone了代码。本地用chrome直接打开example/index.html是不可以运行的，因为我使用了$http服务去获取 js css html，所以必须要在本地搭建服务端程序，如果你有nodejs环境，运行`npm install ` 安装module后再运行 `grunt server` ,
 如果没有grunt，用命令`npm install grunt-cli -g`安装, mac下需要 `sudo npm install grunt-cli -g`
 1. 如果你不想安装node grunt等乱七八糟的玩意，直接打开example/index-local.html 即可运行。
 1. w5cUniqueCheck默认检验是否已经存在，存在验证不通过，不存在验证通过，如果isExists设置为false表示：存在验证通过，不存在验证不通过。
@@ -184,3 +184,4 @@ function removeError(elem){
     }
   });
 ```
+

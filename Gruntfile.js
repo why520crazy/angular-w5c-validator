@@ -95,10 +95,10 @@ module.exports = function (grunt) {
             options: {
                 banner: '/*! <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
-            js   : {
-                src : ["src/w5cValidator.js", "src/directive.js"],
-                dest: 'example/w5cValidator.js'
-            },
+            //js   : {
+            //    src : ["src/w5cValidator.js", "src/directive.js"],
+            //    dest: 'example/w5cValidator.js'
+            //},
             basic: {
                 src : ["src/w5cValidator.js", "src/directive.js"],
                 dest: 'dist/w5cValidator.js'

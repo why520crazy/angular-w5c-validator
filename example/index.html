@@ -44,6 +44,11 @@
                                         <input ng-model="vm.validateOptions.blurTrig" type="checkbox"> 光标移走触发验证
                                     </label>
                                 </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input ng-model="vm.showDynamicElement" type="checkbox"> 是否现实动态元素
+                                    </label>
+                                </div>
                                 <select class="form-control" ng-model="vm.showErrorType" ng-change="vm.changeShowType()">
                                     <option value="1">每个输入框显示错误信息</option>
                                     <option value="2">错误信息集中显示</option>
@@ -129,13 +134,13 @@
 </div>
 <!--</div>-->
 
-<script src="lib/jquery/1.11.0/jquery.js"></script>
+<!--<script src="lib/jquery/1.11.0/jquery.js"></script>-->
 <script src="lib/angular/1.2.0/angular.js"></script>
-<script src="lib/bootstrap/3.0.0/js/bootstrap.js"></script>
 <script src="lib/angular-ui/ui-bootstrap/0.9.0/ui-bootstrap-tpls.js"></script>
 <script src="lib/highlight/8.0/highlight.pack.js"></script>
 <script src="lib/angular-highlightjs/angular-highlightjs.js"></script>
-<script src="w5cValidator.js"></script>
+<script src="../src/w5cValidator.js"></script>
+<script src="../src/directive.js"></script>
 <script src="index.js"></script>
 </body>
 </html>

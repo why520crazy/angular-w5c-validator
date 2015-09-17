@@ -14,7 +14,18 @@ angular.module("w5c.validator", ["ng"])
                 min           : "该选项输入值不能小于{min}"
 
             },
-            elemTypes = ['text', 'password', 'email', 'number', 'url', ['textarea'], ['select'], ['select-one']];
+            elemTypes = ['text', 'password', 'email', 'number', 'url', ['textarea'], ['select'], ['select-multiple'], ['select-one']];
+
+        var getParentGroup = function(elem){
+            if(elem[0].tagName === "FORM" || elem[0].nodeType == 11){
+                return null;
+            }
+            if(elem && elem.hasClass("form-group")){
+                return elem;
+            }else{
+                return getParentGroup(elem.parent())
+            }
+        };
 
         var validatorFn = function () {
             this.elemTypes = elemTypes;
@@ -29,20 +40,28 @@ angular.module("w5c.validator", ["ng"])
                 return false;
             };
             this.defaultShowError = function (elem, errorMessages) {
-                var $elem = angular.element(elem);
-                var $group = $elem.parent().parent();
+                var $elem = angular.element(elem),
+                    $group = getParentGroup($elem);
+
                 if (!this.isEmpty($group) && !$group.hasClass("has-error")) {
                     $group.addClass("has-error");
+
+                }
+                if($elem.next(".w5c-error").length <= 0){
                     $elem.after('<span class="w5c-error">' + errorMessages[0] + '</span>');
                 }
             };
             this.defaultRemoveError = function (elem) {
-                var $elem = angular.element(elem);
-                var $group = $elem.parent().parent();
+                var $elem = angular.element(elem),
+                    $group = getParentGroup($elem);
+
                 if (!this.isEmpty($group) && $group.hasClass("has-error")) {
                     $group.removeClass("has-error");
+                }
+                if($elem.next(".w5c-error").length > 0){
                     $elem.next(".w5c-error").remove();
                 }
+
             };
             this.options = {
                 blurTrig   : false,
@@ -110,10 +129,10 @@ angular.module("w5c.validator", ["ng"])
             },
             showError       : function (elem, errorMessages, options) {
                 var useOptions = angular.extend({}, this.options, options);
+                angular.element(elem).removeClass("valid").addClass("error");
                 if (useOptions.showError === false) {
                     return;
                 }
-                angular.element(elem).removeClass("valid").addClass("error");
                 if (angular.isFunction(useOptions.showError)) {
                     return useOptions.showError(elem, errorMessages);
                 }
@@ -123,10 +142,10 @@ angular.module("w5c.validator", ["ng"])
             },
             removeError     : function (elem, options) {
                 var useOptions = angular.extend({}, this.options, options);
+                angular.element(elem).removeClass("error").addClass("valid");
                 if (useOptions.removeError === false) {
                     return;
                 }
-                angular.element(elem).removeClass("error").addClass("valid");
                 if (angular.isFunction(useOptions.removeError)) {
                     return useOptions.removeError(elem);
                 }
