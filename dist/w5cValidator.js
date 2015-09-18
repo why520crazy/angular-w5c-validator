@@ -1,4 +1,4 @@
-/*! w5cValidator v2.4.0 2015-09-17 */
+/*! w5cValidator v2.4.0 2015-09-18 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -48,7 +48,8 @@ angular.module("w5c.validator", ["ng"])
                     $group.addClass("has-error");
 
                 }
-                if($elem.next(".w5c-error").length <= 0){
+                var $next = $elem.next();
+                if(!$next || !$next.hasClass("w5c-error")){
                     $elem.after('<span class="w5c-error">' + errorMessages[0] + '</span>');
                 }
             };
@@ -59,8 +60,9 @@ angular.module("w5c.validator", ["ng"])
                 if (!this.isEmpty($group) && $group.hasClass("has-error")) {
                     $group.removeClass("has-error");
                 }
-                if($elem.next(".w5c-error").length > 0){
-                    $elem.next(".w5c-error").remove();
+                var $next = $elem.next();
+                if($next.hasClass && $next.hasClass("w5c-error")){
+                    $next.remove();
                 }
 
             };
@@ -221,6 +223,9 @@ angular.module("w5c.validator")
                     var index = this.validElements.indexOf(name);
                     if (index >= 0) {
                         this.validElements.splice(index, 1);
+                        if(!w5cValidator.isEmpty(this.form.$errors)){
+                            this.doValidate(angular.noop);
+                        }
                     }
                 };
                 this.initElememt = function (elem) {
@@ -284,13 +289,11 @@ angular.module("w5c.validator")
                 }
                 ctrl.options = options = angular.extend({}, w5cValidator.options, options);
 
-                $timeout(function () {
-                    //初始化验证规则，并时时监控输入值的变话
-                    for (var i = 0; i < formElem.length; i++) {
-                        var elem = formElem[i];
-                        ctrl.initElememt(elem);
-                    }
-                });
+                //初始化验证规则，并时时监控输入值的变话
+                for (var i = 0; i < formElem.length; i++) {
+                    var elem = formElem[i];
+                    ctrl.initElememt(elem);
+                }
 
                 //触发验证事件
                 var doValidate = function () {
@@ -299,8 +302,8 @@ angular.module("w5c.validator")
                     for (var i = 0; i < ctrl.validElements.length; i++) {
                         var elemName = ctrl.validElements[i];
                         var elem = formElem[elemName];
-                        if (elem && w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elem.name)) {
-                            if (formCtrl[elem.name].$valid) {
+                        if (formCtrl[elemName] && elem && w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elem.name)) {
+                            if (formCtrl[elemName].$valid) {
                                 angular.element(elem).removeClass("error").addClass("valid");
                                 continue;
                             } else {
@@ -466,17 +469,30 @@ angular.module("w5c.validator")
             }
         };
     }])
-    .directive('w5cDynamicElement', [function () {
+    .directive('w5cDynamicElement', ["$timeout",function ($timeout) {
         return {
             restrict: 'A',
             require : ["ngModel", "?^w5cFormValidate", "?^form"],
             link    : function (scope, elm, attrs, ctrls) {
-                var name = elm[0].name;
+                var name = elm[0].name,formCtrl = ctrls[2];
                 if (name) {
                     elm.on("$destroy", function (e) {
-                        ctrls[1].removeElementValidation();
+                        ctrls[1].removeElementValidation(name);
                     });
+                    if(!formCtrl[name]){
+                        formCtrl.$addControl(ctrls[0]);
+                    }
+                    var needValidate = false;
+                    if(ctrls[2].$errors && ctrls[2].$errors.length > 0){
+                        needValidate = true;
+                    }
                     ctrls[1].initElememt(elm[0]);
+                    if(needValidate){
+                        $timeout(function(){
+                            ctrls[1].doValidate(angular.noop);
+                        });
+
+                    }
                 }
             }
         };

@@ -104,6 +104,13 @@ module.exports = function (grunt) {
                 dest: 'dist/w5cValidator.js'
             }
         },
+        less       : {
+            compile: {
+                files: {
+                    "dist/style.css"             : "src/style.less"
+                }
+            }
+        },
         uglify : {
             options: {
                 banner: '/*! <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -116,7 +123,7 @@ module.exports = function (grunt) {
         copy   : {
             main: {
                 src : 'src/style.less',
-                dest: 'example/css/style.less'
+                dest: 'dist/style.less'
             }
         }
 
@@ -140,5 +147,5 @@ module.exports = function (grunt) {
         grunt.task.run(['serve:' + target]);
     });
 
-    grunt.registerTask('build', ["copy", "concat","uglify"]);
+    grunt.registerTask('build', ["copy","less", "concat","uglify"]);
 };
