@@ -14,7 +14,7 @@ angular.module("w5c.validator", ["ng"])
                 min           : "该选项输入值不能小于{min}"
 
             },
-            elemTypes = ['text', 'password', 'email', 'number', 'url', ['textarea'], ['select'], ['select-multiple'], ['select-one'], 'radio', 'checkbox'];
+            elemTypes = ['text', 'password', 'email', 'number', 'url', 'tel', 'hidden', ['textarea'], ['select'], ['select-multiple'], ['select-one'], 'radio', 'checkbox'];
 
         var getParentGroup = function (elem) {
             if (elem[0].tagName === "FORM" || elem[0].nodeType == 11) {
