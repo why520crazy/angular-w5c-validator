@@ -47,7 +47,8 @@ angular.module("w5c.validator", ["ng"])
                     $group.addClass("has-error");
 
                 }
-                if($elem.next(".w5c-error").length <= 0){
+                var $next = $elem.next();
+                if(!$next || !$next.hasClass("w5c-error")){
                     $elem.after('<span class="w5c-error">' + errorMessages[0] + '</span>');
                 }
             };
@@ -58,8 +59,9 @@ angular.module("w5c.validator", ["ng"])
                 if (!this.isEmpty($group) && $group.hasClass("has-error")) {
                     $group.removeClass("has-error");
                 }
-                if($elem.next(".w5c-error").length > 0){
-                    $elem.next(".w5c-error").remove();
+                var $next = $elem.next();
+                if($next.hasClass && $next.hasClass("w5c-error")){
+                    $next.remove();
                 }
 
             };
