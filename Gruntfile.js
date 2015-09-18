@@ -9,7 +9,7 @@ module.exports = function (grunt) {
         yeoman : {
             // configurable paths
             app : 'example',
-            dist: 'dist'
+            dist: ''
         },
         watch  : {
             js        : {
@@ -101,13 +101,13 @@ module.exports = function (grunt) {
             //},
             basic: {
                 src : ["src/w5cValidator.js", "src/directive.js"],
-                dest: 'dist/w5cValidator.js'
+                dest: 'w5cValidator.js'
             }
         },
         less       : {
             compile: {
                 files: {
-                    "dist/style.css"             : "src/style.less"
+                    "style.css"             : "src/style.less"
                 }
             }
         },
@@ -116,14 +116,14 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build  : {
-                src : 'dist/w5cValidator.js',
-                dest: 'dist/w5cValidator.min.js'
+                src : 'w5cValidator.js',
+                dest: 'w5cValidator.min.js'
             }
         },
         copy   : {
             main: {
                 src : 'src/style.less',
-                dest: 'dist/style.less'
+                dest: 'style.less'
             }
         }
 
