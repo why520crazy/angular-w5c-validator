@@ -16,7 +16,7 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
 
 使用步骤：
 
-1. HTML 中引用 dist/w5cValidator.js，或者执行 `bower install angular-w5c-validator` 进行安装；
+1. HTML 中引用 w5cValidator.js，或者执行 `bower install angular-w5c-validator` 进行安装；
 
 1. 启动module引用 "w5c.validator"，如:` var app = angular.module("app", ["w5c.validator"]);`
 
@@ -46,7 +46,7 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
           w5c-form-validate="vm.validateOptions" novalidate name="validateForm">
         <div class="form-group">
             <label class="col-sm-2 control-label">邮箱</label>
-
+    
             <div class="col-sm-10">
                 <input type="email" name="email" ng-model="entity.email" required="" class="form-control"
                        placeholder="输入邮箱">
@@ -54,7 +54,7 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">用户名</label>
-
+    
             <div class="col-sm-10">
                 <input required="" ng-pattern="/^[A-Za-z]{1}[0-9A-Za-z_]{1,19}$/" ng-model="entity.name"
                        w5c-unique-check="{url:'http://www.ngnice.com/api/test/user/name/check?name='+entity.name}"
@@ -63,7 +63,7 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">密码</label>
-
+    
             <div class="col-sm-10">
                 <input type="password" required="" ng-model="entity.password" name="password"
                        class="form-control" ng-minlength="5" ng-maxlength="15"
@@ -72,16 +72,17 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">重复密码</label>
-
+    
             <div class="col-sm-10">
-                <input type="password" required="" w5c-repeat="password" ng-model="entity.repeatPassword" name="repeatPassword"
+                <input type="password" required="" w5c-repeat="password" ng-model="entity.repeatPassword"
+                       name="repeatPassword"
                        class="form-control"
                        placeholder="重复密码">
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">数字</label>
-
+    
             <div class="col-sm-10">
                 <input type="number" required="" ng-model="entity.number" name="number" class="form-control"
                        placeholder="输入数字（10-15）" max="15" min="10">
@@ -89,25 +90,61 @@ v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立�
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">URL</label>
-
+    
             <div class="col-sm-10">
                 <input type="url" required="" ng-model="entity.url" name="url" class="form-control"
                        placeholder="输入URL">
             </div>
         </div>
-
-        <div class="form-group" ng-show="validateForm.$errors.length > 0 && vm.showErrorType == 2">
-            <label class="col-sm-2 control-label"></label>
-
+        <div class="form-group">
+            <label class="col-sm-2 control-label">类型</label>
+    
             <div class="col-sm-10">
-                <div class="alert alert-danger">{{validateForm.$errors[0]}}</div>
+                <select class="form-control" ng-model="entity.type" required name="type"
+                        ng-options="type.text for type in vm.types">
+                    <option value="">---请选择---</option>
+                </select>
             </div>
         </div>
-
+        <div class="form-group">
+            <label class="col-sm-2 control-label">多选框</label>
+    
+            <div class="col-sm-10">
+                <select multiple class="form-control" ng-model="entity.multipleType" required name="multipleType"
+                        ng-options="type.text for type in vm.types">
+                    <option value="">---请选择---</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group" ng-if="vm.showDynamicElement">
+            <label class="col-sm-2 control-label">动态元素</label>
+    
+            <div class="col-sm-10">
+                <input required=""
+                       class="form-control" w5c-dynamic-element ng-model="entity.dynamic" name="dynamic"
+                       placeholder="动态现实元素">
+            </div>
+        </div>
+        <div class="form-group" ng-show="validateForm.$errors.length > 0 && vm.showErrorType == 2">
+            <label class="col-sm-2 control-label"></label>
+    
+            <div class="col-sm-10">
+                <div class="alert alert-danger">
+                    <ui>
+                        <li ng-repeat="error in validateForm.$errors track by $index">
+                            {{error}}
+                        </li>
+                    </ui>
+                </div>
+            </div>
+        </div>
+    
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <button type="buttom" w5c-form-submit="vm.saveEntity()" class="btn btn-success"> 验证</button>
+                <button type="buttom" ng-click="validateForm.reset()" class="btn btn-default"> 重置</button>
             </div>
+    
         </div>
     </form>
     ```
