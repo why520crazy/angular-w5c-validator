@@ -14,15 +14,15 @@ angular.module("w5c.validator", ["ng"])
                 min           : "该选项输入值不能小于{min}"
 
             },
-            elemTypes = ['text', 'password', 'email', 'number', 'url', ['textarea'], ['select'], ['select-multiple'], ['select-one']];
+            elemTypes = ['text', 'password', 'email', 'number', 'url', ['textarea'], ['select'], ['select-multiple'], ['select-one'], 'radio', 'checkbox'];
 
-        var getParentGroup = function(elem){
-            if(elem[0].tagName === "FORM" || elem[0].nodeType == 11){
+        var getParentGroup = function (elem) {
+            if (elem[0].tagName === "FORM" || elem[0].nodeType == 11) {
                 return null;
             }
-            if(elem && elem.hasClass("form-group")){
+            if (elem && elem.hasClass("form-group")) {
                 return elem;
-            }else{
+            } else {
                 return getParentGroup(elem.parent())
             }
         };
@@ -48,7 +48,7 @@ angular.module("w5c.validator", ["ng"])
 
                 }
                 var $next = $elem.next();
-                if(!$next || !$next.hasClass("w5c-error")){
+                if (!$next || !$next.hasClass("w5c-error")) {
                     $elem.after('<span class="w5c-error">' + errorMessages[0] + '</span>');
                 }
             };
@@ -60,7 +60,7 @@ angular.module("w5c.validator", ["ng"])
                     $group.removeClass("has-error");
                 }
                 var $next = $elem.next();
-                if($next.hasClass && $next.hasClass("w5c-error")){
+                if ($next.hasClass && $next.hasClass("w5c-error")) {
                     $next.remove();
                 }
 
