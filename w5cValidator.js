@@ -1,4 +1,4 @@
-/*! w5cValidator v2.4.3 2015-09-18 */
+/*! w5cValidator v2.4.4 2015-10-26 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -15,15 +15,15 @@ angular.module("w5c.validator", ["ng"])
                 min           : "该选项输入值不能小于{min}"
 
             },
-            elemTypes = ['text', 'password', 'email', 'number', 'url', ['textarea'], ['select'], ['select-multiple'], ['select-one']];
+            elemTypes = ['text', 'password', 'email', 'number', 'url', 'tel', 'hidden', ['textarea'], ['select'], ['select-multiple'], ['select-one'], 'radio', 'checkbox'];
 
-        var getParentGroup = function(elem){
-            if(elem[0].tagName === "FORM" || elem[0].nodeType == 11){
+        var getParentGroup = function (elem) {
+            if (elem[0].tagName === "FORM" || elem[0].nodeType == 11) {
                 return null;
             }
-            if(elem && elem.hasClass("form-group")){
+            if (elem && elem.hasClass("form-group")) {
                 return elem;
-            }else{
+            } else {
                 return getParentGroup(elem.parent())
             }
         };
@@ -49,7 +49,7 @@ angular.module("w5c.validator", ["ng"])
 
                 }
                 var $next = $elem.next();
-                if(!$next || !$next.hasClass("w5c-error")){
+                if (!$next || !$next.hasClass("w5c-error")) {
                     $elem.after('<span class="w5c-error">' + errorMessages[0] + '</span>');
                 }
             };
@@ -61,7 +61,7 @@ angular.module("w5c.validator", ["ng"])
                     $group.removeClass("has-error");
                 }
                 var $next = $elem.next();
-                if($next.hasClass && $next.hasClass("w5c-error")){
+                if ($next.hasClass && $next.hasClass("w5c-error")) {
                     $next.remove();
                 }
 
@@ -275,7 +275,7 @@ angular.module("w5c.validator")
                 var formElem = form[0],
                     formSubmitFn = $parse(attr.w5cSubmit),
                     options = scope.$eval(attr.w5cFormValidate);
-                if (!form.attr("name")) {
+                if (!attr.name) {
                     throw Error("form must has name when use w5cFormValidate");
                 }
                 ctrl.init(formCtrl, form, attr);

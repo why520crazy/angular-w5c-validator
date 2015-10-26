@@ -80,7 +80,7 @@ angular.module("w5c.validator")
                 var formElem = form[0],
                     formSubmitFn = $parse(attr.w5cSubmit),
                     options = scope.$eval(attr.w5cFormValidate);
-                if (!form.attr("name")) {
+                if (!attr.name) {
                     throw Error("form must has name when use w5cFormValidate");
                 }
                 ctrl.init(formCtrl, form, attr);
