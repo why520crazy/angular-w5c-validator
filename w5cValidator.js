@@ -1,4 +1,4 @@
-/*! w5cValidator v2.4.4 2015-10-26 */
+/*! w5cValidator v2.4.5 2015-10-28 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -197,7 +197,6 @@ angular.module("w5c.validator")
     .directive("w5cFormValidate", ['$parse', 'w5cValidator', '$timeout', function ($parse, w5cValidator, $timeout) {
         return {
             require   : ['w5cFormValidate', '^?form'],
-            priority  : 100000,
             controller: ['$scope', function ($scope) {
                 this.needBindKeydown = false;
                 this.form = null;

@@ -2,7 +2,6 @@ angular.module("w5c.validator")
     .directive("w5cFormValidate", ['$parse', 'w5cValidator', '$timeout', function ($parse, w5cValidator, $timeout) {
         return {
             require   : ['w5cFormValidate', '^?form'],
-            priority  : 100000,
             controller: ['$scope', function ($scope) {
                 this.needBindKeydown = false;
                 this.form = null;
