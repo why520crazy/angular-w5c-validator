@@ -103,18 +103,20 @@ angular.module("w5c.validator")
                 var doValidate = function () {
                     var errorMessages = [];
                     //循环验证
-                    for (var i = 0; i < ctrl.validElements.length; i++) {
-                        var elemName = ctrl.validElements[i];
-                        var elem = formElem[elemName];
-                        if (formCtrl[elemName] && elem && w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elem.name)) {
-                            if (formCtrl[elemName].$valid) {
-                                angular.element(elem).removeClass("error").addClass("valid");
-                                continue;
-                            } else {
-                                var elementErrors = w5cValidator.getErrorMessages(elem, formCtrl[elem.name].$error);
-                                errorMessages.push(elementErrors[0]);
-                                w5cValidator.removeError(elem, options);
-                                w5cValidator.showError(elem, elementErrors, options);
+                    for (var i = 0; i < formElem.length; i++) {
+                        var elemName = formElem[i].name;
+                        if(elemName && ctrl.validElements.indexOf(elemName) >= 0){
+                            var elem = formElem[elemName];
+                            if (formCtrl[elemName] && elem && w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elem.name)) {
+                                if (formCtrl[elemName].$valid) {
+                                    angular.element(elem).removeClass("error").addClass("valid");
+                                    continue;
+                                } else {
+                                    var elementErrors = w5cValidator.getErrorMessages(elem, formCtrl[elem.name].$error);
+                                    errorMessages.push(elementErrors[0]);
+                                    w5cValidator.removeError(elem, options);
+                                    w5cValidator.showError(elem, elementErrors, options);
+                                }
                             }
                         }
                     }
