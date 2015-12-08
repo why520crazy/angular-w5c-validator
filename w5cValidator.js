@@ -214,7 +214,9 @@ angular.module("w5c.validator")
                     }
                     if (this.form.$valid && angular.isFunction(success)) {
                         $scope.$apply(function () {
-                            success($scope);
+                            success($scope, {
+                                $event: event
+                            });
                         });
                     }
                 };
@@ -365,7 +367,9 @@ angular.module("w5c.validator")
                                 event.preventDefault();
                                 if (formCtrl.$valid && angular.isFunction(ctrl.submitSuccessFn)) {
                                     scope.$apply(function () {
-                                        ctrl.submitSuccessFn(scope);
+                                        ctrl.submitSuccessFn(scope, {
+                                            $event: event
+                                        });
                                     });
                                 }
                             }
