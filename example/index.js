@@ -46,7 +46,7 @@
             showDynamicElement: true
         };
 
-        vm.saveEntity = function (form) {
+        vm.saveEntity = function ($event) {
             //do somethings for bz
             alert("Save Successfully!!!");
         };

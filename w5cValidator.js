@@ -1,4 +1,4 @@
-/*! w5cValidator v2.4.5 2015-11-23 */
+/*! w5cValidator v2.4.5 2015-12-08 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -208,15 +208,13 @@ angular.module("w5c.validator")
                     this.formElement = form;
                     this.formName = form.attr("name");
                 };
-                this.doValidate = function (success) {
+                this.doValidate = function (success, event) {
                     if (angular.isFunction(this.form.doValidate)) {
                         this.form.doValidate();
                     }
                     if (this.form.$valid && angular.isFunction(success)) {
                         $scope.$apply(function () {
-                            success($scope, {
-                                $event: event
-                            });
+                            success($scope, {$event: event});
                         });
                     }
                 };
@@ -224,7 +222,7 @@ angular.module("w5c.validator")
                     var index = this.validElements.indexOf(name);
                     if (index >= 0) {
                         this.validElements.splice(index, 1);
-                        if(!w5cValidator.isEmpty(this.form.$errors)){
+                        if (!w5cValidator.isEmpty(this.form.$errors)) {
                             this.doValidate(angular.noop);
                         }
                     }
@@ -302,7 +300,7 @@ angular.module("w5c.validator")
                     //循环验证
                     for (var i = 0; i < formElem.length; i++) {
                         var elemName = formElem[i].name;
-                        if(elemName && ctrl.validElements.indexOf(elemName) >= 0){
+                        if (elemName && ctrl.validElements.indexOf(elemName) >= 0) {
                             var elem = formElem[elemName];
                             if (formCtrl[elemName] && elem && w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elem.name)) {
                                 if (formCtrl[elemName].$valid) {
@@ -343,11 +341,11 @@ angular.module("w5c.validator")
                 //w5cSubmit is function
                 if (attr.w5cSubmit && angular.isFunction(formSubmitFn)) {
 
-                    form.bind("submit", function () {
+                    form.bind("submit", function (event) {
                         doValidate();
                         if (formCtrl.$valid && angular.isFunction(formSubmitFn)) {
                             scope.$apply(function () {
-                                formSubmitFn(scope);
+                                formSubmitFn(scope, {$event: event});
                             });
                         }
                     });
@@ -367,9 +365,7 @@ angular.module("w5c.validator")
                                 event.preventDefault();
                                 if (formCtrl.$valid && angular.isFunction(ctrl.submitSuccessFn)) {
                                     scope.$apply(function () {
-                                        ctrl.submitSuccessFn(scope, {
-                                            $event: event
-                                        });
+                                        ctrl.submitSuccessFn(scope, {$event: event});
                                     });
                                 }
                             }
@@ -384,8 +380,8 @@ angular.module("w5c.validator")
             require: "^w5cFormValidate",
             link   : function (scope, element, attr, ctrl) {
                 var validSuccessFn = $parse(attr.w5cFormSubmit);
-                element.bind("click", function () {
-                    ctrl.doValidate(validSuccessFn);
+                element.bind("click", function (event) {
+                    ctrl.doValidate(validSuccessFn, event);
                 });
                 ctrl.needBindKeydown = true;
                 ctrl.submitSuccessFn = validSuccessFn;
@@ -474,26 +470,26 @@ angular.module("w5c.validator")
             }
         };
     }])
-    .directive('w5cDynamicElement', ["$timeout",function ($timeout) {
+    .directive('w5cDynamicElement', ["$timeout", function ($timeout) {
         return {
             restrict: 'A',
             require : ["ngModel", "?^w5cFormValidate", "?^form"],
             link    : function (scope, elm, attrs, ctrls) {
-                var name = elm[0].name,formCtrl = ctrls[2];
+                var name = elm[0].name, formCtrl = ctrls[2];
                 if (name) {
                     elm.on("$destroy", function (e) {
                         ctrls[1].removeElementValidation(name);
                     });
-                    if(!formCtrl[name]){
+                    if (!formCtrl[name]) {
                         formCtrl.$addControl(ctrls[0]);
                     }
                     var needValidate = false;
-                    if(ctrls[2].$errors && ctrls[2].$errors.length > 0){
+                    if (ctrls[2].$errors && ctrls[2].$errors.length > 0) {
                         needValidate = true;
                     }
                     ctrls[1].initElememt(elm[0]);
-                    if(needValidate){
-                        $timeout(function(){
+                    if (needValidate) {
+                        $timeout(function () {
                             ctrls[1].doValidate(angular.noop);
                         });
 
