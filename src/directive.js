@@ -203,9 +203,10 @@ angular.module("w5c.validator")
                 ctrl.$parsers.push(function (value) {
                     if (value === otherInput.$viewValue) {
                         ctrl.$setValidity("repeat", true);
-                        return value;
+                    } else {
+                        ctrl.$setValidity("repeat", false);
                     }
-                    ctrl.$setValidity("repeat", false);
+                    return value;
                 });
 
                 otherInput.$parsers.push(function (value) {

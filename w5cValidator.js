@@ -1,4 +1,4 @@
-/*! w5cValidator v2.4.5 2015-12-08 */
+/*! w5cValidator v2.4.8 2015-12-15 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -398,9 +398,10 @@ angular.module("w5c.validator")
                 ctrl.$parsers.push(function (value) {
                     if (value === otherInput.$viewValue) {
                         ctrl.$setValidity("repeat", true);
-                        return value;
+                    } else {
+                        ctrl.$setValidity("repeat", false);
                     }
-                    ctrl.$setValidity("repeat", false);
+                    return value;
                 });
 
                 otherInput.$parsers.push(function (value) {
