@@ -16,5 +16,5 @@
     "Gruntfile.js",
     "package.json"
   ],
-  "main": ["./dist/w5cValidator.js"]
+  "main": ["w5cValidator.js"]
 }
