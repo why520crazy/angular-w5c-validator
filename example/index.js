@@ -37,7 +37,7 @@
                 required: "数字不能为空"
             },
             customizer    : {
-                customizer: "自定义验证必须输入why520crazy"
+                customizer: "自定义验证数字必须大于上面的数字"
             }
         });
     }]);
@@ -61,7 +61,7 @@
         };
 
         vm.customizer = function () {
-            return vm.entity.customizer == 'why520crazy'
+            return vm.entity.customizer > vm.entity.number;
         };
 
         vm.changeShowType = function () {
