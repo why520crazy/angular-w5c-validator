@@ -35,6 +35,9 @@
             },
             number        : {
                 required: "数字不能为空"
+            },
+            customizer    : {
+                customizer: "自定义验证必须输入why520crazy"
             }
         });
     }]);
@@ -43,7 +46,8 @@
         var vm = $scope.vm = {
             htmlSource        : "",
             showErrorType     : 1,
-            showDynamicElement: true
+            showDynamicElement: true,
+            entity            : {}
         };
 
         vm.saveEntity = function ($event) {
@@ -54,6 +58,10 @@
         //每个表单的配置，如果不设置，默认和全局配置相同
         vm.validateOptions = {
             blurTrig: true
+        };
+
+        vm.customizer = function () {
+            return vm.entity.customizer == 'why520crazy'
         };
 
         vm.changeShowType = function () {

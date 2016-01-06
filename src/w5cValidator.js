@@ -11,7 +11,8 @@ angular.module("w5c.validator", ["ng"])
                 w5cuniquecheck: "该输入值已经存在，请重新输入",
                 url           : "输入URL格式不正确",
                 max           : "该选项输入值不能大于{max}",
-                min           : "该选项输入值不能小于{min}"
+                min           : "该选项输入值不能小于{min}",
+                customizer    : "自定义验证不通过"
 
             },
             elemTypes = ['text', 'password', 'email', 'number', 'url', 'tel', 'hidden', ['textarea'], ['select'], ['select-multiple'], ['select-one'], 'radio', 'checkbox'];
@@ -29,7 +30,7 @@ angular.module("w5c.validator", ["ng"])
 
         var validatorFn = function () {
             this.elemTypes = elemTypes;
-            this.rules = [];
+            this.rules = {};
             this.isEmpty = function (object) {
                 if (!object) {
                     return true;
@@ -78,7 +79,7 @@ angular.module("w5c.validator", ["ng"])
                 this.options = angular.extend(this.options, options);
             },
             setRules        : function (rules) {
-                this.rules = rules;
+                this.rules = angular.extend(this.rules, rules);
             },
             getErrorMessage : function (validationName, elem) {
                 var msgTpl = null;
