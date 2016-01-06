@@ -194,7 +194,7 @@ angular.module("w5c.validator", ["ng"])
         }
     }]);
 
-(function(){
+(function () {
     angular.module("w5c.validator")
         .directive("w5cFormValidate", ['$parse', 'w5cValidator', '$timeout', function ($parse, w5cValidator, $timeout) {
             return {
@@ -229,7 +229,7 @@ angular.module("w5c.validator", ["ng"])
                             }
                         }
                     };
-                    this.initElememt = function (elem) {
+                    this.initElement = function (elem) {
                         var $elem = angular.element(elem);
                         var ctrl = this;
 
@@ -293,7 +293,7 @@ angular.module("w5c.validator", ["ng"])
                     //初始化验证规则，并时时监控输入值的变话
                     for (var i = 0; i < formElem.length; i++) {
                         var elem = formElem[i];
-                        ctrl.initElememt(elem);
+                        ctrl.initElement(elem);
                     }
 
                     //触发验证事件
@@ -413,19 +413,23 @@ angular.module("w5c.validator", ["ng"])
                 }
             };
         }])
-        .directive("w5cCustomizer", ['$timeout',function ($timeout) {
+        .directive("w5cCustomizer", ['$timeout', function ($timeout) {
             'use strict';
             return {
-                require: "ngModel",
-                link   : function (scope, elem, attrs, ctrl) {
-                    ctrl.$viewChangeListeners.push(function(){
+                require: ["^form", "ngModel"],
+                link   : function (scope, elem, attrs, ctrls) {
+                    var ngModelCtrl = ctrls[1];
+                    var $validate = function () {
                         var validate = scope.$eval(attrs.w5cCustomizer);
                         if (validate === true) {
-                            ctrl.$setValidity("customizer", true);
+                            ngModelCtrl.$setValidity("customizer", true);
                         } else {
-                            ctrl.$setValidity("customizer", false);
+                            ngModelCtrl.$setValidity("customizer", false);
                         }
-                    });
+                    };
+                    var associate = ctrls[0][attrs.associate];
+                    associate && associate.$viewChangeListeners.push($validate);
+                    ngModelCtrl.$viewChangeListeners.push($validate);
                 }
             };
         }])
@@ -506,7 +510,7 @@ angular.module("w5c.validator", ["ng"])
                         if (ctrls[2].$errors && ctrls[2].$errors.length > 0) {
                             needValidate = true;
                         }
-                        ctrls[1].initElememt(elm[0]);
+                        ctrls[1].initElement(elm[0]);
                         if (needValidate) {
                             $timeout(function () {
                                 ctrls[1].doValidate(angular.noop);
