@@ -33,7 +33,7 @@
                             }
                         }
                     };
-                    this.initElememt = function (elem) {
+                    this.initElement = function (elem) {
                         var $elem = angular.element(elem);
                         var ctrl = this;
 
@@ -97,7 +97,7 @@
                     //初始化验证规则，并时时监控输入值的变话
                     for (var i = 0; i < formElem.length; i++) {
                         var elem = formElem[i];
-                        ctrl.initElememt(elem);
+                        ctrl.initElement(elem);
                     }
 
                     //触发验证事件
@@ -314,7 +314,7 @@
                         if (ctrls[2].$errors && ctrls[2].$errors.length > 0) {
                             needValidate = true;
                         }
-                        ctrls[1].initElememt(elm[0]);
+                        ctrls[1].initElement(elm[0]);
                         if (needValidate) {
                             $timeout(function () {
                                 ctrls[1].doValidate(angular.noop);
