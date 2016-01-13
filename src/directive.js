@@ -37,7 +37,11 @@
                         var $elem = angular.element(elem);
                         var ctrl = this;
 
-                        if (w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elem.name)) {
+                        if (w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elem.name) && !/^\d/.test(elem.name)) {
+                            var disabled = $elem.attr('disabled');
+                            if(disabled && (disabled === 'true' || disabled === 'disabled')){
+                                return;
+                            }
                             //formCtrl[elem.name].$viewChangeListeners.push(function () {
                             //    formCtrl.$errors = [];
                             //    w5cValidator.removeError($elem, options);
