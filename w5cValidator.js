@@ -1,4 +1,4 @@
-/*! w5cValidator v2.4.9 2016-01-06 */
+/*! w5cValidator v2.4.10 2016-01-13 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -233,7 +233,11 @@ angular.module("w5c.validator", ["ng"])
                         var $elem = angular.element(elem);
                         var ctrl = this;
 
-                        if (w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elem.name)) {
+                        if (w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elem.name) && !/^\d/.test(elem.name)) {
+                            var disabled = $elem.attr('disabled');
+                            if(disabled && (disabled === 'true' || disabled === 'disabled')){
+                                return;
+                            }
                             //formCtrl[elem.name].$viewChangeListeners.push(function () {
                             //    formCtrl.$errors = [];
                             //    w5cValidator.removeError($elem, options);
