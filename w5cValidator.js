@@ -1,4 +1,4 @@
-/*! w5cValidator v2.4.10 2016-01-13 */
+/*! w5cValidator v2.4.10 2016-02-25 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -229,13 +229,17 @@ angular.module("w5c.validator", ["ng"])
                             }
                         }
                     };
+                    this.removeError = function ($elem) {
+                        this.form.$errors = [];
+                        w5cValidator.removeError($elem, this.options);
+                    };
                     this.initElement = function (elem) {
                         var $elem = angular.element(elem);
                         var ctrl = this;
 
                         if (w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elem.name) && !/^\d/.test(elem.name)) {
                             var disabled = $elem.attr('disabled');
-                            if(disabled && (disabled === 'true' || disabled === 'disabled')){
+                            if (disabled && (disabled === 'true' || disabled === 'disabled')) {
                                 return;
                             }
                             //formCtrl[elem.name].$viewChangeListeners.push(function () {
@@ -251,8 +255,7 @@ angular.module("w5c.validator", ["ng"])
                             //监控输入框的value值当有变化时移除错误信息
                             //可以修改成当输入框验证通过时才移除错误信息，只要监控$valid属性即可
                             $scope.$watch($viewValueName, function () {
-                                ctrl.form.$errors = [];
-                                w5cValidator.removeError($elem, ctrl.options);
+                                ctrl.removeError($elem);
                             }, true);
                             //光标移走的时候触发验证信息
                             if (ctrl.options.blurTrig) {
@@ -361,7 +364,7 @@ angular.module("w5c.validator", ["ng"])
                         form.bind("keydown keypress", function (event) {
                             if (event.which === 13) {
                                 var currentInput = document.activeElement;
-                                if (currentInput.type !== "textarea") {
+                                if (currentInput.type && currentInput.type !== "textarea") {
                                     var button = form.find("button");
                                     if (button && button[0]) {
                                         button[0].focus();
@@ -397,21 +400,24 @@ angular.module("w5c.validator", ["ng"])
         .directive("w5cRepeat", [function () {
             'use strict';
             return {
-                require: "ngModel",
-                link   : function (scope, elem, attrs, ctrl) {
+                require: ["ngModel", "^w5cFormValidate"],
+                link   : function (scope, elem, attrs, ctrls) {
                     var otherInput = elem.inheritedData("$formController")[attrs.w5cRepeat];
-
-                    ctrl.$parsers.push(function (value) {
+                    var ngModel = ctrls[0], w5cFormCtrl = ctrls[1];
+                    ngModel.$parsers.push(function (value) {
                         if (value === otherInput.$viewValue) {
-                            ctrl.$setValidity("repeat", true);
+                            ngModel.$setValidity("repeat", true);
                         } else {
-                            ctrl.$setValidity("repeat", false);
+                            ngModel.$setValidity("repeat", false);
                         }
                         return value;
                     });
 
                     otherInput.$parsers.push(function (value) {
-                        ctrl.$setValidity("repeat", value === ctrl.$viewValue);
+                        ngModel.$setValidity("repeat", value === ngModel.$viewValue);
+                        if (value === ngModel.$viewValue) {
+                            w5cFormCtrl.removeError(elem);
+                        }
                         return value;
                     });
                 }
