@@ -168,7 +168,7 @@
                         form.bind("keydown keypress", function (event) {
                             if (event.which === 13) {
                                 var currentInput = document.activeElement;
-                                if (currentInput.type !== "textarea") {
+                                if (currentInput.type&&currentInput.type !== "textarea") {
                                     var button = form.find("button");
                                     if (button && button[0]) {
                                         button[0].focus();
