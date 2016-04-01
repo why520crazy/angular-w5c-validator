@@ -101,13 +101,13 @@ module.exports = function (grunt) {
             //},
             basic: {
                 src : ["src/w5cValidator.js", "src/directive.js"],
-                dest: 'w5cValidator.js'
+                dest: 'dist/w5cValidator.js'
             }
         },
         less       : {
             compile: {
                 files: {
-                    "style.css"             : "src/style.less"
+                    "dist/style.css"             : "src/style.less"
                 }
             }
         },
@@ -116,14 +116,14 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build  : {
-                src : 'w5cValidator.js',
-                dest: 'w5cValidator.min.js'
+                src : 'dist/w5cValidator.js',
+                dest: 'dist/w5cValidator.min.js'
             }
         },
         copy   : {
             main: {
                 src : 'src/style.less',
-                dest: 'style.less'
+                dest: 'dist/style.less'
             }
         }
 
