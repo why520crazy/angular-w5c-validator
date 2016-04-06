@@ -45,7 +45,7 @@
 
         var vm = $scope.vm = {
             htmlSource        : "",
-            showErrorType     : 1,
+            showErrorType     : "1",
             showDynamicElement: true,
             entity            : {}
         };
