@@ -102,8 +102,9 @@
                     ctrl.options = options = angular.extend({}, w5cValidator.options, options);
 
                     //初始化验证规则，并时时监控输入值的变话
-                    for (var i = 0; i < formElem.length; i++) {
-                        var elem = formElem[i];
+                    debugger;
+                    for (var i = 0; i < formElem.elements.length; i++) {
+                        var elem = formElem.elements[i];
                         ctrl.initElement(elem);
                     }
 
@@ -111,8 +112,8 @@
                     var doValidate = function () {
                         var errorMessages = [];
                         //循环验证
-                        for (var i = 0; i < formElem.length; i++) {
-                            var elemName = formElem[i].name;
+                        for (var i = 0; i < formElem.elements.length; i++) {
+                            var elemName = formElem.elements[i].name;
                             if (elemName && ctrl.validElements.indexOf(elemName) >= 0) {
                                 var elem = formElem[elemName];
                                 if (formCtrl[elemName] && elem && w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elem.name)) {
@@ -142,8 +143,8 @@
                         formCtrl.reset = function () {
                             $timeout(function () {
                                 formCtrl.$setPristine();
-                                for (var i = 0; i < formElem.length; i++) {
-                                    var elem = formElem[i];
+                                for (var i = 0; i < formElem.elements.length; i++) {
+                                    var elem = formElem.elements[i];
                                     var $elem = angular.element(elem);
                                     w5cValidator.removeError($elem, options);
                                 }
