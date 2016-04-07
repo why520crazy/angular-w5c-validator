@@ -102,7 +102,6 @@
                     ctrl.options = options = angular.extend({}, w5cValidator.options, options);
 
                     //初始化验证规则，并时时监控输入值的变话
-                    debugger;
                     for (var i = 0; i < formElem.elements.length; i++) {
                         var elem = formElem.elements[i];
                         ctrl.initElement(elem);
