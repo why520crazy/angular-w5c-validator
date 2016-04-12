@@ -1,4 +1,4 @@
-/*! w5cValidator v2.4.13 2016-04-12 */
+/*! w5cValidator v2.4.14 2016-04-12 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -506,7 +506,7 @@ angular.module("w5c.validator", ["ng"])
         .directive('w5cDynamicElement', ["$timeout", function ($timeout) {
             return {
                 restrict: 'A',
-                require : ["ngModebuggerl", "?^w5cFormValidate", "?^form"],
+                require : ["ngModel", "?^w5cFormValidate", "?^form"],
                 link    : function (scope, elm, attrs, ctrls) {
                     var name = elm[0].name, formCtrl = ctrls[2];
                     if (name) {
