@@ -1,4 +1,4 @@
-/*! w5cValidator v2.4.11 2016-04-06 */
+/*! w5cValidator v2.4.13 2016-04-12 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -298,7 +298,6 @@ angular.module("w5c.validator", ["ng"])
                     ctrl.options = options = angular.extend({}, w5cValidator.options, options);
 
                     //初始化验证规则，并时时监控输入值的变话
-                    debugger;
                     for (var i = 0; i < formElem.elements.length; i++) {
                         var elem = formElem.elements[i];
                         ctrl.initElement(elem);
@@ -507,7 +506,7 @@ angular.module("w5c.validator", ["ng"])
         .directive('w5cDynamicElement', ["$timeout", function ($timeout) {
             return {
                 restrict: 'A',
-                require : ["ngModel", "?^w5cFormValidate", "?^form"],
+                require : ["ngModebuggerl", "?^w5cFormValidate", "?^form"],
                 link    : function (scope, elm, attrs, ctrls) {
                     var name = elm[0].name, formCtrl = ctrls[2];
                     if (name) {
