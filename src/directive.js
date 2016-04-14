@@ -310,7 +310,7 @@
         .directive('w5cDynamicElement', ["$timeout", function ($timeout) {
             return {
                 restrict: 'A',
-                require : ["ngModebuggerl", "?^w5cFormValidate", "?^form"],
+                require : ["ngModel", "?^w5cFormValidate", "?^form"],
                 link    : function (scope, elm, attrs, ctrls) {
                     var name = elm[0].name, formCtrl = ctrls[2];
                     if (name) {
