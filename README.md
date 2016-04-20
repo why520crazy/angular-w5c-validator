@@ -8,13 +8,7 @@ w5c validator自身提示信息样式使用了bootstrap的方式，当然你可�
 
 >Change Log:https://github.com/why520crazy/angular-w5c-validator/blob/master/CHANGELOG.md
 
-关于v1.x版本的介绍参见：http://www.ngnice.com/posts/69f774dc4d3190
-v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立出来，而且有很多代码不是很规范，这次正好重构了之前的代码，直接升级到了 v2.0.0版本，同时也完善了展示案例功能。
-
-如果你已经足够了解了angular或者之前使用过 w5cValidator，可以直接看展示程序：
->展示地址：http://why520crazy.github.io/w5c-validator-angular
-
-使用步骤：
+# Useage：
 
 1. HTML 中引用 w5cValidator.js，或者执行 `bower install angular-w5c-validator` 进行安装；
 
