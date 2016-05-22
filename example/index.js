@@ -38,6 +38,12 @@
             },
             customizer    : {
                 customizer: "自定义验证数字必须大于上面的数字"
+            },
+            dynamicName:{
+                required: "动态Name不能为空"
+            },
+            dynamic       : {
+                required: "动态元素不能为空"
             }
         });
     }]);
@@ -47,6 +53,7 @@
             htmlSource        : "",
             showErrorType     : "1",
             showDynamicElement: true,
+            dynamicName       : "dynamicName",
             entity            : {}
         };
 
