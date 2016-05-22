@@ -1,4 +1,4 @@
-/*! w5cValidator v2.4.14 2016-04-12 */
+/*! w5cValidator v2.4.15 2016-05-21 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -83,31 +83,26 @@ angular.module("w5c.validator", ["ng"])
                 this.rules = angular.extend(this.rules, rules);
             },
             getErrorMessage : function (validationName, elem) {
-                var msgTpl = null;
-                if (!this.isEmpty(this.rules[elem.name]) && !this.isEmpty(this.rules[elem.name][validationName])) {
-                    msgTpl = this.rules[elem.name][validationName];
+                var msgTpl = null, elementName = elem.name;
+                if (elementName && /\$\d+\$/i.test(elementName)) {
+                    elementName = elementName.replace(/\$\d+\$/i, '');
                 }
+                if (!this.isEmpty(this.rules[elementName]) && !this.isEmpty(this.rules[elementName][validationName])) {
+                    msgTpl = this.rules[elementName][validationName];
+                }
+
                 switch (validationName) {
                     case "maxlength":
-                        if (msgTpl !== null) {
-                            return msgTpl.replace("{maxlength}", elem.getAttribute("ng-maxlength"));
-                        }
-                        return defaultRules.maxlength.replace("{maxlength}", elem.getAttribute("ng-maxlength"));
+                        return (msgTpl || defaultRules.maxlength).replace("{maxlength}", elem.getAttribute("ng-maxlength"));
+                        break;
                     case "minlength":
-                        if (msgTpl !== null) {
-                            return msgTpl.replace("{minlength}", elem.getAttribute("ng-minlength"));
-                        }
-                        return defaultRules.minlength.replace("{minlength}", elem.getAttribute("ng-minlength"));
+                        return (msgTpl || defaultRules.minlength).replace("{minlength}", elem.getAttribute("ng-minlength"));
+                        break;
                     case "max":
-                        if (msgTpl !== null) {
-                            return msgTpl.replace("{max}", elem.getAttribute("max"));
-                        }
-                        return defaultRules.max.replace("{max}", elem.getAttribute("max"));
+                        return (msgTpl || defaultRules.max).replace("{max}", elem.getAttribute("max"));
+                        break;
                     case "min":
-                        if (msgTpl !== null) {
-                            return msgTpl.replace("{min}", elem.getAttribute("min"));
-                        }
-                        return defaultRules.min.replace("{min}", elem.getAttribute("min"));
+                        return (msgTpl || defaultRules.min).replace("{min}", elem.getAttribute("min"));
                     default :
                     {
                         if (msgTpl !== null) {

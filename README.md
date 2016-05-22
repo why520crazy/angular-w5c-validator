@@ -8,13 +8,7 @@ w5c validator自身提示信息样式使用了bootstrap的方式，当然你可�
 
 >Change Log:https://github.com/why520crazy/angular-w5c-validator/blob/master/CHANGELOG.md
 
-关于v1.x版本的介绍参见：http://www.ngnice.com/posts/69f774dc4d3190
-v1.x版本虽然简单的实现了验证功能，但是没有按照模块独立出来，而且有很多代码不是很规范，这次正好重构了之前的代码，直接升级到了 v2.0.0版本，同时也完善了展示案例功能。
-
-如果你已经足够了解了angular或者之前使用过 w5cValidator，可以直接看展示程序：
->展示地址：http://why520crazy.github.io/w5c-validator-angular
-
-使用步骤：
+# Useage：
 
 1. HTML 中引用 w5cValidator.js，或者执行 `bower install angular-w5c-validator` 进行安装；
 
@@ -154,6 +148,10 @@ AngularJS原生支持很多种验证规则，比如：require（必填项），e
 
 w5cValidator提供了w5c-repeat（级联重复，常用于重复密码）和w5cUniqueCheck (远程验证，常用于检验用户名邮箱是否存在)
 
+1. w5cDynamicName , 让name支持表达式, `<input w5c-dynamic-name="vm.dynamicName" />`
+1. w5cDynamicElement 指令用于带 ng-if 或者 ng-repeat 内部的验证元素, 常常和 w5cDynamicName 配合使用
+
+
 #默认提示信息
 
 ```js
@@ -183,6 +181,7 @@ w5cValidator提供了w5c-repeat（级联重复，常用于重复密码）和w5cU
 1. 如果你不想安装node grunt等乱七八糟的玩意，直接打开example/index-local.html 即可运行。
 1. w5cUniqueCheck默认检验是否已经存在，存在验证不通过，不存在验证通过，如果isExists设置为false表示：存在验证通过，不存在验证不通过。
 1. w5cValidatorProvider默认的错误提示信息是中文的，如果想修改成其他语言，可以通过 w5cValidatorProvider.setDefaultRules()方法设置。
+1. w5cDynamicName和w5cDynamicElement通常用于 循环创建表单元素,但是提示信息往往是一样的,默认的提示规则是按照name定义的, 所以提供了一种特殊的命名方式 `{name}{$数字$}`, 当匹配错误提示的时候,如果name后面带有 `$数字$`,会忽略这个,常用于 `ng-repeat`创建元素
 
 #参数
 
