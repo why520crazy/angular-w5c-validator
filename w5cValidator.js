@@ -1,4 +1,4 @@
-/*! w5cValidator v2.4.15 2016-05-21 */
+/*! w5cValidator v2.4.15 2016-05-22 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -392,28 +392,30 @@ angular.module("w5c.validator", ["ng"])
                 }
             };
         }])
-        .directive("w5cRepeat", [function () {
+        .directive("w5cRepeat", ['$timeout', function ($timeout) {
             'use strict';
             return {
                 require: ["ngModel", "^w5cFormValidate"],
                 link   : function (scope, elem, attrs, ctrls) {
-                    var otherInput = elem.inheritedData("$formController")[attrs.w5cRepeat];
-                    var ngModel = ctrls[0], w5cFormCtrl = ctrls[1];
-                    ngModel.$parsers.push(function (value) {
-                        if (value === otherInput.$viewValue) {
-                            ngModel.$setValidity("repeat", true);
-                        } else {
-                            ngModel.$setValidity("repeat", false);
-                        }
-                        return value;
-                    });
+                    $timeout(function(){
+                        var otherInput = elem.inheritedData("$formController")[attrs.w5cRepeat];
+                        var ngModel = ctrls[0], w5cFormCtrl = ctrls[1];
+                        ngModel.$parsers.push(function (value) {
+                            if (value === otherInput.$viewValue) {
+                                ngModel.$setValidity("repeat", true);
+                            } else {
+                                ngModel.$setValidity("repeat", false);
+                            }
+                            return value;
+                        });
 
-                    otherInput.$parsers.push(function (value) {
-                        ngModel.$setValidity("repeat", value === ngModel.$viewValue);
-                        if (value === ngModel.$viewValue) {
-                            w5cFormCtrl.removeError(elem);
-                        }
-                        return value;
+                        otherInput.$parsers.push(function (value) {
+                            ngModel.$setValidity("repeat", value === ngModel.$viewValue);
+                            if (value === ngModel.$viewValue) {
+                                w5cFormCtrl.removeError(elem);
+                            }
+                            return value;
+                        });
                     });
                 }
             };

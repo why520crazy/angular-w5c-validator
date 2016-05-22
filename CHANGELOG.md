@@ -1,3 +1,7 @@
+## v2.4.15
+1. Merge PR https://github.com/why520crazy/angular-w5c-validator/pull/62
+1. 添加 `{name}{$数字$}` 命名忽略 `$数字$` , https://github.com/why520crazy/angular-w5c-validator/issues/60
+
 ## v2.4.0
 添加动态元素的验证
 
