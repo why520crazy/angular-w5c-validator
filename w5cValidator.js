@@ -1,4 +1,4 @@
-/*! w5cValidator v2.4.15 2016-05-22 */
+/*! w5cValidator v2.4.16 2016-05-27 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -226,6 +226,7 @@ angular.module("w5c.validator", ["ng"])
                     };
                     this.removeError = function ($elem) {
                         this.form.$errors = [];
+                        this.form[$elem[0].name] && (this.form[$elem[0].name].w5cError = false);
                         w5cValidator.removeError($elem, this.options);
                     };
                     this.initElement = function (elem) {
@@ -264,6 +265,9 @@ angular.module("w5c.validator", ["ng"])
                                         if (!ctrl.form[self.name].$valid) {
                                             var errorMessages = w5cValidator.getErrorMessages(self, ctrl.form[self.name].$error);
                                             w5cValidator.showError($elem, errorMessages, ctrl.options);
+                                            if(ctrl.form[$elem[0].name]){
+                                                ctrl.form[$elem[0].name].w5cError = true;
+                                            }
                                         } else {
                                             w5cValidator.removeError($elem, ctrl.options);
                                         }
@@ -315,6 +319,7 @@ angular.module("w5c.validator", ["ng"])
                                         errorMessages.push(elementErrors[0]);
                                         w5cValidator.removeError(elem, options);
                                         w5cValidator.showError(elem, elementErrors, options);
+                                        formCtrl[elemName].w5cError = true;
                                     }
                                 }
                             }
@@ -456,6 +461,9 @@ angular.module("w5c.validator", ["ng"])
                             if (!state) {
                                 var errorMsg = w5cValidator.getErrorMessage("w5cuniquecheck", elem[0]);
                                 w5cValidator.showError(elem[0], [errorMsg], w5cFormCtrl.options);
+                                if(formCtrl[elem[0].name]){
+                                    formCtrl[elem[0].name].w5cError = true;
+                                }
                                 if (!formCtrl.$errors) {
                                     formCtrl.$errors = [errorMsg];
                                 } else {
