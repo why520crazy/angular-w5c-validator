@@ -1,4 +1,4 @@
-/*! w5cValidator v2.4.16 2016-05-27 */
+/*! w5cValidator v2.4.16 2016-06-21 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -442,6 +442,7 @@ angular.module("w5c.validator", ["ng"])
                     var associate = ctrls[0][attrs.associate];
                     associate && associate.$viewChangeListeners.push($validate);
                     ngModelCtrl.$viewChangeListeners.push($validate);
+                    $validate();
                 }
             };
         }])

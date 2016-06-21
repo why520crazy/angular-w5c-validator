@@ -251,6 +251,7 @@
                     var associate = ctrls[0][attrs.associate];
                     associate && associate.$viewChangeListeners.push($validate);
                     ngModelCtrl.$viewChangeListeners.push($validate);
+                    $validate();
                 }
             };
         }])
