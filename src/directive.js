@@ -237,7 +237,7 @@
         .directive("w5cCustomizer", ['$timeout', function ($timeout) {
             'use strict';
             return {
-                require: ["^form", "ngModel"],
+                require: ["^form", "?ngModel"],
                 link   : function (scope, elem, attrs, ctrls) {
                     var ngModelCtrl = ctrls[1];
                     var $validate = function () {
@@ -307,7 +307,7 @@
         .directive('w5cDynamicName', [function () {
             return {
                 restrict: 'A',
-                require : "ngModel",
+                require : "?ngModel",
                 link    : function (scope, elm, attrs, ngModelCtr) {
                     ngModelCtr.$name = scope.$eval(attrs.w5cDynamicName);
                     elm.attr('name', scope.$eval(attrs.w5cDynamicName));
@@ -321,7 +321,7 @@
         .directive('w5cDynamicElement', ["$timeout", function ($timeout) {
             return {
                 restrict: 'A',
-                require : ["ngModel", "?^w5cFormValidate", "?^form"],
+                require : ["?ngModel", "?^w5cFormValidate", "?^form"],
                 link    : function (scope, elm, attrs, ctrls) {
                     var name = elm[0].name, formCtrl = ctrls[2];
                     if (name) {

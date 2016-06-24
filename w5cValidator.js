@@ -1,4 +1,4 @@
-/*! w5cValidator v2.4.16 2016-06-21 */
+/*! w5cValidator v2.4.16 2016-06-24 */
 angular.module("w5c.validator", ["ng"])
     .provider('w5cValidator', [function () {
         var defaultRules = {
@@ -428,7 +428,7 @@ angular.module("w5c.validator", ["ng"])
         .directive("w5cCustomizer", ['$timeout', function ($timeout) {
             'use strict';
             return {
-                require: ["^form", "ngModel"],
+                require: ["^form", "?ngModel"],
                 link   : function (scope, elem, attrs, ctrls) {
                     var ngModelCtrl = ctrls[1];
                     var $validate = function () {
@@ -498,7 +498,7 @@ angular.module("w5c.validator", ["ng"])
         .directive('w5cDynamicName', [function () {
             return {
                 restrict: 'A',
-                require : "ngModel",
+                require : "?ngModel",
                 link    : function (scope, elm, attrs, ngModelCtr) {
                     ngModelCtr.$name = scope.$eval(attrs.w5cDynamicName);
                     elm.attr('name', scope.$eval(attrs.w5cDynamicName));
@@ -512,7 +512,7 @@ angular.module("w5c.validator", ["ng"])
         .directive('w5cDynamicElement', ["$timeout", function ($timeout) {
             return {
                 restrict: 'A',
-                require : ["ngModel", "?^w5cFormValidate", "?^form"],
+                require : ["?ngModel", "?^w5cFormValidate", "?^form"],
                 link    : function (scope, elm, attrs, ctrls) {
                     var name = elm[0].name, formCtrl = ctrls[2];
                     if (name) {
