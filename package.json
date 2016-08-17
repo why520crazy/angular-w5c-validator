@@ -1,6 +1,6 @@
 {
   "name": "ng-w5c-validator",
-  "version": "2.4.21",
+  "version": "2.4.23",
   "keywords": [
     "angular",
     "angularjs",
@@ -13,6 +13,7 @@
     "why520crazy",
     "w5cValidator"
   ],
+  "main":"w5cValidator.js",
   "homepage": "https://github.com/why520crazy/angular-w5c-validator",
   "devDependencies": {
     "grunt": "^1.0.1",
