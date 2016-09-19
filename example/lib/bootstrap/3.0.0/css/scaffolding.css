@@ -1,5 +1,0 @@
-NameError: .box-sizing is undefined in /Users/haifeng/IT/01_Study/github_projects/js_framework/public/js/lib/bootstrap/3.0.0/css/scaffolding.less on line 11, column 3:
-10 *:after {
-11   .box-sizing(border-box);
-12 }
-

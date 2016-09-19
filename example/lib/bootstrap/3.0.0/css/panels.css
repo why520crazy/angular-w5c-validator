@@ -1,5 +1,0 @@
-NameError: .box-shadow is undefined in /Users/haifeng/IT/01_Study/github_projects/js_framework/public/js/lib/bootstrap/3.0.0/css/panels.less on line 12, column 3:
-11   border-radius: @panel-border-radius;
-12   .box-shadow(0 1px 1px rgba(0,0,0,.05));
-13 }
-

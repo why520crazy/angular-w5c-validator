@@ -1,5 +1,0 @@
-NameError: variable @state-success-bg is undefined in /Users/haifeng/IT/01_Study/github_projects/js_framework/public/js/lib/bootstrap/3.0.0/css/tables.less on line 172, column 29:
-171 // Generate the contextual variants
-172 .table-row-variant(success; @state-success-bg; @state-success-border);
-173 .table-row-variant(danger; @state-danger-bg; @state-danger-border);
-

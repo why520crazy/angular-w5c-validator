@@ -1,5 +1,0 @@
-NameError: variable @caret-width-base is undefined in /Users/haifeng/IT/01_Study/github_projects/js_framework/public/js/lib/bootstrap/3.0.0/css/dropdowns.less on line 13, column 17:
-12   vertical-align: middle;
-13   border-top:   @caret-width-base solid @dropdown-caret-color;
-14   border-right: @caret-width-base solid transparent;
-

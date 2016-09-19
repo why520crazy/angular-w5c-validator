@@ -1,5 +1,0 @@
-NameError: variable @alert-padding is undefined in /Users/haifeng/IT/01_Study/github_projects/js_framework/public/js/lib/bootstrap/3.0.0/css/alerts.less on line 10, column 12:
-9 .alert {
-10   padding: @alert-padding;
-11   margin-bottom: @line-height-computed;
-

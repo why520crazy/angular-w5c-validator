@@ -1,5 +1,0 @@
-NameError: variable @btn-default-color is undefined in /Users/haifeng/IT/01_Study/github_projects/js_framework/public/js/lib/bootstrap/3.0.0/css/button-groups.less on line 11, column 23:
-10   .btn-default & {
-11     border-top-color: @btn-default-color;
-12   }
-

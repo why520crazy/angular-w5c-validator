@@ -1,5 +1,0 @@
-NameError: variable @icon-font-path is undefined in /Users/haifeng/IT/01_Study/github_projects/js_framework/public/js/lib/bootstrap/3.0.0/css/glyphicons.less on line 13, column 12:
-12   font-family: 'Glyphicons Halflings';
-13   src: url('@{icon-font-path}@{icon-font-name}.eot');
-14   src: url('@{icon-font-path}@{icon-font-name}.eot?#iefix') format('embedded-opentype'),
-
