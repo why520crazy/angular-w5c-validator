@@ -1,5 +1,0 @@
-NameError: .transition is undefined in /Users/haifeng/IT/01_Study/github_projects/js_framework/public/js/lib/bootstrap/3.0.0/css/component-animations.less on line 12, column 3:
-11   opacity: 0;
-12   .transition(opacity .15s linear);
-13   &.in {
-

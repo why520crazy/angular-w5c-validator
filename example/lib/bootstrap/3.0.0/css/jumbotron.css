@@ -1,5 +1,0 @@
-NameError: variable @jumbotron-padding is undefined in /Users/haifeng/IT/01_Study/github_projects/js_framework/public/js/lib/bootstrap/3.0.0/css/jumbotron.less on line 7, column 12:
-6 .jumbotron {
-7   padding: @jumbotron-padding;
-8   margin-bottom: @jumbotron-padding;
-

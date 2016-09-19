@@ -1,5 +1,0 @@
-NameError: .responsive-invisibility is undefined in /Users/haifeng/IT/01_Study/github_projects/js_framework/public/js/lib/bootstrap/3.0.0/css/responsive-utilities.less on line 39, column 3:
-38 .visible-xs {
-39   .responsive-invisibility();
-40   @media (max-width: @screen-xs-max) {
-
