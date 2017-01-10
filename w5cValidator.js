@@ -1,4 +1,4 @@
-/*! ng-w5c-validator v2.4.23 2016-09-19 */
+/*! ng-w5c-validator v2.4.24 2017-01-10 */
 (function(){
     var w5cValidator = angular.module("w5c.validator", ["ng"])
         .provider('w5cValidator', [function () {
@@ -557,7 +557,10 @@
                     var name = elm[0].name, formCtrl = ctrls[2];
                     if (name) {
                         elm.on("$destroy", function (e) {
-                            ctrls[1].removeElementValidation(name);
+                            // if formCtrl is destroyed No need to do anything
+                            if (scope[formCtrl.$name]) {
+                                ctrls[1].removeElementValidation(name);
+                            }
                         });
                         if (!formCtrl[name]) {
                             formCtrl.$addControl(ctrls[0]);
