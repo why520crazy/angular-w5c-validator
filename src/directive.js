@@ -343,12 +343,15 @@
                 restrict: 'A',
                 require : "?ngModel",
                 link    : function (scope, elm, attrs, ngModelCtr) {
-                    ngModelCtr.$name = scope.$eval(attrs.w5cDynamicName);
-                    elm.attr('name', scope.$eval(attrs.w5cDynamicName));
-                    var formController = elm.controller('form') || {
-                            $addControl: angular.noop
-                        };
-                    formController.$addControl(ngModelCtr);
+                    var _name = scope.$eval(attrs.w5cDynamicName) || attrs.w5cDynamicName;
+                    if (_name) {
+                        ngModelCtr.$name = _name;
+                        elm.attr('name', _name);
+                        var _formController = elm.controller('form') || {
+                                $addControl: angular.noop
+                            };
+                        _formController.$addControl(ngModelCtr);
+                    }
                 }
             };
         }])
