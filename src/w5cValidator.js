@@ -49,8 +49,7 @@
                         $group.addClass("has-error");
 
                     }
-                    var $next = $elem.next();
-                    if (!$next || !$next.hasClass("w5c-error")) {
+                    if($elem.siblings(".w5c-error").length===0){
                         $elem.after('<span class="w5c-error">' + errorMessages[0] + '</span>');
                     }
                 };
@@ -61,9 +60,9 @@
                     if (!this.isEmpty($group) && $group.hasClass("has-error")) {
                         $group.removeClass("has-error");
                     }
-                    var $next = $elem.next();
-                    if ($next.hasClass && $next.hasClass("w5c-error")) {
-                        $next.remove();
+                    $errorSiblings=$elem.siblings(".w5c-error");
+                    if($errorSiblings.length>0){
+                        $errorSiblings.remove();
                     }
 
                 };
