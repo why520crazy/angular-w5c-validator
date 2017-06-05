@@ -3,3 +3,4 @@ node_modules
 .idea
 .sass-cache
 bower_components
+example/css/*.css
