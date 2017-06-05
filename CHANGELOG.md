@@ -1,3 +1,7 @@
+## v2.5.0
+w5cFormSubmit 指令添加 error-callback 函数，当点击提交按钮验证失败后调用该函数，并把 $errors 和 $invalidElements 传入
+`error-callback="vm.errorCallback($errors, $invalidElements)"`
+
 ## v2.4.15
 1. Merge PR https://github.com/why520crazy/angular-w5c-validator/pull/62
 1. 添加 `{name}{$数字$}` 命名忽略 `$数字$` , https://github.com/why520crazy/angular-w5c-validator/issues/60

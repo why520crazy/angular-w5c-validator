@@ -6,35 +6,35 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         // Project settings
-        yeoman : {
+        yeoman: {
             // configurable paths
-            app : 'example',
+            app: 'example',
             dist: ''
         },
-        watch  : {
-            js        : {
-                files  : ['<%= yeoman.app %>/*.js'],
-                tasks  : ['newer:jshint:all'],
+        watch: {
+            js: {
+                files: ['<%= yeoman.app %>/*.js'],
+                tasks: ['newer:jshint:all'],
                 options: {
                     livereload: true
                 }
             },
-            jsTest    : {
+            jsTest: {
                 files: ['test/spec/{,*/}*.js'],
                 tasks: ['newer:jshint:test', 'karma']
             },
-            styles    : {
+            styles: {
                 files: ['<%= yeoman.app %>/css/{,*/}*.css'],
                 tasks: ['newer:copy:styles', 'autoprefixer']
             },
-            gruntfile : {
+            gruntfile: {
                 files: ['Gruntfile.js']
             },
             livereload: {
                 options: {
                     livereload: '<%= connect.options.livereload %>'
                 },
-                files  : [
+                files: [
                     '<%= yeoman.app %>/*.html',
                     '.tmp/css/{,*/}*.css',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -42,16 +42,16 @@ module.exports = function (grunt) {
             }
         },
         connect: {
-            options   : {
-                port      : 9000,
+            options: {
+                port: 9000,
                 // Change this to '0.0.0.0' to access the server from outside.
-                hostname  : 'localhost',
+                hostname: 'localhost',
                 livereload: 35729
             },
             livereload: {
                 options: {
-                    open      : true,
-                    base      : [
+                    open: true,
+                    base: [
                         '.tmp',
                         '<%= yeoman.app %>'
                     ],
@@ -74,7 +74,7 @@ module.exports = function (grunt) {
                     }
                 }
             },
-            test      : {
+            test: {
                 options: {
                     port: 9001,
                     base: [
@@ -84,14 +84,14 @@ module.exports = function (grunt) {
                     ]
                 }
             },
-            dist      : {
+            dist: {
                 options: {
                     base: '<%= yeoman.dist %>'
                 }
             }
         },
-        pkg    : grunt.file.readJSON('package.json'),
-        concat : {
+        pkg: grunt.file.readJSON('package.json'),
+        concat: {
             options: {
                 banner: '/*! <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
@@ -100,29 +100,34 @@ module.exports = function (grunt) {
             //    dest: 'example/w5cValidator.js'
             //},
             basic: {
-                src : ["src/w5cValidator.js", "src/directive.js"],
+                src: ["src/w5cValidator.js", "src/directive.js"],
                 dest: 'w5cValidator.js'
             }
         },
-        less       : {
+        less: {
             compile: {
                 files: {
-                    "style.css"             : "src/style.less"
+                    "style.css": "src/style.less"
+                }
+            },
+            example: {
+                files: {
+                    "example/css/css.css": "example/css/css.less"
                 }
             }
         },
-        uglify : {
+        uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
-            build  : {
-                src : 'w5cValidator.js',
+            build: {
+                src: 'w5cValidator.js',
                 dest: 'w5cValidator.min.js'
             }
         },
-        copy   : {
+        copy: {
             main: {
-                src : 'src/style.less',
+                src: 'src/style.less',
                 dest: 'style.less'
             }
         }
@@ -147,5 +152,6 @@ module.exports = function (grunt) {
         grunt.task.run(['serve:' + target]);
     });
 
-    grunt.registerTask('build', ["copy","less", "concat","uglify"]);
+    grunt.registerTask('build', ["copy", "less:compile", "concat", "uglify"]);
+    grunt.registerTask('example-less', ["less:example"]);
 };
