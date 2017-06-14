@@ -1,3 +1,6 @@
+## v2.5.1
+支持单独验证某个表单元素  `formCtrl.validateElement('name')`
+
 ## v2.5.0
 w5cFormSubmit 指令添加 error-callback 函数，当点击提交按钮验证失败后调用该函数，并把 $errors 和 $invalidElements 传入
 `error-callback="vm.errorCallback($errors, $invalidElements)"`
