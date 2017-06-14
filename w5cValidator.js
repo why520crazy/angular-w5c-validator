@@ -1,4 +1,4 @@
-/*! ng-w5c-validator v2.5.0 2017-06-05 */
+/*! ng-w5c-validator v2.5.1 2017-06-14 */
 (function(){
     var w5cValidator = angular.module("w5c.validator", ["ng"])
         .provider('w5cValidator', [function () {
@@ -48,7 +48,6 @@
 
                     if (!this.isEmpty($group) && !$group.hasClass("has-error")) {
                         $group.addClass("has-error");
-
                     }
                     var $next = $elem.next();
                     if (!$next || !$next.hasClass("w5c-error")) {
@@ -72,7 +71,7 @@
                     blurTrig   : false,
                     showError  : true,
                     removeError: true
-                }
+                };
             };
 
             validatorFn.prototype = {
@@ -206,44 +205,54 @@
         this.submitSuccessFn = null;
         this.validElements = [];
 
+        this.validateFormElement = function (elemName) {
+            var self = this;
+            var elem = _formElem[elemName];
+            if (elemName && self.validElements.indexOf(elemName) >= 0) {
+                if (self.formCtrl[elemName] && elem && w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elemName)) {
+                    if (self.formCtrl[elemName].$valid) {
+                        w5cValidator.removeError(elem, self.options);
+                    } else {
+                        var elementErrors = w5cValidator.getErrorMessages(elem, self.formCtrl[elem.name].$error);
+                        w5cValidator.removeError(elem, self.options);
+                        w5cValidator.showError(elem, elementErrors, self.options);
+                        self.formCtrl[elemName].w5cError = true;
+                        return elementErrors;
+                    }
+                }
+            }
+            return null;
+        };
+
+        this.validateForm = function () {
+            var self = this;
+            var formCtrl = this.formCtrl;
+            var errorMessages = [];
+            //循环验证
+            for (var i = 0; i < _formElem.elements.length; i++) {
+                var elementErrorMessages = self.validateFormElement(_formElem.elements[i].name);
+                if (elementErrorMessages && elementErrorMessages.length >= 1) {
+                    errorMessages.push(elementErrorMessages[0])
+                }
+            }
+            if (!w5cValidator.isEmpty(errorMessages) && errorMessages.length > 0) {
+                formCtrl.$errors = errorMessages;
+            } else {
+                formCtrl.$errors = [];
+            }
+            if (!$scope.$$phase) {
+                $scope.$apply(formCtrl.$errors);
+            }
+        };
+
         /**
          * 设置验证方法,并把 doValidate 方法挂载在 form ctrl 上
          * @param formCtrl
          */
         this.setValidate = function (formCtrl) {
             this.formCtrl = formCtrl;
-            var doValidate = function () {
-                var errorMessages = [];
-                //循环验证
-                for (var i = 0; i < _formElem.elements.length; i++) {
-                    var elemName = _formElem.elements[i].name;
-                    if (elemName && _self.validElements.indexOf(elemName) >= 0) {
-                        var elem = _formElem[elemName];
-                        if (formCtrl[elemName] && elem && w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elemName)) {
-                            if (formCtrl[elemName].$valid) {
-                                // angular.element(elem).removeClass("error").addClass("valid");
-                                w5cValidator.removeError(elem, _self.options);
-                                continue;
-                            } else {
-                                var elementErrors = w5cValidator.getErrorMessages(elem, formCtrl[elem.name].$error);
-                                errorMessages.push(elementErrors[0]);
-                                w5cValidator.removeError(elem, _self.options);
-                                w5cValidator.showError(elem, elementErrors, _self.options);
-                                formCtrl[elemName].w5cError = true;
-                            }
-                        }
-                    }
-                }
-                if (!w5cValidator.isEmpty(errorMessages) && errorMessages.length > 0) {
-                    formCtrl.$errors = errorMessages;
-                } else {
-                    formCtrl.$errors = [];
-                }
-                if (!$scope.$$phase) {
-                    $scope.$apply(formCtrl.$errors);
-                }
-            };
-            formCtrl.doValidate = doValidate;
+            var doValidate = formCtrl.doValidate = this.validateForm.bind(this);
+            formCtrl.validateElement = this.validateFormElement.bind(this);
             formCtrl.reset = function () {
                 $timeout(function () {
                     formCtrl.$setPristine();

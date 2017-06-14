@@ -47,7 +47,6 @@
 
                     if (!this.isEmpty($group) && !$group.hasClass("has-error")) {
                         $group.addClass("has-error");
-
                     }
                     var $next = $elem.next();
                     if (!$next || !$next.hasClass("w5c-error")) {
@@ -71,7 +70,7 @@
                     blurTrig   : false,
                     showError  : true,
                     removeError: true
-                }
+                };
             };
 
             validatorFn.prototype = {
