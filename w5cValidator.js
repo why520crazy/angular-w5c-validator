@@ -1,4 +1,4 @@
-/*! ng-w5c-validator v2.5.3 2017-06-15 */
+/*! ng-w5c-validator v2.5.4 2017-06-15 */
 (function(){
     var w5cValidator = angular.module("w5c.validator", ["ng"])
         .provider('w5cValidator', [function () {
@@ -221,6 +221,7 @@
                 if (self.formCtrl[elemName] && elem && w5cValidator.elemTypes.toString().indexOf(elem.type) > -1 && !w5cValidator.isEmpty(elemName)) {
                     if (self.formCtrl[elemName].$valid) {
                         w5cValidator.removeError(elem, self.options);
+                        self.formCtrl[elemName].w5cError = false;
                     } else {
                         var elementErrors = w5cValidator.getErrorMessages(elem, self.formCtrl[elem.name].$error);
                         w5cValidator.removeError(elem, self.options);
@@ -406,17 +407,17 @@
                             return;
                         }
                         var element = this;
-                        var $elem = angular.element(this);
                         $timeout(function () {
-                            if (!_self.formCtrl[element.name].$valid) {
-                                var errorMessages = w5cValidator.getErrorMessages(element, _self.formCtrl[element.name].$error);
-                                w5cValidator.showError($elem, errorMessages, _self.options);
-                                if (_self.formCtrl[$elem[0].name]) {
-                                    _self.formCtrl[$elem[0].name].w5cError = true;
-                                }
-                            } else {
-                                w5cValidator.removeError($elem, _self.options);
-                            }
+                            ctrl.validateFormElement(element.name);
+                            // if (!_self.formCtrl[element.name].$valid) {
+                            //     var errorMessages = w5cValidator.getErrorMessages(element, _self.formCtrl[element.name].$error);
+                            //     w5cValidator.showError($elem, errorMessages, _self.options);
+                            //     if (_self.formCtrl[$elem[0].name]) {
+                            //         _self.formCtrl[$elem[0].name].w5cError = true;
+                            //     }
+                            // } else {
+                            //     w5cValidator.removeError($elem, _self.options);
+                            // }
                         }, 50);
                     });
                 }
@@ -505,7 +506,7 @@
                         var otherInput = elem.inheritedData("$formController")[attrs.w5cRepeat];
                         var ngModel = ctrls[0], w5cFormCtrl = ctrls[1];
                         ngModel.$parsers.push(function (value) {
-                            if (value === otherInput.$viewValue) {
+                            if (value === otherInput.$modelValue) {
                                 ngModel.$setValidity("repeat", true);
                             } else {
                                 ngModel.$setValidity("repeat", false);
@@ -514,8 +515,8 @@
                         });
 
                         otherInput.$parsers.push(function (value) {
-                            ngModel.$setValidity("repeat", value === ngModel.$viewValue);
-                            if (value === ngModel.$viewValue) {
+                            ngModel.$setValidity("repeat", value === ngModel.$modelValue);
+                            if (value === ngModel.$modelValue) {
                                 w5cFormCtrl.removeError(elem);
                             }
                             return value;
