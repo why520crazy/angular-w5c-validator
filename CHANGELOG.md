@@ -1,3 +1,6 @@
+## v2.5.2
+支持显示指定的 form 元素错误信息, 比如服务端响应用户名输入失败等  `formCtrl.setElementErrorMessage('name','注册失败！')`
+
 ## v2.5.1
 支持单独验证某个表单元素  `formCtrl.validateElement('name')`
 

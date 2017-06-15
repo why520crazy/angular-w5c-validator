@@ -1,4 +1,4 @@
-/*! ng-w5c-validator v2.5.1 2017-06-14 */
+/*! ng-w5c-validator v2.5.2 2017-06-15 */
 (function(){
     var w5cValidator = angular.module("w5c.validator", ["ng"])
         .provider('w5cValidator', [function () {
@@ -205,6 +205,15 @@
         this.submitSuccessFn = null;
         this.validElements = [];
 
+        this.setElementErrorMessage = function (elemName, errorMessage) {
+            var self = this;
+            var elem = _formElem[elemName];
+            if (elemName && self.validElements.indexOf(elemName) >= 0) {
+                w5cValidator.removeError(elem, self.options);
+                w5cValidator.showError(elem, [errorMessage], self.options);
+            }
+        };
+
         this.validateFormElement = function (elemName) {
             var self = this;
             var elem = _formElem[elemName];
@@ -253,6 +262,7 @@
             this.formCtrl = formCtrl;
             var doValidate = formCtrl.doValidate = this.validateForm.bind(this);
             formCtrl.validateElement = this.validateFormElement.bind(this);
+            formCtrl.setElementErrorMessage = this.setElementErrorMessage.bind(this);
             formCtrl.reset = function () {
                 $timeout(function () {
                     formCtrl.$setPristine();
@@ -465,20 +475,20 @@
         .directive("w5cFormSubmit", ['$parse', function ($parse) {
             return {
                 require: "^w5cFormValidate",
-                scope: {
-                    w5cFormSubmit: "&",
-                    errorCallback: "&"
-                },
                 link: function (scope, element, attr, ctrl) {
-                    //var validSuccessFn = $parse(attr.w5cFormSubmit);
+                    var validSuccessFn = $parse(attr.w5cFormSubmit);
+                    var errorCallback = $parse(attr.errorCallback);
                     element.bind("click", function (event) {
                         ctrl.doValidate(function () {
-                            scope.w5cFormSubmit({$event: event});
+                            validSuccessFn(scope, {$event: event});
                         }, function ($errors, invalidElements) {
-                            scope.errorCallback({
-                                $errors: $errors,
-                                $invalidElements: invalidElements
-                            });
+                            if (errorCallback) {
+                                errorCallback(scope, {
+                                    $event: $event,
+                                    $errors: $errors,
+                                    $invalidElements: invalidElements
+                                });
+                            }
                         });
                     });
                     ctrl.needBindKeydown = true;
