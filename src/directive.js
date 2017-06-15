@@ -288,7 +288,7 @@
                         }, function ($errors, invalidElements) {
                             if (errorCallback) {
                                 errorCallback(scope, {
-                                    $event: $event,
+                                    $event: event,
                                     $errors: $errors,
                                     $invalidElements: invalidElements
                                 });

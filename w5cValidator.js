@@ -1,4 +1,4 @@
-/*! ng-w5c-validator v2.5.2 2017-06-15 */
+/*! ng-w5c-validator v2.5.3 2017-06-15 */
 (function(){
     var w5cValidator = angular.module("w5c.validator", ["ng"])
         .provider('w5cValidator', [function () {
@@ -484,7 +484,7 @@
                         }, function ($errors, invalidElements) {
                             if (errorCallback) {
                                 errorCallback(scope, {
-                                    $event: $event,
+                                    $event: event,
                                     $errors: $errors,
                                     $invalidElements: invalidElements
                                 });
