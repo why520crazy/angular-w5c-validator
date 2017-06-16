@@ -1,4 +1,4 @@
-##v2.5.4
+## v2.5.4
 1. 修复 https://github.com/why520crazy/angular-w5c-validator/issues/84
 
 ## v2.5.3

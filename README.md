@@ -10,7 +10,7 @@ w5c validator自身提示信息样式使用了bootstrap的方式，当然你可�
 
 # Useage：
 
-1. HTML 中引用 w5cValidator.js，执行 `npm i ng-w5c-validator` 或者 `bower install angular-w5c-validator` 进行安装；
+1. HTML 中引用 w5cValidator.js，执行 `npm i ng-w5c-validator` 或者 `npm i angular-w5c-validator` 或者 `bower install angular-w5c-validator` 进行安装；
 
 1. 启动module引用 "w5c.validator"，如:` var app = angular.module("app", ["w5c.validator"]);`
 
