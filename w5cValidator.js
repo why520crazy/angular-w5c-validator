@@ -1,4 +1,4 @@
-/*! angular-w5c-validator v2.5.5 2017-07-13 */
+/*! angular-w5c-validator v2.5.6 2017-07-13 */
 (function(){
     var w5cValidator = angular.module("w5c.validator", ["ng"])
         .provider('w5cValidator', [function () {
