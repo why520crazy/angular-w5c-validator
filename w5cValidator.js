@@ -1,4 +1,4 @@
-/*! ng-w5c-validator v2.5.4 2017-06-15 */
+/*! angular-w5c-validator v2.5.5 2017-07-13 */
 (function(){
     var w5cValidator = angular.module("w5c.validator", ["ng"])
         .provider('w5cValidator', [function () {
@@ -200,9 +200,10 @@
                                  w5cValidator, $parse, $timeout) {
         var _self = this;
         var _formElem = $element[0];
-        this.needBindKeydown = false;
         this.formCtrl = null;
-        this.submitSuccessFn = null;
+        // Enter 键提交
+        this.needBindKeydown = false;
+        this.enterKeydownFn = null;
         this.validElements = [];
 
         this.setElementErrorMessage = function (elemName, errorMessage) {
@@ -300,13 +301,16 @@
                                 button[0].focus();
                             }
                             currentInput.focus();
-                            doValidate();
                             event.preventDefault();
-                            if (formCtrl.$valid && angular.isFunction(_self.submitSuccessFn)) {
-                                $scope.$apply(function () {
-                                    _self.submitSuccessFn($scope, {$event: event});
-                                });
+                            if(angular.isFunction(_self.enterKeydownFn)){
+                                _self.enterKeydownFn(event);
                             }
+                            //
+                            // if (formCtrl.$valid && angular.isFunction(_self.submitSuccessFn)) {
+                            //     $scope.$apply(function () {
+                            //         _self.submitSuccessFn($scope, {$event: event});
+                            //     });
+                            // }
                         }
                     }
                 });
@@ -479,7 +483,7 @@
                 link: function (scope, element, attr, ctrl) {
                     var validSuccessFn = $parse(attr.w5cFormSubmit);
                     var errorCallback = $parse(attr.errorCallback);
-                    element.bind("click", function (event) {
+                    var submitFn = function (event) {
                         ctrl.doValidate(function () {
                             validSuccessFn(scope, {$event: event});
                         }, function ($errors, invalidElements) {
@@ -491,9 +495,10 @@
                                 });
                             }
                         });
-                    });
+                    };
+                    element.bind("click", submitFn);
                     ctrl.needBindKeydown = true;
-                    ctrl.submitSuccessFn = scope.w5cFormSubmit;
+                    ctrl.enterKeydownFn = submitFn;
                 }
             };
         }])
