@@ -428,7 +428,7 @@
                 link: function (scope, elm, attrs, ctrls) {
                     var name = elm[0].name, formCtrl = ctrls[2];
                     if (name) {
-                        elm.on("$destroy", function (e) {
+                        scope.$on("$destroy", function (e) {
                             // if formCtrl is destroyed No need to do anything
                             if (scope[formCtrl.$name]) {
                                 ctrls[1].removeElementValidation(name);

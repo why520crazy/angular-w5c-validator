@@ -1,4 +1,4 @@
-/*! angular-w5c-validator v2.5.6 2017-07-13 */
+/*! angular-w5c-validator v2.5.7 2017-07-25 */
 (function(){
     var w5cValidator = angular.module("w5c.validator", ["ng"])
         .provider('w5cValidator', [function () {
@@ -624,7 +624,7 @@
                 link: function (scope, elm, attrs, ctrls) {
                     var name = elm[0].name, formCtrl = ctrls[2];
                     if (name) {
-                        elm.on("$destroy", function (e) {
+                        scope.$on("$destroy", function (e) {
                             // if formCtrl is destroyed No need to do anything
                             if (scope[formCtrl.$name]) {
                                 ctrls[1].removeElementValidation(name);
