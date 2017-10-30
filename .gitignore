@@ -4,3 +4,4 @@ node_modules
 .sass-cache
 bower_components
 ##example/css/*.css
+.vscode

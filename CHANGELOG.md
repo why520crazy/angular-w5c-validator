@@ -1,3 +1,12 @@
+## 2.5.8
+1. 添加 `{scope.formName}.w5cValidator` 对象，把之前挂载在 `{scope.formName}` 上的扩展方法 `doValidate` ，`validateElement`，`setElementErrorMessage` 重新挂载到 `{scope.formName}.w5cValidator` 对象上;
+1. 新增 `{scope.formName}.w5cValidator.removeElementValidation(elementName)` 方法移除某个元素的验证；
+1. 新增 `{scope.formName}.w5cValidator.addElementValidation(name)` 添加某个元素的验证。
+
+
+## v2.5.4
+1. 修复 https://github.com/why520crazy/angular-w5c-validator/issues/84
+
 ## v2.5.3
 fix error for v2.5.2
 
