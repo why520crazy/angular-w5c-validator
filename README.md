@@ -221,3 +221,20 @@ function removeError(elem){
   });
 ```
 
+# 扩展方法
+
+`formName` 对象是 Angular.js **Form 验证** 自动生成的 scope 对象,以 Form Name 命名, 包含了表单每个元素的验证情况， `w5cValidator` 组件主要就是基于 Angular.js 内部的验证机制追加错误提示信息而已，下面几个方法是 `w5cValidator` 组件扩展的变量和方法； 
+
+1. `formName.reset()` 重置整个表单，包含错误信息；
+1. `formName.$errors` 是错误提示列表，用于统一显示错误；
+1. `formName.w5cValidator.validateElement(elementName)` 单独验证某个元素；
+1. `formName.w5cValidator.setElementErrorMessage(elementName, errorMessage)` 设置某个元素的错误信息，用户服务端返回的错误；
+1. `formName.w5cValidator.doValidate()` 开始触发验证，一般使用 `w5c-form-submit` 指令点击会自动触发验证，除非特殊情况需要使用 JS 触发才会使用到；
+1. `formName.w5cValidator.removeElementValidation(elementName)` 移除单个元素的验证；
+1. `formName.w5cValidator.addElementValidation(elementName)` 添加单个元素的验证。
+
+以下方法请用 `formName.w5cValidator.xxx` 代替，即将被遗弃：
+- `formName.validateElement(elemName)`
+- `formName.setElementErrorMessage(elemName, errorMessage)`
+- `formName.doValidate()`
+
