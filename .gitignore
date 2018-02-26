@@ -5,3 +5,4 @@ node_modules
 bower_components
 example/css/*.css
 .vscode
+.DS_Store
