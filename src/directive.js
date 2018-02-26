@@ -1,7 +1,7 @@
 (function () {
 
-    function W5cFormValidateCtrl($scope, $element, $attrs,
-                                 w5cValidator, $parse, $timeout) {
+    function W5cFormValidateCtrl ($scope, $element, $attrs,
+        w5cValidator, $parse, $timeout) {
         var _self = this;
         var _formElem = $element[0];
         this.formCtrl = null;
@@ -109,7 +109,8 @@
                 validateElement: this.validateFormElement.bind(this),
                 setElementErrorMessage: this.setElementErrorMessage.bind(this),
                 removeElementValidation: this.removeElementValidation.bind(this),
-                addElementValidation: this.addElementValidation.bind(this)
+                addElementValidation: this.addElementValidation.bind(this),
+                formIsValid: this.formIsValid.bind(this)
             };
 
 
@@ -118,7 +119,7 @@
             if ($attrs.w5cSubmit && angular.isFunction(formSubmitFn)) {
                 $element.bind("submit", function (event) {
                     doValidate();
-                    if (formCtrl.$valid && angular.isFunction(formSubmitFn)) {
+                    if (formCtrl.w5cValidator.formIsValid() && angular.isFunction(formSubmitFn)) {
                         $scope.$apply(function () {
                             formSubmitFn($scope, {$event: event});
                         });
@@ -141,17 +142,22 @@
                             if (angular.isFunction(_self.enterKeydownFn)) {
                                 _self.enterKeydownFn(event);
                             }
-                            //
-                            // if (formCtrl.$valid && angular.isFunction(_self.submitSuccessFn)) {
-                            //     $scope.$apply(function () {
-                            //         _self.submitSuccessFn($scope, {$event: event});
-                            //     });
-                            // }
                         }
                     }
                 });
             }
         };
+
+        this.formIsValid = function () {
+            var formCtrl = this.formCtrl;
+            var isValid = true;
+            this.validElements.forEach(function (elementName) {
+                if (formCtrl[elementName] && formCtrl[elementName].$invalid) {
+                    isValid = false;
+                }
+            });
+            return isValid;
+        }
 
         /**
          * 用户和其他组件交互使用, 目前有 w5cFormSubmit和w5cDynamicElement 指令调用
@@ -163,11 +169,11 @@
             if (angular.isFunction(self.formCtrl.doValidate)) {
                 self.formCtrl.doValidate();
             }
-            if (self.formCtrl.$valid && angular.isFunction(success)) {
+            if (this.formIsValid() && angular.isFunction(success)) {
                 $scope.$apply(function () {
                     success();
                 });
-            } else if (!self.formCtrl.$valid && angular.isFunction(error)) {
+            } else if (angular.isFunction(error)) {
                 var invalidElements = self._getInvalidElements();
                 $scope.$apply(function () {
                     error(self.formCtrl.$errors, invalidElements);
@@ -197,6 +203,10 @@
             if (index >= 0) {
                 this.validElements.splice(index, 1);
                 this.validateFormElement(name);
+                // #91 动态移除验证的时候去除 removeControl
+                // if (this.formCtrl[name]) {
+                //     this.formCtrl.$removeControl(this.formCtrl[name]);
+                // }
                 // if (!w5cValidator.isEmpty(this.formCtrl.$errors)) {
                 //     this.doValidate(angular.noop);
                 // }
@@ -459,8 +469,8 @@
                         ngModelCtr.$name = _name;
                         elm.attr('name', _name);
                         var _formController = elm.controller('form') || {
-                                $addControl: angular.noop
-                            };
+                            $addControl: angular.noop
+                        };
                         _formController.$addControl(ngModelCtr);
                     }
                 }
