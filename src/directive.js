@@ -78,9 +78,9 @@
             } else {
                 formCtrl.$errors = [];
             }
-            if (!$scope.$$phase) {
-                $scope.$apply(formCtrl.$errors);
-            }
+            $timeout(function () {
+                $scope.$apply(formCtrl.$errors);                
+            })
         };
 
         /**
